@@ -1,0 +1,55 @@
+---
+title: Extensibilité - Kit de développement logiciel .NET WPF
+author: matthidinger
+ms.author: mahiding
+ms.date: 10/19/2017
+ms.topic: article
+ms.openlocfilehash: af301ec4d73b6791c1d132b9df7040d71cf70d7b
+ms.sourcegitcommit: 99c7b64d6fc66da336c454951406fb42cd2a7427
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59552621"
+---
+# <a name="extensibility---net-wpf"></a>Extensibilité - .NET WPF
+
+## <a name="custom-element-rendering"></a>Rendu de l’élément personnalisé
+
+Pour un contrôle total du convertisseur que vous pouvez utiliser la `ElementRenderers` propriété **ajouter**, **supprimer**, ou **remplacer** convertisseurs de valeur par défaut.
+
+L’exemple suivant montre comment vous pouvez définir un personnalisé `"type": "Rating"` élément et le rendre.
+
+```csharp
+// Register the new type with the JSON parser
+AdaptiveTypedElementConverter.RegisterTypedElement<MyCustomRating>();
+
+// Add the new type to the element renderer registry
+renderer.ElementRenderers.Set<MyCustomRating>(MyCustomRating.Render);
+
+// Define a custom Rating element type
+public class MyCustomRating : AdaptiveElement
+{
+    public override string Type => "Rating";
+
+    public double Rating { get; set; }
+
+    public AdaptiveTextSize Size { get; set; }
+
+    public AdaptiveTextColor Color { get; set; }
+
+    public static FrameworkElement Render(MyCustomRating rating, AdaptiveRenderContext context)
+    {
+        var textBlock = new AdaptiveTextBlock
+        {
+            Size = rating.Size,
+            Color = rating.Color
+        };
+        for (int i = 0; i < rating.Rating; i++)
+        {
+            textBlock.Text += "\u2605";
+        }
+        textBlock.Text += $" ({rating.Rating})";
+        return context.Render(textBlock);
+    }
+}
+```
