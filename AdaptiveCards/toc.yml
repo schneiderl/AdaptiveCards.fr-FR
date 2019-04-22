@@ -1,0 +1,57 @@
+items:
+- name: Vue d’ensemble
+  href: index.md
+- name: Prise en main
+  items:
+  - name: Développeurs de bots
+    href: getting-started/bots.md
+  - name: Développeurs Windows
+    href: getting-started/windows.md
+  - name: Développeurs Outlook
+    href: getting-started/outlook.md
+- name: Création de cartes
+  items:
+  - name: Prise en main
+    href: authoring-cards/getting-started.md
+  - name: Schéma des cartes
+    href: authoring-cards/card-schema.md
+  - name: Fonctions vocales
+    href: authoring-cards/speech.md
+  - name: Fonctionnalités de texte
+    href: authoring-cards/text-features.md
+- name: Rendu des cartes
+  items:
+  - name: Prise en main
+    href: rendering-cards/getting-started.md
+  - name: Actions
+    href: rendering-cards/actions.md
+  - name: Configuration de l’hôte
+    href: rendering-cards/host-config.md
+  - name: Extensibilité
+    href: rendering-cards/extensibility.md
+  - name: État du rendu
+    href: rendering-cards/renderer-status.md
+  - name: Implémenter un rendu
+    href: rendering-cards/implement-a-renderer.md
+- name: Kit de développement logiciel
+  items:
+  - name: Création de cartes
+    href: sdk/authoring-cards/toc.yml
+  - name: Rendu des cartes
+    href: sdk/rendering-cards/toc.yml
+- name: Ressources
+  items:
+  - name: Principes
+    href: resources/principles.md
+  - name: Partenaires
+    href: resources/partners.md
+  - name: Outils
+    href: resources/tools.md
+  - name: Feuille de route
+    href: resources/future.md
+ms.openlocfilehash: 0d11154a56cef4b2814a28544ebf83b50081bfae
+ms.sourcegitcommit: 99c7b64d6fc66da336c454951406fb42cd2a7427
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59552341"
