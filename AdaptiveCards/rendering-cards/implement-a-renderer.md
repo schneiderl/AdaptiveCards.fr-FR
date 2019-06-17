@@ -4,12 +4,12 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 09/15/2017
 ms.topic: article
-ms.openlocfilehash: 3c79d768d5c979626b66614a1856ad6c2e390805
-ms.sourcegitcommit: 99c7b64d6fc66da336c454951406fb42cd2a7427
+ms.openlocfilehash: b39493f82f3378e5a554abc6df890d6821869671
+ms.sourcegitcommit: e002a988c570072d5bc24a1242eaaac0c9ce90df
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59552551"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67138022"
 ---
 # <a name="adaptive-card-renderer-specification"></a>Spécification de convertisseur de carte adaptative
 
@@ -89,7 +89,7 @@ Un `AdaptiveCard` se compose d’un `body` et `actions`. Le `body` est une colle
 
 ### <a name="images"></a>Images
 
-1. Un convertisseur **SHOULD** permettent d’héberger des applications de savoir lorsque toutes les images HTTP ont été téléchargées et la carte est « entièrement rendererd »
+1. Un convertisseur **SHOULD** permettent d’héberger des applications de savoir lorsque toutes les images HTTP ont été téléchargées et la carte est « entièrement restituée »
 1. Un convertisseur **doit** inspecter la configuration de l’hôte `maxImageSize` param lors du téléchargement des images HTTP
 1. Un convertisseur **doit** prennent en charge `.png` et `.jpeg`
 1. Un convertisseur **SHOULD** prennent en charge `.gif` images
@@ -142,7 +142,7 @@ Action | Comportement
 
 L’Action Envoyer se comporte comme un envoi de formulaire HTML, à ceci près qu’où HTML déclenche généralement une requête HTTP post, des cartes adaptatives laisse jusqu'à chaque application hôte pour déterminer ce que « soumettre » signifie que leur. 
 
-1. Lorsque cela **doit** déclencher un événement de l’utilisateur appuie sur l’action invokved.  
+1. Lorsque cela **doit** déclencher un événement que l’utilisateur appuie sur l’action appelée.  
 1. Le `data` propriété **doit** être inclus dans la charge utile de rappel.
 1. Pour `Action.Submit`, un convertisseur **doit** rassembler toutes les entrées sur la carte et de récupérer les valeurs. 
 
@@ -156,7 +156,7 @@ L’Action Envoyer se comporte comme un envoi de formulaire HTML, à ceci près 
 1. Si HostConfig `supportsInteractivity` est `false` un convertisseur **ne doit pas** afficher toutes les entrées.
 2. Entrées **SHOULD** afficher avec la plus haute fidélité possible. Par exemple, un `Input.Date` offrirait dans l’idéal, un sélecteur de dates à un utilisateur, mais si ce n’est pas possible sur votre pile de l’interface utilisateur, puis le convertisseur **doit** revenir au rendu d’une zone de texte standard.
 3. Un convertisseur **SHOULD** afficher le `placeholderText` si possible
-4. Un convertisseur **ne** obligé d’implémenter la validation de l’entrée. Les utilisateurs de cartes adaptatives doivent planifier à valider les données reçue de leur côté.
+4. Un convertisseur **ne** obligé d’implémenter la validation de l’entrée. Les utilisateurs de cartes adaptatives doivent planifier valider toutes les données reçues de leur côté.
 5. Liaison de la valeur d’entrée **doit** être correctement échappés
 
 6. L’objet **doit** renvoyés à l’application hôte comme suit :
@@ -164,6 +164,6 @@ L’Action Envoyer se comporte comme un envoi de formulaire HTML, à ceci près 
    Nous ne faites pas les promesses de validation d’entrée dans des cartes adaptatives, il est donc à la partie réception à analyser correctement la réponse. Par exemple, un Input.Number peut renvoyer « hello » et ils doivent être préparées pour ce faire.
 
 
-## <a name="events"></a>Événements
+## <a name="events"></a>Events
 
 1. Un convertisseur **SHOULD** déclencher un événement lorsqu’une visibilité d’un élément a changé, ce qui permet l’application hôte faire défiler la carte dans sa position.

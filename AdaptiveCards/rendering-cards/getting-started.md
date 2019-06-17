@@ -4,12 +4,12 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 06/26/2017
 ms.topic: article
-ms.openlocfilehash: 0a9507c56a8bae9f038c220cdf55e34b2c3b0829
-ms.sourcegitcommit: 99c7b64d6fc66da336c454951406fb42cd2a7427
+ms.openlocfilehash: 0a5f99268ce483fddd99f4493b386db796c3e9d2
+ms.sourcegitcommit: e002a988c570072d5bc24a1242eaaac0c9ce90df
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59552921"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67138092"
 ---
 # <a name="rendering-cards-inside-your-application"></a>Rendu des cartes à l’intérieur de votre application
 
@@ -60,7 +60,7 @@ La plupart des infrastructures d’interface utilisateur vous permettent d’app
 
 ### <a name="customize-per-element-rendering"></a>Personnaliser le rendu de chaque élément
 
-Chaque SDK vous permet de substituer le rendu d’un élément, ou même ajouter la prise en charge pour les éléments entièrement nouveaux que vous définissez.  Par exemple, vous pouvez modifier le `Input.Date` convertisseur pour émettre votre propre contrôle personnalisé tout en conservant le reste de la sortie du convertisseur. Ou vous pouvez ajouter la prise en charge pour un personnalisé `Rating` élément vous définissez.
+Chaque SDK vous permet de substituer le rendu d’un élément, ou même ajouter la prise en charge pour les éléments entièrement nouveaux que vous définissez.  Par exemple, vous pouvez modifier le `Input.Date` convertisseur pour émettre votre propre contrôle personnalisé tout en conservant le reste de la sortie du convertisseur. Ou vous pouvez ajouter la prise en charge pour un personnalisé `Rating` élément que vous définissez.
 
 
 

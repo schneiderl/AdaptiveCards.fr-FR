@@ -1,17 +1,17 @@
 ---
-title: État de convertisseur
+title: État du rendu
 author: matthidinger
 ms.author: mahiding
 ms.date: 10/12/2018
 ms.topic: article
-ms.openlocfilehash: 303d5675f58bd2c870dcdf5718d508d2e3c78fca
-ms.sourcegitcommit: 99c7b64d6fc66da336c454951406fb42cd2a7427
+ms.openlocfilehash: bffa49012a8ebe686fc033f98b2438d2e9e959cc
+ms.sourcegitcommit: e002a988c570072d5bc24a1242eaaac0c9ce90df
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59553351"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67138032"
 ---
-# <a name="renderer-status"></a>État de convertisseur
+# <a name="renderer-status"></a>État du rendu
 Les tableaux suivants indiquent l’état actuel de chaque convertisseur, en fonction de leurs versions publiées publiques.
 
 ### <a name="parsing"></a>L’analyse
@@ -43,7 +43,7 @@ Les tableaux suivants indiquent l’état actuel de chaque convertisseur, en fon
 
 \* Prise en charge intégrée de Markdown n’inclut pas le convertisseur HTML afin de réduire la taille de la bibliothèque et pour permettre à applications consommatrices d’utiliser leur processeur Markdown par défaut. Le convertisseur HTML toutefois utiliseront automatiquement Markdown-informatique s’il est chargé.
 
-### <a name="extensbility"></a>Extensbility
+### <a name="extensibility"></a>Extensibilité
 
 |Fonctionnalité | HTML | .NET | UWP | iOS | Android |
 |--- | --- | --- | --- | --- | --- | --- |
@@ -61,7 +61,7 @@ Les tableaux suivants indiquent l’état actuel de chaque convertisseur, en fon
 | Prise en charge Action.Submit  | ✅ | ✅ | ✅ | ✅ | ✅  |
 | prise en charge selectAction | ✅ | ✅ | ✅ | ✅ | ✅ |
 
-### <a name="events"></a>Événements
+### <a name="events"></a>Events
 
 |       Fonctionnalité        | HTML | .NET | UWP | iOS | Android | 
 |----------------------------|------|------|-----|-----|---------|
