@@ -1,100 +1,141 @@
 ---
-title: Afficher une carte - iOS SDK
+title: Effectuer le rendu d’une carte – Kit de développement logiciel (SDK) iOS
 author: matthidinger
 ms.author: mahiding
 ms.date: 06/26/2017
 ms.topic: article
-ms.openlocfilehash: 625701e38389cc1a54682b72ce2315c14180e576
-ms.sourcegitcommit: 99c7b64d6fc66da336c454951406fb42cd2a7427
+ms.openlocfilehash: 7d8d8410c030584dc5a518af7e6473d1d51f3991
+ms.sourcegitcommit: e002a988c570072d5bc24a1242eaaac0c9ce90df
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59552471"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67134326"
 ---
-# <a name="render-a-card---ios"></a><span data-ttu-id="cd34a-102">Afficher une carte - iOS</span><span class="sxs-lookup"><span data-stu-id="cd34a-102">Render a card - iOS</span></span>
+# <a name="render-a-card---ios"></a><span data-ttu-id="43bbc-102">Effectuer le rendu d’une carte – iOS</span><span class="sxs-lookup"><span data-stu-id="43bbc-102">Render a card - iOS</span></span>
 
-<span data-ttu-id="cd34a-103">Voici comment effectuer le rendu d’une carte à l’aide du SDK iOS.</span><span class="sxs-lookup"><span data-stu-id="cd34a-103">Here's how to render a card using the iOS SDK.</span></span>
+<span data-ttu-id="43bbc-103">Voici comment effectuer le rendu d’une carte à l’aide du Kit de développement logiciel (SDK) iOS.</span><span class="sxs-lookup"><span data-stu-id="43bbc-103">Here's how to render a card using the iOS SDK.</span></span>
 
-## <a name="create-a-card-from-a-json-string"></a><span data-ttu-id="cd34a-104">Créer une carte à partir d’une chaîne JSON</span><span class="sxs-lookup"><span data-stu-id="cd34a-104">Create a card from a JSON string</span></span>
+## <a name="create-a-card-from-a-json-string"></a><span data-ttu-id="43bbc-104">Créer une carte à partir d’une chaîne JSON</span><span class="sxs-lookup"><span data-stu-id="43bbc-104">Create a card from a JSON string</span></span>
 
-<span data-ttu-id="cd34a-105">AdaptiveCard est généré à partir de la chaîne JSON</span><span class="sxs-lookup"><span data-stu-id="cd34a-105">AdaptiveCard is generated from JSON string</span></span>
+<span data-ttu-id="43bbc-105">Une AdaptiveCard est générée à partir de la chaîne JSON :</span><span class="sxs-lookup"><span data-stu-id="43bbc-105">AdaptiveCard is generated from JSON string</span></span>
 
 ```objective-c
-ACOParseResult *cardParseResult = [ACOAdaptiveCards FromJson:jsonStr];
+
+NSString *jsonStr = @"{ \"type\": \"AdaptiveCard\", \"version\": \"1.0\", \"body\": [ { \"type\": \"Image\", \"url\": \"http://adaptivecards.io/content/adaptive-card-50.png\", \"horizontalAlignment\":\"center\" }, { \"type\": \"TextBlock\", \"horizontalAlignment\":\"center\", \"text\": \"Hello **Adaptive Cards!**\" } ], \"actions\": [ { \"type\": \"Action.OpenUrl\", \"title\": \"Learn more\", \"url\": \"http://adaptivecards.io\" }, { \"type\": \"Action.OpenUrl\", \"title\": \"GitHub\", \"url\": \"http://github.com/Microsoft/AdaptiveCards\" } ] }";
+ACOAdaptiveCardParseResult *cardParseResult = [ACOAdaptiveCard fromJson:jsonStr];
+
 /// access for parse warnings and errors
 NSArray<NSError *> errors = cardParseResult.parseErrors;
 NSArray<ACRParseWarning *> warnings = cardPraseResult.parseWarnings;
 ```
 
-## <a name="render-a-card"></a><span data-ttu-id="cd34a-106">Afficher une carte</span><span class="sxs-lookup"><span data-stu-id="cd34a-106">Render a Card</span></span>
+## <a name="render-a-card"></a><span data-ttu-id="43bbc-106">Effectuer le rendu d’une carte</span><span class="sxs-lookup"><span data-stu-id="43bbc-106">Render a Card</span></span>
 
-<span data-ttu-id="cd34a-107">Rederer prend carte adaptative et configuration de l’hôte. HostConfig peut être nil, et si elle est nulle, valeur de la valeur par défaut sera utilisée.</span><span class="sxs-lookup"><span data-stu-id="cd34a-107">Rederer takes adaptive card and host config. HostConfig can be nil, and if nil, default value will be used.</span></span>
+<span data-ttu-id="43bbc-107">Le convertisseur prend une carte adaptative et une configuration d’hôte. HostConfig peut être nil, auquel cas la valeur par défaut sera utilisée.</span><span class="sxs-lookup"><span data-stu-id="43bbc-107">Rederer takes adaptive card and host config. HostConfig can be nil, and if nil, default value will be used.</span></span>
+<span data-ttu-id="43bbc-108">L’UIView retourné utilise autolayout.</span><span class="sxs-lookup"><span data-stu-id="43bbc-108">Returned UIView uses autolayout.</span></span> <span data-ttu-id="43bbc-109">La largeur sera contrainte à la valeur définie par widthConstraint.</span><span class="sxs-lookup"><span data-stu-id="43bbc-109">Width will be constraint to the value set by widthConstraint.</span></span> <span data-ttu-id="43bbc-110">Si la valeur 0 est utilisée, elle n’est pas liée.</span><span class="sxs-lookup"><span data-stu-id="43bbc-110">If 0 value is used, it won't be bound.</span></span>
+<span data-ttu-id="43bbc-111">La hauteur n’est pas liée et, quand elle est retournée, elle a la hauteur des sommes de tous les contenus rendus.</span><span class="sxs-lookup"><span data-stu-id="43bbc-111">Height is not bound, and when returned it will have the height of sums of all contents rendered.</span></span> <span data-ttu-id="43bbc-112">Pour lier la dimension de la vue, utilisez NSLayoutConstraint.</span><span class="sxs-lookup"><span data-stu-id="43bbc-112">To bound the view dimension, please use NSLayoutConstraint.</span></span> <span data-ttu-id="43bbc-113">La dimension exacte est accessible à partir du contexte de la viewDidLayoutSubview du viewcontroller de sa superview, ou sa méthode du même nom en cas d’utilisation d’ACRViewController.</span><span class="sxs-lookup"><span data-stu-id="43bbc-113">The exact dimension is accessible from the context of viewDidLayoutSubview of its superview's viewcontroller or its method with the same name if ACRViewController is used.</span></span>
 
 ```objective-c
 ACRRenderResult *renderResult;
-renderResult = [ACRRenderer render:cardParseResult.card
-                            config:nil
-                   widthConstraint:300.0];
+if(cardParseResult.isValid){
+    renderResult = [ACRRenderer render:cardParseResult.card config:nil widthConstraint:335];
+}
 ``` 
-
-### <a name="example"></a><span data-ttu-id="cd34a-108">Exemple</span><span class="sxs-lookup"><span data-stu-id="cd34a-108">Example</span></span>
+### <a name="example"></a><span data-ttu-id="43bbc-114">Exemple</span><span class="sxs-lookup"><span data-stu-id="43bbc-114">Example</span></span>
 
 ```objective-c
-ACRRenderResult *renderResult;
-ACOHostConfigParseResult *hostconfigParseResult = [ACOHostConfig FromJson:self.hostconfig];
-ACOAdaptiveCardsParseResult *cardParseResult       = [ACOAdaptiveCards FromJson:jsonStr];
+--------------------------------------------------------------------------------
+ViewController.m
+--------------------------------------------------------------------------------
+#import "ViewController.h"
+#import <SafariServices/SafariServices.h>
 
-// checking parse result
-if(hostconfigParseResult.IsValid == YES && cardParseResult.IsValid == YES)
+@interface ViewController ()
+
+@end
+
+@implementation ViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+
+    NSString *jsonStr = @"{ \"type\": \"AdaptiveCard\", \"version\": \"1.0\", \"body\": [ { \"type\": \"Image\", \"url\": \"http://adaptivecards.io/content/adaptive-card-50.png\", \"horizontalAlignment\":\"center\" }, { \"type\": \"TextBlock\", \"horizontalAlignment\":\"center\", \"text\": \"Hello **Adaptive Cards!**\" } ], \"actions\": [ { \"type\": \"Action.OpenUrl\", \"title\": \"Learn more\", \"url\": \"http://adaptivecards.io\" }, { \"type\": \"Action.OpenUrl\", \"title\": \"GitHub\", \"url\": \"http://github.com/Microsoft/AdaptiveCards\" } ] }";
+    ACRRenderResult *renderResult;
+    ACOAdaptiveCardParseResult *cardParseResult = [ACOAdaptiveCard fromJson:jsonStr];
+    if(cardParseResult.isValid){
+        renderResult = [ACRRenderer render:cardParseResult.card config:nil widthConstraint:335];
+    }
+
+    if(renderResult.succeeded)
+    {
+        ACRView *ad = renderResult.view;
+        ad.acrActionDelegate = self;
+        
+        UIView *view = self.view;
+        view.autoresizingMask |= UIViewAutoresizingFlexibleHeight;
+        [self.view addSubview:ad];
+        ad.translatesAutoresizingMaskIntoConstraints = NO;
+        
+        [NSLayoutConstraint constraintWithItem:ad attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:view attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0].active = YES;
+
+        [NSLayoutConstraint constraintWithItem:ad attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:view attribute:NSLayoutAttributeCenterY multiplier:1.0 constant:3].active = YES;
+    }
+}
+
+- (void)didFetchUserResponses:(ACOAdaptiveCard *)card action:(ACOBaseActionElement *)action
 {
-    renderResult = [ACRRenderer render:cardParseResult.card
-                                config:hostconfigParseResult.config
-                       widthConstraint:300.0];
-}   
+    if(action.type == ACROpenUrl){
+        NSURL *url = [NSURL URLWithString:[action url]];
+        SFSafariViewController *svc = [[SFSafariViewController alloc] initWithURL:url];
+        [self presentViewController:svc animated:YES completion:nil];
+    }
+}
+
+@end
+
+```
+
+```swift
+--------------------------------------------------------------------------------
+ViewController.swft
+--------------------------------------------------------------------------------
+
+import UIKit
+import SafariServices
+
+class ViewController: UIViewController, ACRActionDelegate {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        let jsonStr = "{ \"type\": \"AdaptiveCard\", \"version\": \"1.0\", \"body\": [ { \"type\": \"Image\", \"url\": \"http://adaptivecards.io/content/adaptive-card-50.png\", \"horizontalAlignment\":\"center\" }, { \"type\": \"TextBlock\", \"horizontalAlignment\":\"center\", \"text\": \"Hello **Adaptive Cards!**\" } ], \"actions\": [ { \"type\": \"Action.OpenUrl\", \"title\": \"Learn more\", \"url\": \"http://adaptivecards.io\" }, { \"type\": \"Action.OpenUrl\", \"title\": \"GitHub\", \"url\": \"http://github.com/Microsoft/AdaptiveCards\" } ] }";
+
+        let cardParseResult = ACOAdaptiveCard.fromJson(jsonStr);
+        if((cardParseResult?.isValid)!){
+            let renderResult = ACRRenderer.render(cardParseResult!.card, config: nil, widthConstraint: 335);
+
+            if(renderResult?.succeeded ?? false)
+            {
+                let ad = renderResult?.view;
+                ad!.acrActionDelegate = (self as ACRActionDelegate);
+                self.view.autoresizingMask = [.flexibleHeight];
+                self.view.addSubview(ad!);
+                ad!.translatesAutoresizingMaskIntoConstraints = false;
     
-if(renderResult.Suceeded == YES)
-{
-    // access returned UIView object
-    ACRView *adaptiveView = renderResult.view;
-    [self.view addSubview:adcVc.view];
+                NSLayoutConstraint(item: ad!, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1.0, constant: 0).isActive = true;
+                NSLayoutConstraint(item: ad!, attribute: .centerY, relatedBy: .equal, toItem: view, attribute: .centerY, multiplier: 1.0, constant: 3).isActive = true;
+            }
+        }
+    }
+
+    func didFetchUserResponses(_ card: ACOAdaptiveCard, action: ACOBaseActionElement)
+    {
+        if(action.type == ACRActionType.openUrl){
+            let url = URL.init(string:action.url());
+            let svc = SFSafariViewController.init(url: url!);
+            self.present(svc, animated: true, completion: nil);
+        }
+    }
+
 }
-```
-
-### <a name="render-a-card-as-uiviewcontroller"></a><span data-ttu-id="cd34a-109">Afficher une carte en tant que UIViewController</span><span class="sxs-lookup"><span data-stu-id="cd34a-109">Render a Card as UIViewController</span></span>
-
-<span data-ttu-id="cd34a-110">Convertisseur de AdaptiveCard peut également retourner UIViewController.</span><span class="sxs-lookup"><span data-stu-id="cd34a-110">AdaptiveCard renderer can also return UIViewController.</span></span>
-
-```objective-c
-ACRRenderResult *renderResult = [ACRRenderer renderAsViewController:card config:config frame:frame delegate:acrActionDelegate];
-
-renderResult.viewif(renderResult.Suceeded == YES)
-{
-    ACRViewController *adaptiveViewController = renderResult.viewcontroller;
-    [self addChildViewController:adaptiveViewController];
-    [self.view addSubview:adaptiveViewController.view];
-    [adaptiveViewController didMoveToParentViewController:self];
-    ...
-}
-```
-
-<span data-ttu-id="cd34a-111">Retourné Qu'uiview utilise la mise en forme automatique.</span><span class="sxs-lookup"><span data-stu-id="cd34a-111">Returned UIView uses autolayout.</span></span> <span data-ttu-id="cd34a-112">La largeur sera contrainte à la valeur définie par widthConstraint.</span><span class="sxs-lookup"><span data-stu-id="cd34a-112">Width will be constraint to the value set by widthConstraint.</span></span> <span data-ttu-id="cd34a-113">Si la valeur 0 est utilisée, il ne sera pas lié.</span><span class="sxs-lookup"><span data-stu-id="cd34a-113">If 0 value is used, it won't be bound.</span></span>
-<span data-ttu-id="cd34a-114">Hauteur n’est pas liée et lorsque retourné elle aura la hauteur de sommes de tout le contenu rendu.</span><span class="sxs-lookup"><span data-stu-id="cd34a-114">Height is not bound, and when returned it will have the height of sums of all contents rendered.</span></span> <span data-ttu-id="cd34a-115">Pour lier la dimension de la vue, utilisez NSLayoutConstraint.</span><span class="sxs-lookup"><span data-stu-id="cd34a-115">To bound the view dimension, please use NSLayoutConstraint.</span></span> <span data-ttu-id="cd34a-116">La dimension exacte est accessible à partir du contexte de viewDidLayoutSubview de viewcontroller de sa superview ou sa méthode portant le même nom si ACRViewController est utilisé.</span><span class="sxs-lookup"><span data-stu-id="cd34a-116">The exact dimension is accessible from the context of viewDidLayoutSubview of its superview's viewcontroller or its method with the same name if ACRViewController is used.</span></span>
-
-
-### <a name="compact-style-inputchoiceset"></a><span data-ttu-id="cd34a-117">Style compact Input.ChoiceSet</span><span class="sxs-lookup"><span data-stu-id="cd34a-117">Compact Style Input.ChoiceSet</span></span>
-
-<span data-ttu-id="cd34a-118">Représentation de l’interface utilisateur de Input.ChoiceSet a UINavigationController, et il doit être présenté à un UIViewController actuellement actif pour une transition vers UIView qui permet la sélection de l’utilisateur.</span><span class="sxs-lookup"><span data-stu-id="cd34a-118">UI representation of Input.ChoiceSet has UINavigationController, and it needs to be presented to a presently active UIViewController to transition into UIView that allows user selection.</span></span>
-
-<span data-ttu-id="cd34a-119">Pour cela, veuillez mettre en œuvre didFecthSecondaryView de ACRActionDelegate.</span><span class="sxs-lookup"><span data-stu-id="cd34a-119">To accomplish that, please implement didFecthSecondaryView of ACRActionDelegate.</span></span>
-
-```objective-c
-- (void)didFetchSecondaryView:(ACOAdaptiveCard *)card navigationController:(UINavigationController *)navigationController{
-    [self presentViewController:navigationController animated:YES completion:nil];
-}  
-```
-
-<span data-ttu-id="cd34a-120">Si le biais du délégué n’a pas été raccordé, faites-le.</span><span class="sxs-lookup"><span data-stu-id="cd34a-120">If the delgate has not been hooked up, do so.</span></span>
-
-```objective-c
-adaptiveView.acrActionDelegate = self
 ```

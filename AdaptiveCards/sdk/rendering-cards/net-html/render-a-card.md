@@ -1,23 +1,23 @@
 ---
-title: Afficher une carte - Kit de développement logiciel .NET HTML
+title: Effectuer le rendu d’une carte – Kit de développement logiciel (SDK) HTML .NET
 author: matthidinger
 ms.author: mahiding
 ms.date: 10/19/2017
 ms.topic: article
-ms.openlocfilehash: 8dc1baffb91f0755f1955ee02b8a3e820b0d34e4
-ms.sourcegitcommit: 99c7b64d6fc66da336c454951406fb42cd2a7427
+ms.openlocfilehash: 1bc1a225fc731aeb8e66bde1ef21a9443e74c8b1
+ms.sourcegitcommit: e002a988c570072d5bc24a1242eaaac0c9ce90df
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59553101"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67134178"
 ---
-# <a name="render-a-card---net-html"></a><span data-ttu-id="01e1b-102">Afficher une carte - HTML de .NET</span><span class="sxs-lookup"><span data-stu-id="01e1b-102">Render a card - .NET HTML</span></span>
+# <a name="render-a-card---net-html"></a><span data-ttu-id="88809-102">Effectuer le rendu d’une carte – HTML .NET</span><span class="sxs-lookup"><span data-stu-id="88809-102">Render a card - .NET HTML</span></span>
 
-<span data-ttu-id="01e1b-103">Voici comment effectuer le rendu d’une carte à l’aide du Kit de développement logiciel .NET HTML.</span><span class="sxs-lookup"><span data-stu-id="01e1b-103">Here's how to render a card using the .NET HTML SDK.</span></span>
+<span data-ttu-id="88809-103">Voici comment effectuer le rendu d’une carte à l’aide du Kit de développement logiciel (SDK) HTML .NET.</span><span class="sxs-lookup"><span data-stu-id="88809-103">Here's how to render a card using the .NET HTML SDK.</span></span>
 
-## <a name="instantiate-a-renderer"></a><span data-ttu-id="01e1b-104">Instancier un convertisseur</span><span class="sxs-lookup"><span data-stu-id="01e1b-104">Instantiate a renderer</span></span>
+## <a name="instantiate-a-renderer"></a><span data-ttu-id="88809-104">Instancier un convertisseur</span><span class="sxs-lookup"><span data-stu-id="88809-104">Instantiate a renderer</span></span>
 
-<span data-ttu-id="01e1b-105">L’étape suivante consiste à créer une instance du convertisseur.</span><span class="sxs-lookup"><span data-stu-id="01e1b-105">The next step is to create an instance of the renderer.</span></span> 
+<span data-ttu-id="88809-105">L’étape suivante consiste à créer une instance du convertisseur.</span><span class="sxs-lookup"><span data-stu-id="88809-105">The next step is to create an instance of the renderer.</span></span> 
 
 ```csharp
 using AdaptiveCards;
@@ -32,7 +32,7 @@ AdaptiveCardRenderer renderer = new AdaptiveCardRenderer();
 AdaptiveSchemaVersion schemaVersion = renderer.SupportedSchemaVersion; // 1.0
 ```
 
-## <a name="render-a-card-to-html"></a><span data-ttu-id="01e1b-106">Afficher une carte au format HTML</span><span class="sxs-lookup"><span data-stu-id="01e1b-106">Render a card to HTML</span></span>
+## <a name="render-a-card-to-html"></a><span data-ttu-id="88809-106">Effectuer le rendu d’une carte au format HTML</span><span class="sxs-lookup"><span data-stu-id="88809-106">Render a card to HTML</span></span>
 
 ```csharp
 // Build a simple card
@@ -52,7 +52,7 @@ try
 
     // (Optional) Check for any renderer warnings
     // This includes things like an unknown element type found in the card
-    // Or the card exceeded the maxmimum number of supported actions, etc
+    // Or the card exceeded the maximum number of supported actions, etc
     IList<AdaptiveWarning> warnings = renderedCard.Warnings;
 }
 catch(AdaptiveException ex)
