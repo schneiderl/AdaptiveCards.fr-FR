@@ -5,27 +5,27 @@ ms.author: mahiding
 ms.date: 11/9/2017
 ms.topic: article
 ms.openlocfilehash: 9d363da0c10b242e23d2594984292fcc1f31382f
-ms.sourcegitcommit: 99c7b64d6fc66da336c454951406fb42cd2a7427
-ms.translationtype: MT
+ms.sourcegitcommit: e002a988c570072d5bc24a1242eaaac0c9ce90df
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
+ms.lasthandoff: 06/17/2019
 ms.locfileid: "59552681"
 ---
 # <a name="getting-started"></a>Prise en main 
 
-Une carte adaptative est un modèle d’objet de carte sérialisé en JSON.
+Une carte adaptative est un modèle d'objet de carte sérialisé au format JSON.
 
-## <a name="adaptive-card-structure"></a>Structure de carte adaptative
+## <a name="adaptive-card-structure"></a>Structure d'une carte adaptative
 
-La structure de base d’une carte est comme suit :
+La structure de base d'une carte est la suivante :
 
-* `AdaptiveCard` -L’objet racine décrit le AdaptiveCard lui-même, y compris sa composition de l’élément, ses actions, comment il doit être prononcé et la version de schéma requise pour l’afficher.
-* `body` : Le corps de la carte est constitué des blocs de construction appelé `elements`. Éléments peuvent être composées dans des dispositions presque illimitées pour créer de nombreux types de cartes. 
-* `actions` -Nombre de cartes ont un ensemble d’actions qu'utilisateur peut prendre le dessus. Cette propriété décrit ces actions généralement obtient restituée dans une barre d’action « » en bas.
+* `AdaptiveCard` : l'objet racine décrit la carte adaptative proprement dite, avec sa composition en termes d'éléments, ses actions, la façon dont elle doit être lue et la version du schéma requise pour la restituer.
+* `body` : le corps de la carte est constitué de blocs de construction appelés `elements`. Les éléments peuvent être composés selon des combinaisons quasiment infinies pour créer de nombreux types de cartes. 
+* `actions` : beaucoup de cartes disposent d'un ensemble d'actions applicables par l'utilisateur. Cette propriété décrit les actions qui sont généralement présentées sur une « barre d'action », en bas.
 
-### <a name="example-card"></a>Carte de l’exemple
+### <a name="example-card"></a>Exemple de carte
 
-Cette carte exemple qui inclut une seule ligne de texte suivie d’une image.
+Cet exemple de carte comprend une ligne de texte suivie d'une image.
 
 ```json
 {
@@ -46,50 +46,50 @@ Cette carte exemple qui inclut une seule ligne de texte suivie d’une image.
 
 ## <a name="type-property"></a>Propriété `Type`
 
-Chaque élément a un `type` est la propriété qui identifie quel type d’objet. En examinant la carte ci-dessus, vous pouvez voir nous avons deux éléments, un `TextBlock` et un `Image`.
+Chaque élément possède une propriété `type` qui identifie le type d'objet dont il s'agit. En examinant la carte ci-dessus, vous pouvez constater que nous disposons de deux éléments : `TextBlock` et `Image`.
 
-Tous les éléments de carte adaptative **empilent verticalement** et **développez à la largeur de leur parent** (pensez `display: block` au format HTML). Toutefois, vous pouvez utiliser un `ColumnSet` pour créer des colonnes côte à côte de conteneurs.
+Tous les éléments de la carte adaptative **sont empilés verticalement** et **s'étendent sur la largeur de leur parent** (pensez à `display: block` en HTML). Vous pouvez toutefois utiliser `ColumnSet` pour créer des colonnes de conteneurs côte à côte.
 
-## <a name="adaptive-elements"></a>Éléments ADAPTATIF
+## <a name="adaptive-elements"></a>Éléments adaptatifs
 
-Les éléments principaux sont :
+Les principaux éléments sont les suivants :
 
-* **TextBlock** -ajoute un bloc de texte avec des propriétés pour contrôler l’aspect du texte
-* **Image** -ajoute une image avec les propriétés qui contrôlent l’aspect de l’image
+* **TextBlock** : ajoute un bloc de texte avec des propriétés permettant de contrôler l'aspect du texte.
+* **Image** : ajoute une image avec des propriétés permettant de contrôler l'aspect de l'image.
 
 ## <a name="container-elements"></a>Éléments conteneurs
 
-Les cartes peuvent également avoir des conteneurs, qui organisent une collection d’éléments enfants.
+Les cartes peuvent également comporter des conteneurs, qui permettent d'organiser une collection d'éléments enfants.
 
-* **Conteneur** -définit une collection d’éléments
-* **Jeu de colonnes/colonne** -définit une collection de colonnes, chaque colonne est un conteneur
-* **FactSet** -conteneur de faits
-* **ImageSet** -expérience de galerie pour une collection d’images de photos d’Images de conteneur afin que l’interface utilisateur peut afficher appropriée.
+* **Container** : définit une collection d'éléments.
+* **ColumnSet/Column** : définit une collection de colonnes ; chaque colonne est un conteneur.
+* **FactSet** : conteneur de faits.
+* **ImageSet** : conteneur d'images permettant à l'interface utilisateur d'afficher l'expérience de galerie photo appropriée pour une collection d'images.
 
-## <a name="input-elements"></a>Éléments d’entrée
+## <a name="input-elements"></a>Éléments d'entrée
 
-Éléments d’entrée vous autorise à demander de l’interface utilisateur native créer des formulaires simples :
+Les éléments d'entrée vous permettent de demander une interface utilisateur native pour créer des formulaires simples :
 
-* **Input.Text** -obtenir le contenu de texte à partir de l’utilisateur
-* **Input.Date** -obtenir une Date de l’utilisateur
-* **Input.Time** -obtenir un temps de l’utilisateur
-* **Input.Number** -obtenir un nombre à partir de l’utilisateur
-* **Input.ChoiceSet** : donner à l’utilisateur un ensemble de choix et demandez-lui de prélèvement
-* **Input.Toggle** : donner à l’utilisateur un choix unique entre deux éléments et les sélectionner
+* **Input.Text** : obtenir du contenu textuel auprès de l'utilisateur.
+* **Input.Date** : obtenir une date auprès de l'utilisateur.
+* **Input.Time** : obtenir une heure auprès de l'utilisateur.
+* **Input.Number** : obtenir un nombre auprès de l'utilisateur.
+* **Input.ChoiceSet** : donner à l'utilisateur un ensemble de possibilités et lui demander de choisir.
+* **Input.Toggle** : donner à l'utilisateur de faire un choix entre deux éléments.
 
 ## <a name="actions"></a>Actions
 
-Actions ajoutent des boutons à la carte. Il peuvent effectuer diverses actions, telles que l’ouverture d’une URL ou l’envoi des données.
+Les actions ajoutent des boutons à la carte. Ceux-ci permettent d'effectuer différents types d'actions, comme l'ouverture d'une URL ou l'envoi de certaines données.
 
-* **Action.OpenUrl** -le bouton ouvre une URL externe pour l’affichage
-* **Action.ShowCard** -demande une carte secondaires à afficher à l’utilisateur.
-* **Action.Submit** -poser pour tous les éléments d’entrée à collecter dans un objet qui est ensuite envoyé via une méthode définie par l’application hôte pour vous.
+* **Action.OpenUrl** : le bouton ouvre une URL externe à des fins d'affichage.
+* **Action.ShowCard** : permet de demander de présenter une sous-carte à l'utilisateur.
+* **Action.Submit** : permet de demander de regrouper tous les éléments d'entrée au sein d'un même objet, qui vous est ensuite envoyé via une méthode définie par l'application hôte.
 
-> **Exemple Action.Submit**: Avec Skype, un Action.Submit renverra un robot de Bot Framework activité au robot avec le **valeur** propriété contenant un objet avec toutes les données d’entrée sur ce dernier.
+> **Example Action.Submit** : avec Skype, Action.Submit renvoie une activité Bot Framework au bot. La propriété **Value** comporte un objet contenant toutes les données d'entrée.
 
 ## <a name="learn-more"></a>En savoir plus
 
-* [Parcourir les cartes d’exemple](http://adaptivecards.io/samples/) d’inspiration
-* Utilisez le [Explorateur de schémas](http://adaptivecards.io/explorer) pour parcourir les éléments disponibles
-* Générer une carte à l’aide de la [visualiseur Interactive](http://adaptivecards.io/visualizer/)
-* [Nous contacter](http://adaptivecards.io/connect) avec vos commentaires
+* [Parcourir des exemples de cartes](http://adaptivecards.io/samples/) pour trouver l'inspiration
+* Utiliser l'[Explorateur de schémas](http://adaptivecards.io/explorer) pour parcourir les éléments disponibles
+* Générer une carte à l'aide du [Visualiseur interactif](http://adaptivecards.io/visualizer/)
+* [Nous contacter](http://adaptivecards.io/connect) pour nous faire part de vos commentaires

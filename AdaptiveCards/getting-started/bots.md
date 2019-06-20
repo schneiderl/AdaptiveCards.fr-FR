@@ -1,46 +1,46 @@
 ---
-title: Cartes adaptatives pour développeurs de robots
+title: Cartes adaptatives pour développeurs de bots
 author: matthidinger
 ms.author: mahiding
 ms.date: 05/30/2018
 ms.topic: article
 ms.openlocfilehash: 1acc30c0347ea5527de2af1fe74e605c7589cbc6
-ms.sourcegitcommit: 99c7b64d6fc66da336c454951406fb42cd2a7427
-ms.translationtype: MT
+ms.sourcegitcommit: e002a988c570072d5bc24a1242eaaac0c9ce90df
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
+ms.lasthandoff: 06/17/2019
 ms.locfileid: "59553281"
 ---
-# <a name="adaptive-cards-for-bot-developers"></a>Cartes adaptatives pour développeurs de robots
+# <a name="adaptive-cards-for-bot-developers"></a>Cartes adaptatives pour développeurs de bots
 
-Des cartes adaptatives sont parfaits pour les robots. Elles vous permettent de créer une carte qu’une seule fois et de la rendre parfaitement à l’intérieur de plusieurs applications, comme Microsoft Teams, votre propre site Web et bien plus encore.
+Les cartes adaptatives conviennent parfaitement aux bots. Vous pouvez créer une carte une bonne fois pour toutes et la présenter dans différentes applications, comme Microsoft Teams, votre site web, etc.
 
 > [!NOTE]
-> Skype n’est pas pris en charge dans la version préliminaire actuelle. Consultez le [statut de partenaire](../resources/partners.md) page pour la dernière version.
+> Skype n'est pas pris en charge dans la préversion actuelle. Consultez la page [Statut partenaire](../resources/partners.md) pour accéder aux dernières informations.
 
 ## <a name="try-it-out"></a>Faire un essai
 
-Cliquez sur le lien suivant et [communiquer avec notre robot lance](http://contososcubademo.azurewebsites.net/). Par exemple `I'm looking for scuba` et il vous aiderons à réserver le voyage de prendre des cours de vos rêves.  
+Cliquez sur le lien suivant et [parlez à notre Scuba Bot](http://contososcubademo.azurewebsites.net/). Dites `I'm looking for scuba` et il vous aidera à réserver le voyage de plongée de vos rêves.  
 
-Toutes les réponses du robot sont créés avec des cartes adaptatives.
+Toutes les réponses du bot sont créées à l'aide de cartes adaptatives.
 
-[![Capture d’écran de conversation de plan](media/bots/scuba-chat.png)](http://contososcubademo.azurewebsites.net/)
+[![Capture d'écran de la conversation de plongée](media/bots/scuba-chat.png)](http://contososcubademo.azurewebsites.net/)
 
-**Obtenir le code**: la version complète [Contoso lance Bot de code source](https://github.com/matthidinger/ContosoScubaBot
-) trouverez sur GitHub.
+**Obtenez le code** : le [code source complet de Contoso Scuba Bot](https://github.com/matthidinger/ContosoScubaBot
+) est disponible sur GitHub.
 
 
 ## <a name="bot-framework-integration"></a>Intégration de Bot Framework
 
-Avec le [Bot Framework](https://dev.botframework.com/) vous pouvez écrire un seul robot est en mesure de conversation avec des utilisateurs sur plusieurs « canaux », tels que Skype, Microsoft Teams, Facebook Messenger, etc.
+[Bot Framework](https://dev.botframework.com/) vous permet de créer un bot capable de converser avec des utilisateurs sur plusieurs « canaux », comme Skype, Microsoft Teams, Facebook Messenger, etc.
 
 ## <a name="walkthrough"></a>Démonstration
 
-Il est assez simple pour ajouter une carte adaptative à votre robot.
+L'ajout d'une carte adaptative à votre bot est très simple.
 
-### <a name="step-0-start-with-a-basic-message"></a>Étape 0 : Démarrer avec un message de base
+### <a name="step-0-start-with-a-basic-message"></a>Étape 0 : commencez avec un message de base
 
-Voici un Bot Framework standard `message` charge utile qui peut être remis à n’importe quel canal et affiche le texte à l’utilisateur.
+Voici une charge utile `message` d'un Bot Framework standard qui peut être transmise à n'importe quel canal et afficher du texte à l'utilisateur.
 
 ```json
 {
@@ -49,13 +49,13 @@ Voici un Bot Framework standard `message` charge utile qui peut être remis à n
 }
 ```
 
-### <a name="step-1-add-an-adaptive-card-attachment"></a>Étape 1 : Ajouter une carte adaptative `attachment`
+### <a name="step-1-add-an-adaptive-card-attachment"></a>Étape 1 : ajoutez une carte adaptative `attachment`
 
-Pour ajouter une richesse au-delà uniquement le texte, Bot Framework a un concept de `attachments`. 
+Pour enrichir le contenu en plus du texte, le Bot Framework utilise le concept de `attachments`. 
 
-Nous allons attacher une carte adaptative qui affiche le texte personnalisé.
+Joignons une carte adaptative affichant du texte personnalisé.
 
-![Base carte adaptative](media/bots/hello-adaptivecards.png)
+![Carte adaptative de base](media/bots/hello-adaptivecards.png)
 
 ```json
 {
@@ -96,39 +96,39 @@ Nous allons attacher une carte adaptative qui affiche le texte personnalisé.
 }
 ```
 
-### <a name="step-2-build-even-richer-cards"></a>Étape 2 : Créer des cartes encore plus riches 
+### <a name="step-2-build-even-richer-cards"></a>Étape 2 : créez des cartes encore plus riches 
 
-Des cartes adaptatives offrent beaucoup plus que simplement personnalisable texte. 
+Les cartes adaptatives offrent bien plus que du texte personnalisable. 
 
 Vous pouvez : 
 
-* Ajouter `Images` sur votre carte
-* Organiser votre contenu avec `Containers` et `Columns`
-* Ajouter plusieurs types de `Actions`
-* Collecter `Input` à partir de vos utilisateurs
-* Disposer d’une carte `show another card`
-* [Découvrez l’Explorateur de schémas complète](http://adaptivecards.io/explorer/)! 
+* Ajouter des `Images` à votre carte
+* Organiser votre contenu avec des `Containers` et des `Columns`
+* Ajouter différents types d'`Actions`
+* Recueillir des `Input` auprès de vos utilisateurs
+* Faire en sorte qu'une carte affiche une autre carte : `show another card`
+* [Accédez à l'Explorateur de schémas complet](http://adaptivecards.io/explorer/) ! 
 
-## <a name="platform-sdks"></a>Kits SDK de plateforme
+## <a name="platform-sdks"></a>Kits de développement logiciels (SDK) pour plateformes
 
-Si votre robot est développé à l’aide de .NET ou Node.js, nous avons des bibliothèques à facilitent la création des cartes adaptatives encore plus facile.
+Si vous développez votre bot via .NET ou NodeJS, nous disposons de bibliothèques pour faciliter la création de cartes adaptatives.
 
-Plateforme|Installation|En savoir plus
+Plateforme|Installer|En savoir plus
 --------|-------|----------
-.NET | `Install-Package AdaptiveCards -IncludePrerelease` | [Documentation de .NET Framework Bot](https://docs.microsoft.com/en-us/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments)
-NodeJS | `npm install adaptivecards` | [Bot Framework NodeJS Docs](https://docs.microsoft.com/en-us/bot-framework/nodejs/bot-builder-nodejs-send-rich-cards)
+.NET | `Install-Package AdaptiveCards -IncludePrerelease` | [Documentation Bot Framework .NET](https://docs.microsoft.com/en-us/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments)
+NodeJS | `npm install adaptivecards` | [Documentation Bot Framework NodeJS](https://docs.microsoft.com/en-us/bot-framework/nodejs/bot-builder-nodejs-send-rich-cards)
 
 
 ## <a name="channel-status"></a>État du canal
 
-Le Bot Framework vous permet de publier votre robot à plusieurs canaux. Nous travaillons avec différents canaux pour fournir une prise en charge complète pour des cartes adaptatives. Consultez le [statut de partenaire](../resources/partners.md) page pour la dernière version.
+Bot Framework vous permet de publier votre bot sur différents canaux. Nous utilisons différents canaux pour fournir un support complet aux cartes adaptatives. Consultez la page [Statut partenaire](../resources/partners.md) pour accéder aux dernières informations.
 
 
-## <a name="dive-in"></a>Foncez !
+## <a name="dive-in"></a>Lancez-vous !
 
-Nous avons fait que gratter la surface dans ce didacticiel, donc Veuillez jetez un coup de œil sur les liens ci-dessous pour découvrir des façons plus que des cartes adaptatives peut améliorer votre robot.
+Ce didacticiel ne fait qu'effleurer le sujet. Nous vous invitons donc à utiliser les liens ci-dessous pour en savoir plus sur l'amélioration de votre bot à l'aide de cartes adaptatives.
 
-* [Parcourir les cartes d’exemple](http://adaptivecards.io/samples/) d’inspiration
-* Utilisez le [Explorateur de schémas](http://adaptivecards.io/explorer) pour en savoir plus les éléments disponibles
-* Générer une carte à l’aide de la [visualiseur Interactive](http://adaptivecards.io/visualizer/index.html?hostApp=Skype)
-* [Nous contacter](http://adaptivecards.io/connect) avec vos commentaires
+* [Parcourir des exemples de cartes](http://adaptivecards.io/samples/) pour trouver l'inspiration
+* Utiliser l'[Explorateur de schémas](http://adaptivecards.io/explorer) pour en savoir plus sur les éléments disponibles
+* Générer une carte à l'aide du [Visualiseur interactif](http://adaptivecards.io/visualizer/index.html?hostApp=Skype)
+* [Nous contacter](http://adaptivecards.io/connect) pour nous faire part de vos commentaires
