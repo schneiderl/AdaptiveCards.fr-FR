@@ -1,19 +1,19 @@
 ---
-title: Actions - Kit de développement logiciel Android
+title: Actions – Kit de développement logiciel (SDK) Android
 author: bekao
 ms.author: bekao
 ms.date: 09/27/2017
 ms.topic: article
-ms.openlocfilehash: b823b139a706e5149ff1cabc672f57cede4bfa33
-ms.sourcegitcommit: 99c7b64d6fc66da336c454951406fb42cd2a7427
+ms.openlocfilehash: e21c03e069e7ab29dd7d2724d49a2d439c67e5a1
+ms.sourcegitcommit: e002a988c570072d5bc24a1242eaaac0c9ce90df
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59552541"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67134261"
 ---
-# <a name="actions---android"></a>Actions - Android
+# <a name="actions---android"></a>Actions – Android
 
-Lorsqu’une action de cartes est exécutée, la classe qui a été passée à l’appel de rendu qui implémente l’interface ICardActionHandler est appelée. Voici comment définir votre gestionnaire d’actions :
+Lors de l’exécution d’une action de carte, la classe transmise à l’appel de rendu qui implémente l’interface ICardActionHandler est appelée. Voici comment définir votre gestionnaire d’actions :
 
 ```java
 public class ActionHandler implements ICardActionHandler
@@ -109,3 +109,15 @@ public class ActionHandler implements ICardActionHandler
     }
 }
 ```
+
+> [!IMPORTANT]
+> **Changements importants pour la version v1.1**
+> 
+> 1. L’élément multimédia inclus dans cette version requiert que deux nouvelles méthodes soient implémentées par les classes qui implémentent ICardActionHandler. Ces méthodes sont les suivantes :
+>
+> ```java
+> public void onMediaPlay(BaseCardElement mediaElement, RenderedAdaptiveCard renderedAdaptiveCard)
+> public void onMediaStop(BaseCardElement mediaElement, RenderedAdaptiveCard renderedAdaptiveCard)
+> ```
+>
+> La méthode onMediaPlay est appelée lorsque le bouton de lecture est utilisé pour la première fois dans un élément multimédia, tandis que la méthode onMediaStop est appelée lorsque l’élément multimédia atteint sa fin.

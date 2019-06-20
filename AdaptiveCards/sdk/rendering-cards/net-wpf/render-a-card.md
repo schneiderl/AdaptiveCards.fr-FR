@@ -1,28 +1,28 @@
 ---
-title: Afficher une carte - Kit de développement logiciel .NET WPF
+title: Effectuer le rendu d’une carte – Kit de développement logiciel (SDK) WPF .NET
 author: matthidinger
 ms.author: mahiding
 ms.date: 10/19/2017
 ms.topic: article
-ms.openlocfilehash: 6bc476c79c6d06c7ecb770fb1c3e89eb55e81b9a
-ms.sourcegitcommit: 99c7b64d6fc66da336c454951406fb42cd2a7427
+ms.openlocfilehash: f847b83a17456dbf80f869ef8ef0df699e57f50e
+ms.sourcegitcommit: e002a988c570072d5bc24a1242eaaac0c9ce90df
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59553471"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67134299"
 ---
-# <a name="render-a-card---net-wpf"></a>Afficher une carte - .NET WPF
+# <a name="render-a-card---net-wpf"></a>Effectuer le rendu d’une carte – WPF .NET
 
-Voici comment effectuer le rendu d’une carte à l’aide du SDK de WPF .NET.
+Voici comment effectuer le rendu d’une carte à l’aide du Kit de développement logiciel (SDK) WPF .NET.
 
 > [!NOTE]
-> **`Media` avec l’URL HTTPS, ne fonctionneront pas dans WPF**
+> **`Media` avec des URL HTTPS ne fonctionne pas en WPF**
 > 
-> Suite à un [bogue dans le contrôle MediaElement de WPF](https://stackoverflow.com/questions/30702505/playing-media-from-https-site-in-media-element-throwing-null-reference-exception) nous ne sommes pas capables de restituer de média pris en charge par le biais de HTTPS. Vous devez utiliser des URL HTTP dans le `Media` élément jusqu'à ce que ce problème soit résolu.  
+> Suite à un [bogue dans le contrôle WPF MediaElement](https://stackoverflow.com/questions/30702505/playing-media-from-https-site-in-media-element-throwing-null-reference-exception), nous ne pouvons pas effectuer le rendu d’éléments multimédias servis via HTTPS. En attendant ce que ce problème soit résolu, vous devez utiliser des URL HTTP dans l’élément `Media`.  
 
 ## <a name="instantiate-a-renderer"></a>Instancier un convertisseur
 
-Créez une instance de la bibliothèque de convertisseur. 
+Créez une instance de la bibliothèque du convertisseur. 
 
 ```csharp
 using AdaptiveCards;
@@ -40,12 +40,12 @@ renderer.UseXceedElementRenderers();
 AdaptiveSchemaVersion schemaVersion = renderer.SupportedSchemaVersion;
 ```
 
-## <a name="render-a-card-to-xaml"></a>Afficher une carte pour XAML
+## <a name="render-a-card-to-xaml"></a>Effectuer le rendu d’une carte au format XAML
 
 ```csharp
 // Build a simple card
 // In the real world this would probably be provided as JSON
-AdaptiveCard card = new AdaptiveCard()
+AdaptiveCard card = new AdaptiveCard("1.0")
 {
     Body = { new AdaptiveTextBlock() { Text = "Hello World" } }
 };
@@ -61,7 +61,7 @@ try
 
     // (Optional) Check for any renderer warnings
     // This includes things like an unknown element type found in the card
-    // Or the card exceeded the maxmimum number of supported actions, etc
+    // Or the card exceeded the maximum number of supported actions, etc
     IList<AdaptiveWarning> warnings = renderedCard.Warnings;
 }
 catch(AdaptiveException ex)
