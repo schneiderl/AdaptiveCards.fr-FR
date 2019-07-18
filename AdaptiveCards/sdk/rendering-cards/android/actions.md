@@ -4,16 +4,22 @@ author: bekao
 ms.author: bekao
 ms.date: 09/27/2017
 ms.topic: article
-ms.openlocfilehash: e21c03e069e7ab29dd7d2724d49a2d439c67e5a1
-ms.sourcegitcommit: e002a988c570072d5bc24a1242eaaac0c9ce90df
+ms.openlocfilehash: 49b0b45abeb54381bd7b4b548219a09ad5da10c1
+ms.sourcegitcommit: 8c8067206f283d97a5aa4ec65ba23d3fe18962f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67134261"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68299521"
 ---
-# <a name="actions---android"></a><span data-ttu-id="d260e-102">Actions – Android</span><span class="sxs-lookup"><span data-stu-id="d260e-102">Actions - Android</span></span>
+# <a name="actions---android"></a><span data-ttu-id="478b6-102">Actions – Android</span><span class="sxs-lookup"><span data-stu-id="478b6-102">Actions - Android</span></span>
 
-<span data-ttu-id="d260e-103">Lors de l’exécution d’une action de carte, la classe transmise à l’appel de rendu qui implémente l’interface ICardActionHandler est appelée.</span><span class="sxs-lookup"><span data-stu-id="d260e-103">When a cards action is executed, the class that was passed to the render call that implements the ICardActionHandler interface gets invoked.</span></span> <span data-ttu-id="d260e-104">Voici comment définir votre gestionnaire d’actions :</span><span class="sxs-lookup"><span data-stu-id="d260e-104">Here is how to define your action handler:</span></span>
+> [!IMPORTANT]
+> <span data-ttu-id="478b6-103">**Liste des modifications avec rupture**</span><span class="sxs-lookup"><span data-stu-id="478b6-103">**List of Breaking changes**</span></span>
+> 
+> [<span data-ttu-id="478b6-104">Modifications avec rupture dans v 1.1</span><span class="sxs-lookup"><span data-stu-id="478b6-104">Breaking changes in v1.1</span></span>](#breaking-changes-in-v11)
+> 
+
+<span data-ttu-id="478b6-105">Lorsqu’une action de cartes est exécutée, la classe qui a été passée à l’appel de rendu ```ICardActionHandler``` qui implémente l’interface est appelée.</span><span class="sxs-lookup"><span data-stu-id="478b6-105">When a cards action is executed, the class that was passed to the render call that implements the ```ICardActionHandler``` interface gets invoked.</span></span> <span data-ttu-id="478b6-106">Voici comment définir votre gestionnaire d’actions :</span><span class="sxs-lookup"><span data-stu-id="478b6-106">Here is how to define your action handler:</span></span>
 
 ```java
 public class ActionHandler implements ICardActionHandler
@@ -110,14 +116,50 @@ public class ActionHandler implements ICardActionHandler
 }
 ```
 
-> [!IMPORTANT]
-> <span data-ttu-id="d260e-105">**Changements importants pour la version v1.1**</span><span class="sxs-lookup"><span data-stu-id="d260e-105">**Breaking changes for v1.1**</span></span>
-> 
-> 1. <span data-ttu-id="d260e-106">L’élément multimédia inclus dans cette version requiert que deux nouvelles méthodes soient implémentées par les classes qui implémentent ICardActionHandler. Ces méthodes sont les suivantes :</span><span class="sxs-lookup"><span data-stu-id="d260e-106">The media element included in this version requires two new methods to be implemented by the classes that implement ICardActionHandler, these methods are</span></span>
->
-> ```java
-> public void onMediaPlay(BaseCardElement mediaElement, RenderedAdaptiveCard renderedAdaptiveCard)
-> public void onMediaStop(BaseCardElement mediaElement, RenderedAdaptiveCard renderedAdaptiveCard)
-> ```
->
-> <span data-ttu-id="d260e-107">La méthode onMediaPlay est appelée lorsque le bouton de lecture est utilisé pour la première fois dans un élément multimédia, tandis que la méthode onMediaStop est appelée lorsque l’élément multimédia atteint sa fin.</span><span class="sxs-lookup"><span data-stu-id="d260e-107">onMediaPlay is invoked when the play button is pressed for the first time in any media element, meanwhile onMediaStop is invoked when the media reaches it's end</span></span>
+## <a name="breaking-changes-in-v11"></a><span data-ttu-id="478b6-107">Modifications avec rupture dans v 1.1</span><span class="sxs-lookup"><span data-stu-id="478b6-107">Breaking changes in v1.1</span></span>
+
+<span data-ttu-id="478b6-108">L’élément multimédia inclus dans cette version requiert que deux nouvelles méthodes soient implémentées par les classes qui ```ICardActionHandler```implémentent, ces méthodes sont les suivantes:</span><span class="sxs-lookup"><span data-stu-id="478b6-108">The media element included in this version requires two new methods to be implemented by the classes that implement ```ICardActionHandler```, these methods are:</span></span>
+
+* <span data-ttu-id="478b6-109">```onMediaPlay```est appelé lorsque le bouton de lecture est enfoncé pour la première fois dans un élément multimédia</span><span class="sxs-lookup"><span data-stu-id="478b6-109">```onMediaPlay``` is invoked when the play button is pressed for the first time in any media element</span></span>
+* <span data-ttu-id="478b6-110">```onMediaStop```est appelé lorsque le média atteint son extrémité</span><span class="sxs-lookup"><span data-stu-id="478b6-110">```onMediaStop``` is invoked when the media reaches it's end</span></span>
+
+<span data-ttu-id="478b6-111">Les signatures pour ces méthodes sont les suivantes:</span><span class="sxs-lookup"><span data-stu-id="478b6-111">The signatures for these methods are:</span></span>
+
+```java
+public void onMediaPlay(BaseCardElement mediaElement, RenderedAdaptiveCard renderedAdaptiveCard)
+public void onMediaStop(BaseCardElement mediaElement, RenderedAdaptiveCard renderedAdaptiveCard)
+```
+
+<span data-ttu-id="478b6-112">Et l’implémentation de ActionHandler de l’exemple précédent ressemble à ce qui suit:</span><span class="sxs-lookup"><span data-stu-id="478b6-112">And the implementation for the ActionHandler from the previous example would now look similar to this:</span></span>
+
+```java
+public class ActionHandler implements ICardActionHandler
+{
+    @Override
+    public void onAction(BaseActionElement actionElement, RenderedAdaptiveCard renderedCard)
+    { }
+
+    private void onSubmit(BaseActionElement actionElement, RenderedAdaptiveCard renderedAdaptiveCard) 
+    { }
+
+    private void onShowCard(BaseActionElement actionElement)
+    { }
+
+    private void onOpenUrl(BaseActionElement actionElement)
+    { }
+
+    @Override
+    public void onMediaPlay(BaseCardElement mediaElement, RenderedAdaptiveCard renderedAdaptiveCard)
+    {
+        // Your logic here, i.e.
+        showToast("Media started: " + mediaElement, Toast.LENGTH_LONG);
+    }
+
+    @Override
+    public void onMediaStop(BaseCardElement mediaElement, RenderedAdaptiveCard renderedAdaptiveCard)
+    {
+        // Your logic here, i.e.
+        showToast("Media ended playing: " + mediaElement, Toast.LENGTH_LONG);
+    }
+}
+```
