@@ -1,31 +1,31 @@
 ---
-title: SDK .NET pour des cartes adaptatives
+title: Kit de développement logiciel (SDK) .NET pour cartes adaptatives
 author: matthidinger
 ms.author: mahiding
 ms.date: 10/01/2017
 ms.topic: article
-ms.openlocfilehash: 37dec7651a574194eb00d46014431dfb5764f9b7
-ms.sourcegitcommit: 99c7b64d6fc66da336c454951406fb42cd2a7427
+ms.openlocfilehash: fa86d83a8f20490ec286b69653099ac8cd81b8ef
+ms.sourcegitcommit: 4d80c553ab574befa8c84706fd85d22077915745
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59553741"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68387350"
 ---
-# <a name="net-sdk-for-authoring-cards"></a>Kit de développement logiciel .NET pour la création de cartes
+# <a name="net-sdk-for-authoring-cards"></a>Kit de développement logiciel (SDK) .NET pour la création de cartes
 
-Comme décrit dans la [mise en route](../../authoring-cards/getting-started.md) page, une carte adaptative est un modèle d’objet JSON. La bibliothèque .NET facilite beaucoup l’utilisation avec ce code JSON.
+Comme nous l’avons décrit dans la page [prise en main](../../authoring-cards/getting-started.md) , une carte adaptative est un modèle d’objet JSON. La bibliothèque .NET facilite grandement l’utilisation de ce JSON.
 
 > [!IMPORTANT]
-> **Dernières modifications issues des v0.5**
+> **Dernières modifications de v 0.5**
 > 
-> 1. Package renommé à partir de `Microsoft.AdaptiveCards` à `AdaptiveCards`
-> 1. En raison de collisions de nom fréquentes de types de framework, toutes les classes de modèle ont le préfixe « Adaptive ». Par exemple, `TextBlock` est maintenant `AdaptiveTextBlock`
-> 1. Toutes les propriétés « uri » ont été modifiées à partir du type `string` à `Uri`
-> 1. Ont également été certaines modifications du schéma à partir de la version préliminaire v0.5, qui sont [décrites ici](https://github.com/Microsoft/AdaptiveCards/pull/633)
+> 1. Package renommé `Microsoft.AdaptiveCards` en`AdaptiveCards`
+> 1. En raison des collisions de noms fréquentes avec les types de Framework, toutes les classes de modèle ont été précédées de «Adaptive». Par exemple, `TextBlock` est maintenant`AdaptiveTextBlock`
+> 1. Toutes les propriétés «URI» ont été modifiées `string` du type à`Uri`
+> 1. Certaines modifications de schéma ont également été apportées à la version préliminaire v 0,5, qui sont [décrites ici](https://github.com/Microsoft/AdaptiveCards/pull/633)
 
 
 ## <a name="nuget-install"></a>Installation de NuGet
-Le `AdaptiveCards` package NuGet fournit des types pour travailler avec des cartes adaptatives dans .NET
+Le `AdaptiveCards` package NuGet fournit des types pour l’utilisation des cartes adaptatives dans .net
 
 [![Installation de NuGet](https://img.shields.io/nuget/vpre/AdaptiveCards.svg)](https://www.nuget.org/packages/AdaptiveCards)
 
@@ -33,9 +33,9 @@ Le `AdaptiveCards` package NuGet fournit des types pour travailler avec des cart
 Install-Package AdaptiveCards -IncludePrerelease
 ```
 
-## <a name="example-create-an-adaptivecard-and-serialize-to-json"></a>Exemple : Créer un AdaptiveCard et sérialiser au format JSON
+## <a name="example-create-an-adaptivecard-and-serialize-to-json"></a>Exemple : Créer un AdaptiveCard et le sérialiser en JSON
 
-Cet exemple montre comment créer une carte adaptative à l’aide de la norme C# objets et puis les sérialise au format JSON pour le transport sur le réseau.
+Cet exemple montre comment créer une carte adaptative à l’aide d' C# objets standard, puis la sérialiser au format JSON pour le transport sur le réseau.
 
 ```csharp
 using AdaptiveCards;
@@ -60,15 +60,15 @@ string json = card.ToJson();
 
 ## <a name="example-parse-an-adaptivecard-from-json"></a>Exemple : Analyser un AdaptiveCard à partir de JSON
 
-Cet exemple montre comment analyser une charge utile JSON dans une carte adaptative. Cela rend plus facile à manipuler le modèle objet ou même de rendre des cartes adaptatives à l’intérieur de votre application à l’aide de notre [convertisseur kits de développement logiciel](../../rendering-cards/getting-started.md).
+Cet exemple montre comment analyser une charge utile JSON dans une carte adaptative. Cela facilite la manipulation du modèle d’objet, voire le rendu des cartes adaptatives dans votre application à l’aide de nos [Kits de développement](../../rendering-cards/getting-started.md)logiciel (SDK) de convertisseur.
 
 ```csharp
 try
 {
     // Get a JSON-serialized payload
     // Your app will probably get cards from somewhere else :)
-    var client = new HttpClient("http://adaptivecards.io/payloads/ActivityUpdate.json");
-    var response = await client.GetAsync(cardUrl);
+    var client = new HttpClient();
+    var response = await client.GetAsync("http://adaptivecards.io/payloads/ActivityUpdate.json");
     var json = await response.Content.ReadAsStringAsync();
 
     // Parse the JSON 
