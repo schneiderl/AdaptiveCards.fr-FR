@@ -4,24 +4,16 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 10/01/2017
 ms.topic: article
-ms.openlocfilehash: fa86d83a8f20490ec286b69653099ac8cd81b8ef
-ms.sourcegitcommit: 4d80c553ab574befa8c84706fd85d22077915745
+ms.openlocfilehash: fb1a79da288cbce77c4f684b384982feb96e7a8c
+ms.sourcegitcommit: f8de9c02b92cd8927a18e59e5650c92b2b78db06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68387350"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68523848"
 ---
 # <a name="net-sdk-for-authoring-cards"></a>Kit de développement logiciel (SDK) .NET pour la création de cartes
 
 Comme nous l’avons décrit dans la page [prise en main](../../authoring-cards/getting-started.md) , une carte adaptative est un modèle d’objet JSON. La bibliothèque .NET facilite grandement l’utilisation de ce JSON.
-
-> [!IMPORTANT]
-> **Dernières modifications de v 0.5**
-> 
-> 1. Package renommé `Microsoft.AdaptiveCards` en`AdaptiveCards`
-> 1. En raison des collisions de noms fréquentes avec les types de Framework, toutes les classes de modèle ont été précédées de «Adaptive». Par exemple, `TextBlock` est maintenant`AdaptiveTextBlock`
-> 1. Toutes les propriétés «URI» ont été modifiées `string` du type à`Uri`
-> 1. Certaines modifications de schéma ont également été apportées à la version préliminaire v 0,5, qui sont [décrites ici](https://github.com/Microsoft/AdaptiveCards/pull/633)
 
 
 ## <a name="nuget-install"></a>Installation de NuGet
@@ -30,7 +22,7 @@ Le `AdaptiveCards` package NuGet fournit des types pour l’utilisation des cart
 [![Installation de NuGet](https://img.shields.io/nuget/vpre/AdaptiveCards.svg)](https://www.nuget.org/packages/AdaptiveCards)
 
 ```console
-Install-Package AdaptiveCards -IncludePrerelease
+Install-Package AdaptiveCards
 ```
 
 ## <a name="example-create-an-adaptivecard-and-serialize-to-json"></a>Exemple : Créer un AdaptiveCard et le sérialiser en JSON
