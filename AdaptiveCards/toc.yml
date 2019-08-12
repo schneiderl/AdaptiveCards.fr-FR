@@ -38,6 +38,16 @@
       href: sdk/authoring-cards/toc.yml
     - name: Rendu des cartes
       href: sdk/rendering-cards/toc.yml
+- name: Création de modèles (préversion)
+  items:
+    - name: Vue d’ensemble
+      href: templating/index.md
+    - name: Langage de modèle
+      href: templating/language.md
+    - name: Kits de développement logiciel
+      href: templating/sdk.md
+    - name: Service de modèles
+      href: templating/service.md
 - name: Ressources
   items:
     - name: Principes
