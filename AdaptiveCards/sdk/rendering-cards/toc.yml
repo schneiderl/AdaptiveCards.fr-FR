@@ -1,105 +1,104 @@
-items:
 - name: Android
   items:
-  - name: Prise en main
-    href: android/getting-started.md
-  - name: Afficher une carte
-    href: android/render-a-card.md
-  - name: Actions
-    href: android/actions.md
-  - name: Configuration de l’hôte
-    href: android/host-config.md
-  - name: Style natif
-    href: android/native-styling.md
-  - name: Extensibilité
-    href: android/extensibility.md
+    - name: Prise en main
+      href: android/getting-started.md
+    - name: Afficher une carte
+      href: android/render-a-card.md
+    - name: Actions
+      href: android/actions.md
+    - name: Configuration de l’hôte
+      href: android/host-config.md
+    - name: Style natif
+      href: android/native-styling.md
+    - name: Extensibilité
+      href: android/extensibility.md
 - name: iOS
   items:
-  - name: Prise en main
-    href: ios/getting-started.md
-  - name: Afficher une carte
-    href: ios/render-a-card.md
-  - name: Actions
-    href: ios/actions.md
-  - name: Configuration de l’hôte
-    href: ios/host-config.md
-  - name: Style natif
-    href: ios/native-styling.md
-  - name: Extensibilité
-    href: ios/extensibility.md
+    - name: Prise en main
+      href: ios/getting-started.md
+    - name: Afficher une carte
+      href: ios/render-a-card.md
+    - name: Actions
+      href: ios/actions.md
+    - name: Configuration de l’hôte
+      href: ios/host-config.md
+    - name: Style natif
+      href: ios/native-styling.md
+    - name: Extensibilité
+      href: ios/extensibility.md
 - name: JavaScript
   items:
-  - name: Prise en main
-    href: javascript/getting-started.md
-  - name: Afficher une carte
-    href: javascript/render-a-card.md
-  - name: Actions
-    href: javascript/actions.md
-  - name: Configuration de l’hôte
-    href: javascript/host-config.md
-  - name: Style natif
-    href: javascript/native-styling.md
-  - name: Extensibilité
-    href: javascript/extensibility.md
+    - name: Prise en main
+      href: javascript/getting-started.md
+    - name: Afficher une carte
+      href: javascript/render-a-card.md
+    - name: Actions
+      href: javascript/actions.md
+    - name: Configuration de l’hôte
+      href: javascript/host-config.md
+    - name: Style natif
+      href: javascript/native-styling.md
+    - name: Extensibilité
+      href: javascript/extensibility.md
+    - name: Intégration Fabric UI
+      href: javascript/fabric.md
 - name: .NET HTML
   items:
-  - name: Prise en main
-    href: net-html/getting-started.md
-  - name: Afficher une carte
-    href: net-html/render-a-card.md
-  - name: Actions
-    href: net-html/actions.md
-  - name: Configuration de l’hôte
-    href: net-html/host-config.md
-  - name: Style natif
-    href: net-html/native-styling.md
-  - name: Extensibilité
-    href: net-html/extensibility.md
+    - name: Prise en main
+      href: net-html/getting-started.md
+    - name: Afficher une carte
+      href: net-html/render-a-card.md
+    - name: Actions
+      href: net-html/actions.md
+    - name: Configuration de l’hôte
+      href: net-html/host-config.md
+    - name: Style natif
+      href: net-html/native-styling.md
+    - name: Extensibilité
+      href: net-html/extensibility.md
 - name: .NET WPF
   items:
-  - name: Prise en main
-    href: net-wpf/getting-started.md
-  - name: Afficher une carte
-    href: net-wpf/render-a-card.md
-  - name: Actions
-    href: net-wpf/actions.md
-  - name: Configuration de l’hôte
-    href: net-wpf/host-config.md
-  - name: Style natif
-    href: net-wpf/native-styling.md
-  - name: Extensibilité
-    href: net-wpf/extensibility.md
+    - name: Prise en main
+      href: net-wpf/getting-started.md
+    - name: Afficher une carte
+      href: net-wpf/render-a-card.md
+    - name: Actions
+      href: net-wpf/actions.md
+    - name: Configuration de l’hôte
+      href: net-wpf/host-config.md
+    - name: Style natif
+      href: net-wpf/native-styling.md
+    - name: Extensibilité
+      href: net-wpf/extensibility.md
 - name: Image .NET
   items:
-  - name: Prise en main
-    href: net-image/getting-started.md
-  - name: Afficher une carte
-    href: net-image/render-a-card.md
-  - name: Actions
-    href: net-image/actions.md
-  - name: Configuration de l’hôte
-    href: net-image/host-config.md
-  - name: Style natif
-    href: net-image/native-styling.md
-  - name: Extensibilité
-    href: net-image/extensibility.md
+    - name: Prise en main
+      href: net-image/getting-started.md
+    - name: Afficher une carte
+      href: net-image/render-a-card.md
+    - name: Actions
+      href: net-image/actions.md
+    - name: Configuration de l’hôte
+      href: net-image/host-config.md
+    - name: Style natif
+      href: net-image/native-styling.md
+    - name: Extensibilité
+      href: net-image/extensibility.md
 - name: UWP
   items:
-  - name: Prise en main
-    href: uwp/getting-started.md
-  - name: Afficher une carte
-    href: uwp/render-a-card.md
-  - name: Actions
-    href: uwp/actions.md
-  - name: Configuration de l’hôte
-    href: uwp/host-config.md
-  - name: Style natif
-    href: uwp/native-styling.md
-  - name: Extensibilité
-    href: uwp/extensibility.md
-ms.openlocfilehash: 2576fb7239292897dcec3f44411d356731c5ab3c
-ms.sourcegitcommit: 99c7b64d6fc66da336c454951406fb42cd2a7427
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59552281"
+    - name: Prise en main
+      href: uwp/getting-started.md
+    - name: Afficher une carte
+      href: uwp/render-a-card.md
+    - name: Actions
+      href: uwp/actions.md
+    - name: Configuration de l’hôte
+      href: uwp/host-config.md
+    - name: Style natif
+      href: uwp/native-styling.md
+    - name: Extensibilité
+      href: uwp/extensibility.md
+- name: ReactNative
+  items:
+    - name: Prise en main
+      href: react-native/getting-started.md
