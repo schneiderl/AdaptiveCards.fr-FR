@@ -1,5 +1,5 @@
 ---
-title: Extensibilité - Kit de développement logiciel de rendu des images de .NET
+title: Extensibilité-SDK .NET Image Rendering SDK
 author: matthidinger
 ms.author: mahiding
 ms.date: 10/19/2017
@@ -11,6 +11,6 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59552871"
 ---
-# <a name="extensibility---net-image"></a><span data-ttu-id="153ab-102">Extensibilité - Image .NET</span><span class="sxs-lookup"><span data-stu-id="153ab-102">Extensibility - .NET Image</span></span>
+# <a name="extensibility---net-image"></a><span data-ttu-id="d5189-102">Extensibilité-image .NET</span><span class="sxs-lookup"><span data-stu-id="d5189-102">Extensibility - .NET Image</span></span>
 
-<span data-ttu-id="153ab-103">Consultez le [docs WPF](../net-wpf/getting-started.md) pour une liste complète de ces options.</span><span class="sxs-lookup"><span data-stu-id="153ab-103">See the [WPF docs](../net-wpf/getting-started.md) for a full run-down of these options.</span></span>
+<span data-ttu-id="d5189-103">Consultez les [documents WPF](../net-wpf/getting-started.md) pour une exécution complète de ces options.</span><span class="sxs-lookup"><span data-stu-id="d5189-103">See the [WPF docs](../net-wpf/getting-started.md) for a full run-down of these options.</span></span>

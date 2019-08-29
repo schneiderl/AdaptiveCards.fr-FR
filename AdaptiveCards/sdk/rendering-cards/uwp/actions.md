@@ -1,5 +1,5 @@
 ---
-title: Actions - SDK UWP
+title: Actions-Kit de développement logiciel (SDK) UWP
 author: matthidinger
 ms.author: mahiding
 ms.date: 06/26/2017
@@ -11,11 +11,11 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59552971"
 ---
-# <a name="actions---uwp"></a><span data-ttu-id="36ca1-102">Actions - UWP</span><span class="sxs-lookup"><span data-stu-id="36ca1-102">Actions - UWP</span></span>
+# <a name="actions---uwp"></a><span data-ttu-id="28a37-102">Actions-UWP</span><span class="sxs-lookup"><span data-stu-id="28a37-102">Actions - UWP</span></span>
 
-<span data-ttu-id="36ca1-103">N’importe quel **actions** au sein de la carte s’affiche en tant que UWP **bouton**de, mais c’est à votre application à gérer que se passe-t-il quand un utilisateur appuie dessus (à l’exception des actions ShowCard... Voir extrait de code pour plus d’informations).</span><span class="sxs-lookup"><span data-stu-id="36ca1-103">Any **actions** within the card will render as UWP **Button**'s, but it's up to your app to handle what happens when a user presses them (except for ShowCard actions... see code snippet for more info).</span></span>
+<span data-ttu-id="28a37-103">Toutes les **actions** de la carte s’affichent en tant que **bouton**UWP, mais c’est à votre application de gérer ce qui se passe quand un utilisateur clique dessus (à l’exception des actions ShowCard... Pour plus d’informations, consultez l’extrait de code.</span><span class="sxs-lookup"><span data-stu-id="28a37-103">Any **actions** within the card will render as UWP **Button**'s, but it's up to your app to handle what happens when a user presses them (except for ShowCard actions... see code snippet for more info).</span></span>
 
-<span data-ttu-id="36ca1-104">Le `RenderedAdaptiveCard` objet fournit une `Action` événement à cet effet.</span><span class="sxs-lookup"><span data-stu-id="36ca1-104">The `RenderedAdaptiveCard` object provides an `Action` event for this purpose.</span></span>
+<span data-ttu-id="28a37-104">L’objet `RenderedAdaptiveCard` fournit un événement `Action` à cette fin.</span><span class="sxs-lookup"><span data-stu-id="28a37-104">The `RenderedAdaptiveCard` object provides an `Action` event for this purpose.</span></span>
 
 ```csharp
 // Render a card (as previously shown)

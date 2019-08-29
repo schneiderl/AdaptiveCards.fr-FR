@@ -1,5 +1,5 @@
 ---
-title: Afficher une carte - SDK UWP
+title: Rendu d’une carte-Kit de développement logiciel (SDK) UWP
 author: matthidinger
 ms.author: mahiding
 ms.date: 06/26/2017
@@ -11,13 +11,13 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59552431"
 ---
-# <a name="render-a-card---uwp"></a><span data-ttu-id="a7f7d-102">Afficher une carte - UWP</span><span class="sxs-lookup"><span data-stu-id="a7f7d-102">Render a card - UWP</span></span>
+# <a name="render-a-card---uwp"></a><span data-ttu-id="d7501-102">Rendu d’une carte UWP</span><span class="sxs-lookup"><span data-stu-id="d7501-102">Render a card - UWP</span></span>
 
-<span data-ttu-id="a7f7d-103">Voici comment effectuer le rendu d’une carte à l’aide du SDK UWP.</span><span class="sxs-lookup"><span data-stu-id="a7f7d-103">Here's how to render a card using the UWP SDK.</span></span>
+<span data-ttu-id="d7501-103">Voici comment afficher une carte à l’aide du kit de développement logiciel (SDK) UWP.</span><span class="sxs-lookup"><span data-stu-id="d7501-103">Here's how to render a card using the UWP SDK.</span></span>
 
-## <a name="create-an-instance-of-your-renderer"></a><span data-ttu-id="a7f7d-104">Créez une instance de votre convertisseur</span><span class="sxs-lookup"><span data-stu-id="a7f7d-104">Create an instance of your renderer</span></span>
+## <a name="create-an-instance-of-your-renderer"></a><span data-ttu-id="d7501-104">Créer une instance de votre convertisseur</span><span class="sxs-lookup"><span data-stu-id="d7501-104">Create an instance of your renderer</span></span>
 
-<span data-ttu-id="a7f7d-105">Créez une instance de la bibliothèque de convertisseur.</span><span class="sxs-lookup"><span data-stu-id="a7f7d-105">Create an instance of the renderer library.</span></span> 
+<span data-ttu-id="d7501-105">Créez une instance de la bibliothèque du convertisseur.</span><span class="sxs-lookup"><span data-stu-id="d7501-105">Create an instance of the renderer library.</span></span> 
 
 ```csharp
 using AdaptiveCards.Rendering.Uwp;
@@ -26,21 +26,21 @@ using AdaptiveCards.Rendering.Uwp;
 var renderer = new AdaptiveCardRenderer();
 ```
 
-## <a name="create-a-card-from-a-json-string"></a><span data-ttu-id="a7f7d-106">Créer une carte à partir d’une chaîne JSON</span><span class="sxs-lookup"><span data-stu-id="a7f7d-106">Create a card from a JSON string</span></span>
+## <a name="create-a-card-from-a-json-string"></a><span data-ttu-id="d7501-106">Créer une carte à partir d’une chaîne JSON</span><span class="sxs-lookup"><span data-stu-id="d7501-106">Create a card from a JSON string</span></span>
 
 ```csharp
 var card = AdaptiveCard.FromJsonString(jsonString);
 ```
 
-## <a name="create-a-card-from-a-json-object"></a><span data-ttu-id="a7f7d-107">Créer une carte à partir d’un objet JSON</span><span class="sxs-lookup"><span data-stu-id="a7f7d-107">Create a card from a JSON object</span></span>
+## <a name="create-a-card-from-a-json-object"></a><span data-ttu-id="d7501-107">Créer une carte à partir d’un objet JSON</span><span class="sxs-lookup"><span data-stu-id="d7501-107">Create a card from a JSON object</span></span>
 
 ```csharp
 var card = AdaptiveCard.FromJson(jsonObject);
 ```
 
-## <a name="render-a-card"></a><span data-ttu-id="a7f7d-108">Afficher une carte</span><span class="sxs-lookup"><span data-stu-id="a7f7d-108">Render a card</span></span>
+## <a name="render-a-card"></a><span data-ttu-id="d7501-108">Effectuer le rendu d’une carte</span><span class="sxs-lookup"><span data-stu-id="d7501-108">Render a card</span></span>
 
-<span data-ttu-id="a7f7d-109">Acquérir une carte à partir d’une source et le rendre.</span><span class="sxs-lookup"><span data-stu-id="a7f7d-109">Acquire a card from a source and render it.</span></span>
+<span data-ttu-id="d7501-109">Acquérir une carte à partir d’une source et la restituer.</span><span class="sxs-lookup"><span data-stu-id="d7501-109">Acquire a card from a source and render it.</span></span>
 
 ```csharp
 RenderedAdaptiveCard renderedAdaptiveCard =  renderer.RenderAdaptiveCard(card);
@@ -56,9 +56,9 @@ if (renderedAdaptiveCard.FrameworkElement != null)
 }
 ```
 
-## <a name="example"></a><span data-ttu-id="a7f7d-110">Exemple</span><span class="sxs-lookup"><span data-stu-id="a7f7d-110">Example</span></span>
+## <a name="example"></a><span data-ttu-id="d7501-110">Exemple</span><span class="sxs-lookup"><span data-stu-id="d7501-110">Example</span></span>
 
-<span data-ttu-id="a7f7d-111">Voici un exemple à partir du convertisseur UWP.</span><span class="sxs-lookup"><span data-stu-id="a7f7d-111">Here is an example from the UWP renderer.</span></span>
+<span data-ttu-id="d7501-111">Voici un exemple du convertisseur UWP.</span><span class="sxs-lookup"><span data-stu-id="d7501-111">Here is an example from the UWP renderer.</span></span>
 
 ```csharp
 var renderer = new AdaptiveCardRenderer();

@@ -11,13 +11,13 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 06/14/2019
 ms.locfileid: "67134326"
 ---
-# <a name="render-a-card---ios"></a><span data-ttu-id="43bbc-102">Effectuer le rendu d’une carte – iOS</span><span class="sxs-lookup"><span data-stu-id="43bbc-102">Render a card - iOS</span></span>
+# <a name="render-a-card---ios"></a><span data-ttu-id="0f1b8-102">Effectuer le rendu d’une carte – iOS</span><span class="sxs-lookup"><span data-stu-id="0f1b8-102">Render a card - iOS</span></span>
 
-<span data-ttu-id="43bbc-103">Voici comment effectuer le rendu d’une carte à l’aide du Kit de développement logiciel (SDK) iOS.</span><span class="sxs-lookup"><span data-stu-id="43bbc-103">Here's how to render a card using the iOS SDK.</span></span>
+<span data-ttu-id="0f1b8-103">Voici comment effectuer le rendu d’une carte à l’aide du Kit de développement logiciel (SDK) iOS.</span><span class="sxs-lookup"><span data-stu-id="0f1b8-103">Here's how to render a card using the iOS SDK.</span></span>
 
-## <a name="create-a-card-from-a-json-string"></a><span data-ttu-id="43bbc-104">Créer une carte à partir d’une chaîne JSON</span><span class="sxs-lookup"><span data-stu-id="43bbc-104">Create a card from a JSON string</span></span>
+## <a name="create-a-card-from-a-json-string"></a><span data-ttu-id="0f1b8-104">Créer une carte à partir d’une chaîne JSON</span><span class="sxs-lookup"><span data-stu-id="0f1b8-104">Create a card from a JSON string</span></span>
 
-<span data-ttu-id="43bbc-105">Une AdaptiveCard est générée à partir de la chaîne JSON :</span><span class="sxs-lookup"><span data-stu-id="43bbc-105">AdaptiveCard is generated from JSON string</span></span>
+<span data-ttu-id="0f1b8-105">Une AdaptiveCard est générée à partir de la chaîne JSON :</span><span class="sxs-lookup"><span data-stu-id="0f1b8-105">AdaptiveCard is generated from JSON string</span></span>
 
 ```objective-c
 
@@ -29,11 +29,11 @@ NSArray<NSError *> errors = cardParseResult.parseErrors;
 NSArray<ACRParseWarning *> warnings = cardPraseResult.parseWarnings;
 ```
 
-## <a name="render-a-card"></a><span data-ttu-id="43bbc-106">Effectuer le rendu d’une carte</span><span class="sxs-lookup"><span data-stu-id="43bbc-106">Render a Card</span></span>
+## <a name="render-a-card"></a><span data-ttu-id="0f1b8-106">Afficher une carte</span><span class="sxs-lookup"><span data-stu-id="0f1b8-106">Render a Card</span></span>
 
-<span data-ttu-id="43bbc-107">Le convertisseur prend une carte adaptative et une configuration d’hôte. HostConfig peut être nil, auquel cas la valeur par défaut sera utilisée.</span><span class="sxs-lookup"><span data-stu-id="43bbc-107">Rederer takes adaptive card and host config. HostConfig can be nil, and if nil, default value will be used.</span></span>
-<span data-ttu-id="43bbc-108">L’UIView retourné utilise autolayout.</span><span class="sxs-lookup"><span data-stu-id="43bbc-108">Returned UIView uses autolayout.</span></span> <span data-ttu-id="43bbc-109">La largeur sera contrainte à la valeur définie par widthConstraint.</span><span class="sxs-lookup"><span data-stu-id="43bbc-109">Width will be constraint to the value set by widthConstraint.</span></span> <span data-ttu-id="43bbc-110">Si la valeur 0 est utilisée, elle n’est pas liée.</span><span class="sxs-lookup"><span data-stu-id="43bbc-110">If 0 value is used, it won't be bound.</span></span>
-<span data-ttu-id="43bbc-111">La hauteur n’est pas liée et, quand elle est retournée, elle a la hauteur des sommes de tous les contenus rendus.</span><span class="sxs-lookup"><span data-stu-id="43bbc-111">Height is not bound, and when returned it will have the height of sums of all contents rendered.</span></span> <span data-ttu-id="43bbc-112">Pour lier la dimension de la vue, utilisez NSLayoutConstraint.</span><span class="sxs-lookup"><span data-stu-id="43bbc-112">To bound the view dimension, please use NSLayoutConstraint.</span></span> <span data-ttu-id="43bbc-113">La dimension exacte est accessible à partir du contexte de la viewDidLayoutSubview du viewcontroller de sa superview, ou sa méthode du même nom en cas d’utilisation d’ACRViewController.</span><span class="sxs-lookup"><span data-stu-id="43bbc-113">The exact dimension is accessible from the context of viewDidLayoutSubview of its superview's viewcontroller or its method with the same name if ACRViewController is used.</span></span>
+<span data-ttu-id="0f1b8-107">Rederer utilise une carte adaptative et une configuration d’hôte. HostConfig peut être nil, auquel cas la valeur par défaut sera utilisée.</span><span class="sxs-lookup"><span data-stu-id="0f1b8-107">Rederer takes adaptive card and host config. HostConfig can be nil, and if nil, default value will be used.</span></span>
+<span data-ttu-id="0f1b8-108">L’UIView retourné utilise autolayout.</span><span class="sxs-lookup"><span data-stu-id="0f1b8-108">Returned UIView uses autolayout.</span></span> <span data-ttu-id="0f1b8-109">La largeur sera contrainte à la valeur définie par widthConstraint.</span><span class="sxs-lookup"><span data-stu-id="0f1b8-109">Width will be constraint to the value set by widthConstraint.</span></span> <span data-ttu-id="0f1b8-110">Si la valeur 0 est utilisée, elle n’est pas liée.</span><span class="sxs-lookup"><span data-stu-id="0f1b8-110">If 0 value is used, it won't be bound.</span></span>
+<span data-ttu-id="0f1b8-111">La hauteur n’est pas liée et, quand elle est retournée, elle a la hauteur des sommes de tous les contenus rendus.</span><span class="sxs-lookup"><span data-stu-id="0f1b8-111">Height is not bound, and when returned it will have the height of sums of all contents rendered.</span></span> <span data-ttu-id="0f1b8-112">Pour lier la dimension de la vue, utilisez NSLayoutConstraint.</span><span class="sxs-lookup"><span data-stu-id="0f1b8-112">To bound the view dimension, please use NSLayoutConstraint.</span></span> <span data-ttu-id="0f1b8-113">La dimension exacte est accessible à partir du contexte de la viewDidLayoutSubview du viewcontroller de sa superview, ou sa méthode du même nom en cas d’utilisation d’ACRViewController.</span><span class="sxs-lookup"><span data-stu-id="0f1b8-113">The exact dimension is accessible from the context of viewDidLayoutSubview of its superview's viewcontroller or its method with the same name if ACRViewController is used.</span></span>
 
 ```objective-c
 ACRRenderResult *renderResult;
@@ -41,7 +41,7 @@ if(cardParseResult.isValid){
     renderResult = [ACRRenderer render:cardParseResult.card config:nil widthConstraint:335];
 }
 ``` 
-### <a name="example"></a><span data-ttu-id="43bbc-114">Exemple</span><span class="sxs-lookup"><span data-stu-id="43bbc-114">Example</span></span>
+### <a name="example"></a><span data-ttu-id="0f1b8-114">Exemple</span><span class="sxs-lookup"><span data-stu-id="0f1b8-114">Example</span></span>
 
 ```objective-c
 --------------------------------------------------------------------------------

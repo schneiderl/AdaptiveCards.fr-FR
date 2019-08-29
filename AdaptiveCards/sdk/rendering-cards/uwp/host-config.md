@@ -1,5 +1,5 @@
 ---
-title: Configuration - SDK UWP de l’hôte
+title: Configuration de l’hôte-Kit UWP SDK
 author: matthidinger
 ms.author: mahiding
 ms.date: 06/26/2017
@@ -11,13 +11,13 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59553671"
 ---
-# <a name="host-config---uwp"></a><span data-ttu-id="42e89-102">Configuration de l’hôte - UWP</span><span class="sxs-lookup"><span data-stu-id="42e89-102">Host config - UWP</span></span>
+# <a name="host-config---uwp"></a><span data-ttu-id="adff2-102">Configuration de l’hôte-UWP</span><span class="sxs-lookup"><span data-stu-id="adff2-102">Host config - UWP</span></span>
 
-<span data-ttu-id="42e89-103">Pour personnaliser le convertisseur vous fournir une instance de l’objet HostConfig.</span><span class="sxs-lookup"><span data-stu-id="42e89-103">To customize the renderer you provide an instance of the HostConfig object.</span></span> <span data-ttu-id="42e89-104">(Consultez [schéma de configuration d’hôte](../../../rendering-cards/host-config.md) pour la description complète.)</span><span class="sxs-lookup"><span data-stu-id="42e89-104">(See [Host Config Schema](../../../rendering-cards/host-config.md) for the full description.)</span></span>
+<span data-ttu-id="adff2-103">Pour personnaliser le convertisseur, vous fournissez une instance de l’objet HostConfig.</span><span class="sxs-lookup"><span data-stu-id="adff2-103">To customize the renderer you provide an instance of the HostConfig object.</span></span> <span data-ttu-id="adff2-104">(Consultez [schéma de configuration](../../../rendering-cards/host-config.md) de l’hôte pour obtenir une description complète.)</span><span class="sxs-lookup"><span data-stu-id="adff2-104">(See [Host Config Schema](../../../rendering-cards/host-config.md) for the full description.)</span></span>
 
-> <span data-ttu-id="42e89-105">L’objet HostConfig sera instancié avec les valeurs par défaut, vous pouvez donc définir uniquement les propriétés que vous souhaitez modifier.</span><span class="sxs-lookup"><span data-stu-id="42e89-105">The HostConfig object will be instantiated with defaults, so you can set just the properties you want to change.</span></span>
+> <span data-ttu-id="adff2-105">L’objet HostConfig sera instancié avec les valeurs par défaut, de sorte que vous pouvez définir uniquement les propriétés que vous souhaitez modifier.</span><span class="sxs-lookup"><span data-stu-id="adff2-105">The HostConfig object will be instantiated with defaults, so you can set just the properties you want to change.</span></span>
 
-<span data-ttu-id="42e89-106">Exemple :</span><span class="sxs-lookup"><span data-stu-id="42e89-106">Example:</span></span>
+<span data-ttu-id="adff2-106">Exemple :</span><span class="sxs-lookup"><span data-stu-id="adff2-106">Example:</span></span>
 
 ```csharp
 var hostConfig = new AdaptiveHostConfig() 
@@ -33,9 +33,9 @@ var hostConfig = new AdaptiveHostConfig()
 renderer.HostConfig = hostConfig;
 ```
 
-> <span data-ttu-id="42e89-107">Vous pouvez également charger le HostConfig à partir d’une chaîne JSON.</span><span class="sxs-lookup"><span data-stu-id="42e89-107">Alternatively, you can load the HostConfig from a JSON string.</span></span>
+> <span data-ttu-id="adff2-107">Vous pouvez également charger le HostConfig à partir d’une chaîne JSON.</span><span class="sxs-lookup"><span data-stu-id="adff2-107">Alternatively, you can load the HostConfig from a JSON string.</span></span>
 
-<span data-ttu-id="42e89-108">Exemple :</span><span class="sxs-lookup"><span data-stu-id="42e89-108">Example:</span></span>
+<span data-ttu-id="adff2-108">Exemple :</span><span class="sxs-lookup"><span data-stu-id="adff2-108">Example:</span></span>
 
 ```csharp
 var hostConfig = AdaptiveHostConfig.FromJsonString(jsonString); 
@@ -43,4 +43,4 @@ var hostConfig = AdaptiveHostConfig.FromJsonString(jsonString);
 renderer.HostConfig = hostConfig;
 ```
 
-<span data-ttu-id="42e89-109">Quand vous passez dans à la UWPRenderer vous définissez la valeur par défaut HostConfig à utiliser pour chaque carte que vous effectuez le rendu.</span><span class="sxs-lookup"><span data-stu-id="42e89-109">When you pass it in to the UWPRenderer you are setting the default HostConfig to use for every card you render.</span></span>
+<span data-ttu-id="adff2-109">Lorsque vous le transmettez à UWPRenderer, vous définissez le HostConfig par défaut à utiliser pour chaque carte que vous affichez.</span><span class="sxs-lookup"><span data-stu-id="adff2-109">When you pass it in to the UWPRenderer you are setting the default HostConfig to use for every card you render.</span></span>

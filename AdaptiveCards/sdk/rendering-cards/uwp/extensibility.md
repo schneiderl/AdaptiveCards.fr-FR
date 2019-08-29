@@ -1,5 +1,5 @@
 ---
-title: Extensibilité - SDK UWP
+title: Extensibilité-Kit de développement logiciel (SDK) UWP
 author: matthidinger
 ms.author: mahiding
 ms.date: 06/26/2017
@@ -11,11 +11,11 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59553041"
 ---
-# <a name="extensibility---uwp"></a><span data-ttu-id="64c19-102">Extensibilité - UWP</span><span class="sxs-lookup"><span data-stu-id="64c19-102">Extensibility - UWP</span></span>
+# <a name="extensibility---uwp"></a><span data-ttu-id="845de-102">Extensibilité-UWP</span><span class="sxs-lookup"><span data-stu-id="845de-102">Extensibility - UWP</span></span>
 
-## <a name="changing-per-element-rendering"></a><span data-ttu-id="64c19-103">Modification par le rendu de l’élément</span><span class="sxs-lookup"><span data-stu-id="64c19-103">Changing per element rendering</span></span>
+## <a name="changing-per-element-rendering"></a><span data-ttu-id="845de-103">Modification par élément rendu</span><span class="sxs-lookup"><span data-stu-id="845de-103">Changing per element rendering</span></span>
 
-<span data-ttu-id="64c19-104">Implémenter une classe de convertisseur et définissez-le dans le convertisseur</span><span class="sxs-lookup"><span data-stu-id="64c19-104">Implement a renderer class and set it in the renderer</span></span>
+<span data-ttu-id="845de-104">Implémenter une classe de convertisseur et la définir dans le convertisseur</span><span class="sxs-lookup"><span data-stu-id="845de-104">Implement a renderer class and set it in the renderer</span></span>
 
 ```csharp
 // My custom renderer is going to replace how textblocks should render!

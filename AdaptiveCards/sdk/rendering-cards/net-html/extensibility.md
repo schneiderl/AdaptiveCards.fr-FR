@@ -1,5 +1,5 @@
 ---
-title: Extensibilité - Kit de développement logiciel .NET HTML
+title: Extensibilité-Kit de développement logiciel (SDK) HTML .NET
 author: matthidinger
 ms.author: mahiding
 ms.date: 10/19/2017
@@ -11,13 +11,13 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59552531"
 ---
-# <a name="extensibility---net-html"></a><span data-ttu-id="256c0-102">Extensibilité - .NET HTML</span><span class="sxs-lookup"><span data-stu-id="256c0-102">Extensibility - .NET HTML</span></span>
+# <a name="extensibility---net-html"></a><span data-ttu-id="fbe49-102">Extensibilité-.NET HTML</span><span class="sxs-lookup"><span data-stu-id="fbe49-102">Extensibility - .NET HTML</span></span>
 
-## <a name="custom-element-rendering"></a><span data-ttu-id="256c0-103">Rendu de l’élément personnalisé</span><span class="sxs-lookup"><span data-stu-id="256c0-103">Custom Element Rendering</span></span>
+## <a name="custom-element-rendering"></a><span data-ttu-id="fbe49-103">Rendu d’élément personnalisé</span><span class="sxs-lookup"><span data-stu-id="fbe49-103">Custom Element Rendering</span></span>
 
-<span data-ttu-id="256c0-104">Pour un contrôle total du convertisseur que vous pouvez utiliser la `ElementRenderers` propriété **ajouter**, **supprimer**, ou **remplacer** convertisseurs de valeur par défaut.</span><span class="sxs-lookup"><span data-stu-id="256c0-104">For full control of the renderer you can use the `ElementRenderers` property to **add**, **remove**, or **override** default renderers.</span></span>
+<span data-ttu-id="fbe49-104">Pour un contrôle total du convertisseur, vous pouvez utiliser la propriété `ElementRenderers` pour **ajouter**, **supprimer** ou **remplacer** les convertisseurs par défaut.</span><span class="sxs-lookup"><span data-stu-id="fbe49-104">For full control of the renderer you can use the `ElementRenderers` property to **add**, **remove**, or **override** default renderers.</span></span>
 
-<span data-ttu-id="256c0-105">L’exemple suivant montre comment vous pouvez définir un personnalisé `"type": "Rating"` élément et le rendre.</span><span class="sxs-lookup"><span data-stu-id="256c0-105">The following example shows how you could define a custom `"type": "Rating"` element and render it.</span></span>
+<span data-ttu-id="fbe49-105">L’exemple suivant montre comment définir un élément `"type": "Rating"` personnalisé et en effectuer le rendu.</span><span class="sxs-lookup"><span data-stu-id="fbe49-105">The following example shows how you could define a custom `"type": "Rating"` element and render it.</span></span>
 
 ```csharp
 // Register the new type with the JSON parser

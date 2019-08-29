@@ -1,5 +1,5 @@
 ---
-title: Actions - Kit de développement logiciel de rendu des images de .NET
+title: Actions-SDK de rendu d’image .NET
 author: matthidinger
 ms.author: mahiding
 ms.date: 10/19/2017
@@ -11,6 +11,6 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59552401"
 ---
-# <a name="actions---net-image"></a><span data-ttu-id="ac75b-102">Actions - Image .NET</span><span class="sxs-lookup"><span data-stu-id="ac75b-102">Actions - .NET Image</span></span>
+# <a name="actions---net-image"></a><span data-ttu-id="4b10a-102">Actions-image .NET</span><span class="sxs-lookup"><span data-stu-id="4b10a-102">Actions - .NET Image</span></span>
 
-<span data-ttu-id="ac75b-103">Les actions sont non pris en charge, envisagez que cela génère le rendu d’une image.</span><span class="sxs-lookup"><span data-stu-id="ac75b-103">Actions are unsupported, considering this renders to an image.</span></span>
+<span data-ttu-id="4b10a-103">Les actions ne sont pas prises en charge, ce qui est considéré comme un rendu sur une image.</span><span class="sxs-lookup"><span data-stu-id="4b10a-103">Actions are unsupported, considering this renders to an image.</span></span>

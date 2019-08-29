@@ -1,5 +1,5 @@
 ---
-title: Extensibilité - iOS SDK
+title: Extensibilité-Kit de développement logiciel (SDK) iOS
 author: matthidinger
 ms.author: mahiding
 ms.date: 06/26/2017
@@ -11,12 +11,12 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59553561"
 ---
-# <a name="extensibility---ios"></a><span data-ttu-id="67c5d-102">Extensibilité - iOS</span><span class="sxs-lookup"><span data-stu-id="67c5d-102">Extensibility - iOS</span></span>
+# <a name="extensibility---ios"></a><span data-ttu-id="0f3c8-102">Extensibilité-iOS</span><span class="sxs-lookup"><span data-stu-id="0f3c8-102">Extensibility - iOS</span></span>
 
-## <a name="changing-per-element-rendering"></a><span data-ttu-id="67c5d-103">Modification par le rendu de l’élément</span><span class="sxs-lookup"><span data-stu-id="67c5d-103">Changing per element rendering</span></span>
+## <a name="changing-per-element-rendering"></a><span data-ttu-id="0f3c8-103">Modification par élément rendu</span><span class="sxs-lookup"><span data-stu-id="0f3c8-103">Changing per element rendering</span></span>
 
-<span data-ttu-id="67c5d-104">Les développeurs peuvent personnaliser l’apparence des éléments de AdaptiveCards renderred tels que TextBlock.</span><span class="sxs-lookup"><span data-stu-id="67c5d-104">Developers can customize the look of renderred AdaptiveCards elements such as TextBlock.</span></span>
-<span data-ttu-id="67c5d-105">Exemple suivant montre comment changer les couleurs d’arrière-plan de NumberInput.</span><span class="sxs-lookup"><span data-stu-id="67c5d-105">Following example shows how one can change background color of NumberInput.</span></span>
+<span data-ttu-id="0f3c8-104">Les développeurs peuvent personnaliser l’apparence des éléments renderred AdaptiveCards tels que TextBlock.</span><span class="sxs-lookup"><span data-stu-id="0f3c8-104">Developers can customize the look of renderred AdaptiveCards elements such as TextBlock.</span></span>
+<span data-ttu-id="0f3c8-105">L’exemple suivant montre comment modifier la couleur d’arrière-plan de NumberInput.</span><span class="sxs-lookup"><span data-stu-id="0f3c8-105">Following example shows how one can change background color of NumberInput.</span></span>
 
 ```objective-c
 ACRRegistration *registration = [ACRRegistration getInstance];
@@ -51,10 +51,10 @@ ACRRegistration *registration = [ACRRegistration getInstance];
   }
   ```
 
- ## <a name="additional-property"></a><span data-ttu-id="67c5d-106">Propriété supplémentaire</span><span class="sxs-lookup"><span data-stu-id="67c5d-106">Additional Property</span></span>
+ ## <a name="additional-property"></a><span data-ttu-id="0f3c8-106">Propriété supplémentaire</span><span class="sxs-lookup"><span data-stu-id="0f3c8-106">Additional Property</span></span>
 
- <span data-ttu-id="67c5d-107">Les développeurs peuvent également envoyer dans des propriétés supplémentaires dans le cadre de la charge utile json.</span><span class="sxs-lookup"><span data-stu-id="67c5d-107">Developers can also send in additional properties as part of json payload.</span></span>
-<span data-ttu-id="67c5d-108">Par exemple, outre « espacement » et « id » de la charge utile json pour BaseCardElement, un peut ajouter rayon pour les angles du TextBlock à sa charge utile json.</span><span class="sxs-lookup"><span data-stu-id="67c5d-108">For example, in addition to "spacing" and "id" of json payload for BaseCardElement, one can add radius for corners of TextBlock to its json payload.</span></span>
+ <span data-ttu-id="0f3c8-107">Les développeurs peuvent également envoyer des propriétés supplémentaires dans le cadre de la charge utile JSON.</span><span class="sxs-lookup"><span data-stu-id="0f3c8-107">Developers can also send in additional properties as part of json payload.</span></span>
+<span data-ttu-id="0f3c8-108">Par exemple, en plus de «l’espacement» et de l’ID de charge utile JSON pour BaseCardElement, vous pouvez ajouter RADIUS pour les angles de TextBlock à sa charge utile JSON.</span><span class="sxs-lookup"><span data-stu-id="0f3c8-108">For example, in addition to "spacing" and "id" of json payload for BaseCardElement, one can add radius for corners of TextBlock to its json payload.</span></span>
 
  ```objective-c
  "type":"TextBlock",
@@ -70,10 +70,10 @@ ACRRegistration *registration = [ACRRegistration getInstance];
               radiusForMyTextBlock = dictionary[@"radius"];
           ...
 ```
- ## <a name="custom-parsing"></a><span data-ttu-id="67c5d-109">Personnaliser l’analyse</span><span class="sxs-lookup"><span data-stu-id="67c5d-109">Custom Parsing</span></span>
+ ## <a name="custom-parsing"></a><span data-ttu-id="0f3c8-109">Analyse personnalisée</span><span class="sxs-lookup"><span data-stu-id="0f3c8-109">Custom Parsing</span></span>
 
-<span data-ttu-id="67c5d-110">Les développeurs peuvent également avoir l’analyse personnalisée et avoir le nouvel élément d’interface utilisateur ajouté à la carte adpative telles que de la barre de progression.</span><span class="sxs-lookup"><span data-stu-id="67c5d-110">Developers can also have custom parsing and have new UI element added to adpative card such as progress bar.</span></span> <span data-ttu-id="67c5d-111">Vérifiez les CustomProgressBarRenderer.mm en détail.</span><span class="sxs-lookup"><span data-stu-id="67c5d-111">Please check CustomProgressBarRenderer.mm for detail.</span></span>
-<span data-ttu-id="67c5d-112">Analyseur personnalisé doit implémenter ACOIBaseCardElementParser protocole.</span><span class="sxs-lookup"><span data-stu-id="67c5d-112">Custom parser must implement ACOIBaseCardElementParser protocol.</span></span> <span data-ttu-id="67c5d-113">deserializeToCustomElement méthode doit analyse étant donné la charge utile json donnée comme NSData et retourner un pointeur vers l’objet UIView qui est ajouté à AdaptiveCard rendu objet.</span><span class="sxs-lookup"><span data-stu-id="67c5d-113">deserializeToCustomElement method should parses given json payload given as NSData and return a pointer to UIView object that will be added to AdaptiveCard rendered object.</span></span>
+<span data-ttu-id="0f3c8-110">Les développeurs peuvent également avoir une analyse personnalisée et ajouter un nouvel élément d’interface utilisateur à la carte Adpative, comme la barre de progression.</span><span class="sxs-lookup"><span data-stu-id="0f3c8-110">Developers can also have custom parsing and have new UI element added to adpative card such as progress bar.</span></span> <span data-ttu-id="0f3c8-111">Pour plus d’informations, consultez CustomProgressBarRenderer.mm.</span><span class="sxs-lookup"><span data-stu-id="0f3c8-111">Please check CustomProgressBarRenderer.mm for detail.</span></span>
+<span data-ttu-id="0f3c8-112">L’analyseur personnalisé doit implémenter le protocole ACOIBaseCardElementParser.</span><span class="sxs-lookup"><span data-stu-id="0f3c8-112">Custom parser must implement ACOIBaseCardElementParser protocol.</span></span> <span data-ttu-id="0f3c8-113">la méthode deserializeToCustomElement doit analyser la charge utile JSON donnée en tant que NSData et retourner un pointeur vers l’objet UIView qui sera ajouté à AdaptiveCard objet rendu.</span><span class="sxs-lookup"><span data-stu-id="0f3c8-113">deserializeToCustomElement method should parses given json payload given as NSData and return a pointer to UIView object that will be added to AdaptiveCard rendered object.</span></span>
 
 ```objective-c
       CustomProgressBarRenderer *progressBarRenderer = [[CustomProgressBarRenderer alloc] init];
