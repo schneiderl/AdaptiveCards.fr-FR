@@ -11,9 +11,9 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59552901"
 ---
-# <a name="getting-started---uwp"></a>Mise en route - UWP
+# <a name="getting-started---uwp"></a>Prise en main-UWP
 
-Il s’agit d’un convertisseur les cibles UWP native contrôle.
+Il s’agit d’un convertisseur qui cible les contrôles natifs UWP.
 
 ## <a name="install-nuget-package"></a>Installer le package NuGet
 
@@ -27,7 +27,7 @@ Install-Package AdaptiveCards.Rendering.Uwp
 
 ## <a name="namespace"></a>Espace de noms
 
-Déclarer l’espace de noms du convertisseur.
+Déclarez l’espace de noms du convertisseur.
 
 ```csharp
 using AdaptiveCards.Rendering.Uwp;
@@ -35,4 +35,4 @@ using AdaptiveCards.Rendering.Uwp;
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Consultez [restituer une carte](render-a-card.md) pour les prochaines étapes !
+Pour les prochaines étapes, voir [Effectuer le rendu d’une carte](render-a-card.md).

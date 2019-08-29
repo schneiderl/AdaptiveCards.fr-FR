@@ -1,5 +1,5 @@
 ---
-title: Configuration de l’hôte - iOS SDK
+title: Configuration de l’hôte-SDK iOS
 author: matthidinger
 ms.author: mahiding
 ms.date: 06/26/2017
@@ -11,23 +11,23 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59553701"
 ---
-# <a name="host-config---ios"></a>Configuration de l’hôte - iOS
+# <a name="host-config---ios"></a>Configuration de l’hôte-iOS
 
-Hôte peut être configuré via HostConfig qui peut être générée par la chaîne JSON
+L’hôte peut être configuré par le biais de HostConfig qui peuvent être générés par une chaîne JSON
 
 ```objective-c
 ACOParseResult *hostconfigParseResult = [ACOHostConfig FromJson:self.hostconfig];
 ```
 
-Par défaut HostConfig peut être instancié.
+La valeur par défaut de HostConfig peut être instanciée
 
 ```objective-c
 ACOHostConfig *defaultConfig = [[ACHostConfig alloc] init];
 ```
 
-## <a name="render-a-card-using-host-config"></a>Afficher une carte à l’aide de la configuration de l’hôte
+## <a name="render-a-card-using-host-config"></a>Rendu d’une carte à l’aide de la configuration d’hôte
 
-Rederer prend carte adaptative et configuration de l’hôte. HostConfig peut être nil, et si elle est nulle, valeur de la valeur par défaut sera utilisée.
+Rederer utilise une carte adaptative et une configuration d’hôte. HostConfig peut être nil, auquel cas la valeur par défaut sera utilisée.
 
 ```objective-c
 ACRRenderResult *renderResult;

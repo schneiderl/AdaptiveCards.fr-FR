@@ -1,5 +1,5 @@
 ---
-title: Actions - Kit de développement logiciel .NET HTML
+title: Actions-SDK HTML .NET
 author: matthidinger
 ms.author: mahiding
 ms.date: 10/19/2017
@@ -11,14 +11,14 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59553311"
 ---
-# <a name="actions---net-html"></a>Actions - .NET HTML
+# <a name="actions---net-html"></a>Actions-HTML .NET
 
-Carte de niveau supérieur `actions` seront restituées sous la forme d’un élément HTML `<button>`. Dans la mesure où il s’agit d’une bibliothèque côté serveur, que c’est à vous pour associer des gestionnaires d’événements côté client lorsque les boutons sont enfoncés. Chaque `<button>` dans le code HTML a les attributs que vous pouvez utiliser pour associer le comportement approprié.
+La carte `actions` de niveau supérieur est restituée sous `<button>`forme de code html. Dans la mesure où il s’agit d’une bibliothèque côté serveur, vous pouvez associer des gestionnaires d’événements côté client lorsque vous appuyez sur les boutons. Chaque `<button>` dans le code html aura des attributs que vous pouvez utiliser pour associer le comportement approprié.
 
-Certains éléments ont un `selectAction` propriété (Image de conteneur, colonnes,), ce qui les rend appelables. Si un élément a un `selectAction` le convertisseur ajoutera une classe CSS de `ac-selectable`, avec la sous attributs.
+Certains éléments ont une `selectAction` propriété (Container, Columns, image) qui les rend programmes appelables. Si un élément a un `selectAction` convertisseur, ajoute une classe CSS de `ac-selectable`, ainsi que les attributs ci-dessous.
 
-Type d'action | Classe CSS | Attributs supplémentaires
+Type d’action | Classe CSS | Attributs supplémentaires
 ---|---|---
-`Action.OpenUrl` | `ac-action-openUrl` | `data-ac-url` (le `url` propriété à partir de la carte)
-`Action.Submit` | `ac-action-submit` | `data-ac-data` (le `data` propriété à partir de la carte)
-`Action.ShowCard` | `ac-action-showCard` | `data-ac-showcardid` (le `id` de la `<div>` contenant la carte interne)
+`Action.OpenUrl` | `ac-action-openUrl` | `data-ac-url`(la `url` propriété de la carte)
+`Action.Submit` | `ac-action-submit` | `data-ac-data`(la `data` propriété de la carte)
+`Action.ShowCard` | `ac-action-showCard` | `data-ac-showcardid`(le `id` `<div>` du contenant la carte interne)

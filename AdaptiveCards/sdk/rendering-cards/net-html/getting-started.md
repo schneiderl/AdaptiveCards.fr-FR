@@ -1,5 +1,5 @@
 ---
-title: KIT DE DÉVELOPPEMENT LOGICIEL .NET HTML
+title: SDK HTML .NET
 author: matthidinger
 ms.author: mahiding
 ms.date: 10/19/2017
@@ -11,9 +11,9 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59552601"
 ---
-# <a name="getting-started---net-html"></a>Mise en route - .NET HTML
+# <a name="getting-started---net-html"></a>Prise en main-HTML .NET
 
-Comme décrit dans [mise en route](../../../authoring-cards/getting-started.md) page, une carte adaptative est un modèle d’objet de carte sérialisé en JSON. Il s’agit d’une bibliothèque .NET pour générer un balisage HTML, généralement à partir d’un serveur.
+Comme nous l’avons décrit dans [prise en main](../../../authoring-cards/getting-started.md) page, une carte adaptative est un modèle objet de carte sérialisée JSON. Il s’agit d’une bibliothèque .NET permettant de générer le balisage HTML, généralement à partir d’un serveur.
 
 ## <a name="nuget-install"></a>Installation de NuGet
 
@@ -25,4 +25,4 @@ Install-Package AdaptiveCards.Rendering.Html -IncludePrerelease
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Consultez [restituer une carte](render-a-card.md) pour les prochaines étapes !
+Pour les prochaines étapes, voir [Effectuer le rendu d’une carte](render-a-card.md).

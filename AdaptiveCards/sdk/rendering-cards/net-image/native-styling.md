@@ -1,5 +1,5 @@
 ---
-title: Style natif - SDK de rendu Image .NET
+title: Styles natifs-SDK de rendu d’image .NET
 author: matthidinger
 ms.author: mahiding
 ms.date: 10/19/2017
@@ -11,6 +11,6 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59553141"
 ---
-# <a name="native-styling---net-image"></a>Style natif - Image .NET
+# <a name="native-styling---net-image"></a>Styles natifs-image .NET
 
-Consultez le [docs WPF](../net-wpf/getting-started.md) pour une liste complète de ces options.
+Consultez les [documents WPF](../net-wpf/getting-started.md) pour une exécution complète de ces options.

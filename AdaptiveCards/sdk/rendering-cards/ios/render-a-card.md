@@ -29,9 +29,9 @@ NSArray<NSError *> errors = cardParseResult.parseErrors;
 NSArray<ACRParseWarning *> warnings = cardPraseResult.parseWarnings;
 ```
 
-## <a name="render-a-card"></a>Effectuer le rendu d’une carte
+## <a name="render-a-card"></a>Afficher une carte
 
-Le convertisseur prend une carte adaptative et une configuration d’hôte. HostConfig peut être nil, auquel cas la valeur par défaut sera utilisée.
+Rederer utilise une carte adaptative et une configuration d’hôte. HostConfig peut être nil, auquel cas la valeur par défaut sera utilisée.
 L’UIView retourné utilise autolayout. La largeur sera contrainte à la valeur définie par widthConstraint. Si la valeur 0 est utilisée, elle n’est pas liée.
 La hauteur n’est pas liée et, quand elle est retournée, elle a la hauteur des sommes de tous les contenus rendus. Pour lier la dimension de la vue, utilisez NSLayoutConstraint. La dimension exacte est accessible à partir du contexte de la viewDidLayoutSubview du viewcontroller de sa superview, ou sa méthode du même nom en cas d’utilisation d’ACRViewController.
 

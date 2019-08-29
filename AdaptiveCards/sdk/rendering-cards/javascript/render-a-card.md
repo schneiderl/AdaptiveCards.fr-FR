@@ -1,5 +1,5 @@
 ---
-title: Afficher une carte - JavaScript SDK
+title: Rendu d’une carte-SDK JavaScript
 author: matthidinger
 ms.author: mahiding
 ms.date: 11/28/2017
@@ -11,13 +11,13 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59553121"
 ---
-# <a name="render-a-card---javascript"></a>Afficher une carte - JavaScript
+# <a name="render-a-card---javascript"></a>Rendre une carte-JavaScript
 
-Voici comment effectuer le rendu d’une carte à l’aide du SDK JavaScript.
+Voici comment afficher une carte à l’aide du kit de développement logiciel (SDK) JavaScript.
 
 ## <a name="usage"></a>Utilisation
 
-### <a name="import-the-module"></a>Importez le module
+### <a name="import-the-module"></a>Importer le module
 
 ```js
 // import the module
@@ -30,7 +30,7 @@ var AdaptiveCards = require("adaptivecards");
 AdaptiveCards.renderCard(...);
 ```
 
-## <a name="render-a-card"></a>Afficher une carte
+## <a name="render-a-card"></a>Effectuer le rendu d’une carte
 
 ```js
 // Author a card

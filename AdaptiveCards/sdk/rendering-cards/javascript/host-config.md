@@ -1,5 +1,5 @@
 ---
-title: Configuration - SDK JavaScript de l’hôte
+title: Configuration de l’hôte-SDK JavaScript
 author: matthidinger
 ms.author: mahiding
 ms.date: 11/28/2017
@@ -11,7 +11,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59553601"
 ---
-# <a name="host-config---javascript"></a>Host config - JavaScript
+# <a name="host-config---javascript"></a>Configuration de l’hôte-JavaScript
 
 ```js
 // Create an AdaptiveCard instance
@@ -30,16 +30,16 @@ var renderedCard = adaptiveCard.render();
 
 ## <a name="customization"></a>Personnalisation
 
-Il existe 3 façons de personnaliser le rendu de la carte adaptative : 
+Il existe trois façons de personnaliser le rendu de carte adaptative: 
 1. Configuration de l’hôte
 2. Styles CSS
-3. Rendu de l’élément personnalisé
+3. Rendu d’élément personnalisé
 
 ### <a name="hostconfig"></a>HostConfig 
 
-Un [configuration de l’hôte](../../../rendering-cards/host-config.md) est un objet de configuration partagée comprennent tous les convertisseurs. Cela vous permet de définir des styles courants (par exemple, famille de polices, tailles de police par défaut espacement) et les comportements (par exemple, un nombre maximal d’actions) qui seront automatiquement interprétées par chaque convertisseur de plateforme. 
+Une [configuration d’hôte](../../../rendering-cards/host-config.md) est un objet de configuration partagé que tous les convertisseurs comprennent. Elle vous permet de définir des styles (par exemple, famille de polices, tailles de police, espacement par défaut) et des comportements (par exemple, nombre maximal d’actions) communs qui sont automatiquement interprétés par le convertisseur de chaque plateforme. 
 
-L’objectif est que l’interface utilisateur native généré par chaque convertisseur de plateforme paraîtra très similaire avec un minimum de travail de votre part.
+L’objectif est que l’interface utilisateur native générée par le convertisseur de chaque plateforme se présente de façon très similaire avec un minimum de travail de votre part.
 
 ```javascript
 var renderOptions = {

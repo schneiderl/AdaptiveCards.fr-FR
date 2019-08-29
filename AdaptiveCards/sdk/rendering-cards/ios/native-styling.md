@@ -1,5 +1,5 @@
 ---
-title: Style natif - iOS SDK
+title: Stylisation Native-Kit de développement logiciel (SDK) iOS
 author: matthidinger
 ms.author: mahiding
 ms.date: 06/26/2017
@@ -11,6 +11,6 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59553301"
 ---
-# <a name="native-styling---ios"></a>Style natif - iOS
+# <a name="native-styling---ios"></a>Stylisation Native-iOS
 
 Non pris en charge.

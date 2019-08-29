@@ -1,5 +1,5 @@
 ---
-title: Configuration - SDK UWP de l’hôte
+title: Configuration de l’hôte-Kit UWP SDK
 author: matthidinger
 ms.author: mahiding
 ms.date: 06/26/2017
@@ -11,11 +11,11 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59553671"
 ---
-# <a name="host-config---uwp"></a>Configuration de l’hôte - UWP
+# <a name="host-config---uwp"></a>Configuration de l’hôte-UWP
 
-Pour personnaliser le convertisseur vous fournir une instance de l’objet HostConfig. (Consultez [schéma de configuration d’hôte](../../../rendering-cards/host-config.md) pour la description complète.)
+Pour personnaliser le convertisseur, vous fournissez une instance de l’objet HostConfig. (Consultez [schéma de configuration](../../../rendering-cards/host-config.md) de l’hôte pour obtenir une description complète.)
 
-> L’objet HostConfig sera instancié avec les valeurs par défaut, vous pouvez donc définir uniquement les propriétés que vous souhaitez modifier.
+> L’objet HostConfig sera instancié avec les valeurs par défaut, de sorte que vous pouvez définir uniquement les propriétés que vous souhaitez modifier.
 
 Exemple :
 
@@ -43,4 +43,4 @@ var hostConfig = AdaptiveHostConfig.FromJsonString(jsonString);
 renderer.HostConfig = hostConfig;
 ```
 
-Quand vous passez dans à la UWPRenderer vous définissez la valeur par défaut HostConfig à utiliser pour chaque carte que vous effectuez le rendu.
+Lorsque vous le transmettez à UWPRenderer, vous définissez le HostConfig par défaut à utiliser pour chaque carte que vous affichez.

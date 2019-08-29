@@ -1,5 +1,5 @@
 ---
-title: Configuration - Android SDK de l’hôte
+title: Configuration de l’hôte-Android SDK
 author: bekao
 ms.author: bekao
 ms.date: 09/27/2017
@@ -11,9 +11,9 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59553341"
 ---
-# <a name="host-config---android"></a>Configuration de l’hôte - Android
+# <a name="host-config---android"></a>Configuration de l’hôte-Android
 
-Pour personnaliser le convertisseur vous fournir une instance de l’objet HostConfig. (Consultez [schéma de configuration d’hôte](../../../rendering-cards/host-config.md) pour la description complète.)
+Pour personnaliser le convertisseur, vous fournissez une instance de l’objet HostConfig. (Consultez [schéma de configuration](../../../rendering-cards/host-config.md) de l’hôte pour obtenir une description complète.)
 
 Pour créer un objet HostConfig à partir d’une chaîne, utilisez la méthode DeserializeFromString
 

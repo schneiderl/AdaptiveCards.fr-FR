@@ -1,5 +1,5 @@
 ---
-title: Style natif - Kit de développement logiciel .NET WPF
+title: Styles natifs-SDK .NET WPF
 author: matthidinger
 ms.author: mahiding
 ms.date: 10/19/2017
@@ -11,33 +11,33 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59552721"
 ---
-# <a name="native-styling---net-wpf"></a>Style natif - .NET WPF
+# <a name="native-styling---net-wpf"></a>Styles natifs-WPF .NET
 
-Tandis que la configuration de l’hôte vous aidera à la plupart de la façon dont il sur chaque plateforme, il est probable que vous devrez faire certains styles natif sur chaque plateforme. 
+Bien que la configuration de l’hôte vous permette d’accéder à la plupart des cas sur chaque plateforme, il est probable que vous deviez effectuer des styles natifs sur chaque plateforme. 
 
-WPF facilite cette procédure en vous permettant de passer un ResourceDictionary pour style affiné, comportement, animations, etc.
+WPF facilite cette opération en vous permettant de transmettre un ResourceDictionary pour un style, un comportement, des animations, etc. précis.
 
 | Élément | Noms de style |
 |---|---|
 | AdaptiveCard | Adaptive.Card| 
-| Action.OpenUrl  | Adaptive.Action.OpenUrl  |
-| Action.ShowCard | Adaptive.Action.ShowCard |
-| Action.Submit  | Adaptive.Action.Submit  |
-| colonne | Adaptive.Column, Adaptive.Action.Tap |
+| Action. OpenUrl  | Adaptative. action. OpenUrl  |
+| Action. ShowCard | Adaptive.Action.ShowCard |
+| Action. Submit  | Adaptative. action. Submit  |
+| colonne | Adaptative. Column, adaptative. action. TAP |
 | ColumnSet | Adaptive.ColumnSet, Adaptive.VerticalSeparator |
 | Conteneur | Adaptive.Container|
 | Input.ChoiceSet | Adaptive.Input.ChoiceSet,  Adaptive.Input.ChoiceSet.ComboBox, Adaptive.Input.ChoiceSet.CheckBox,  Adaptive.Input.ChoiceSet.Radio,  Adaptive.Input.ChoiceSet.ComboBoxItem |
-| Input.Date | Adaptive.Input.Text.Date
-| Input.Number | Adaptive.Input.Text.Number |
-| Input.Text | Adaptive.Input.Text |
-| Input.Time | Adaptive.Input.Text.Time |
+| Entrée. date | Adaptive.Input.Text.Date
+| Entrée. nombre | Adaptative. Input. Text. Number |
+| Input. Text | Adaptative. Input. Text |
+| Input. Time | Adaptative. Input. Text. Time |
 | Input.Toggle| Adaptive.Input.Toggle|
-| Image  | Adaptive.Image |
+| Image  | Adaptive. image |
 | ImageSet  | Adaptive.ImageSet |
 | FactSet | Adaptive.FactSet, Adaptive.Fact.Title, Adaptive.Fact.Value |
-| TextBlock  | Adaptive.TextBlock |
+| TextBlock  | Adaptive. TextBlock |
 
-Cet exemple de dictionnaire de ressource de XAML qui définit l’arrière-plan de toutes les TextBlocks sur « cyan ». Vous souhaiterez probablement que quelque chose plus avancé que cela 😁
+Cet exemple de dictionnaire de ressources XAML définit l’arrière-plan de tous les TextBlocks sur Aqua. Vous souhaiterez probablement une plus grande avancée que celle-ci😁
 
 ```xml
 <ResourceDictionary
@@ -59,4 +59,4 @@ renderer.ResourcesPath = <path-to-my-resource-dictionary.xaml>;
 ```
 
 > [!IMPORTANT]
-> **Une remarque sur la génération d’image côté serveur** WPF le convertisseur fournit une `RenderCardToImageAsync` méthode qui peut être utilisé pour la génération d’images du côté serveur. Vous devez utiliser uniquement le `ResourcesPath` propriété si utilisés dans cet environnement. Consultez le [rendu de l’Image](../net-image/getting-started.md) docs pour en savoir plus
+> **Remarque sur la génération d’images côté serveur** Le convertisseur WPF fournit une méthode `RenderCardToImageAsync` qui peut être utilisée pour la génération d’images côté serveur. Vous devez uniquement utiliser la `ResourcesPath` propriété si elle est utilisée dans cet environnement. Consultez les documents de [rendu d’image](../net-image/getting-started.md) pour plus d’informations

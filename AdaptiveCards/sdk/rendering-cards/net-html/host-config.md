@@ -1,5 +1,5 @@
 ---
-title: Configuration de l’hôte - Kit de développement logiciel .NET HTML
+title: Configuration de l’hôte-SDK HTML .NET
 author: matthidinger
 ms.author: mahiding
 ms.date: 10/19/2017
@@ -11,11 +11,11 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59552411"
 ---
-# <a name="host-config---net-html"></a>Configuration - .NET HTML de l’hôte
+# <a name="host-config---net-html"></a>Configuration de l’hôte-HTML .NET
 
-Un [configuration de l’hôte](../../../rendering-cards/host-config.md) est un objet de configuration partagée comprennent tous les convertisseurs. Cela vous permet de définir des styles courants (par exemple, famille de polices, tailles de police par défaut espacement) et les comportements (par exemple, un nombre maximal d’actions) qui seront automatiquement interprétées par chaque convertisseur de plateforme. 
+Une [configuration d’hôte](../../../rendering-cards/host-config.md) est un objet de configuration partagé que tous les convertisseurs comprennent. Elle vous permet de définir des styles (par exemple, famille de polices, tailles de police, espacement par défaut) et des comportements (par exemple, nombre maximal d’actions) communs qui sont automatiquement interprétés par le convertisseur de chaque plateforme. 
 
-L’objectif est que l’interface utilisateur native généré par chaque convertisseur de plateforme paraîtra très similaire avec un minimum de travail de votre part.
+L’objectif est que l’interface utilisateur native générée par le convertisseur de chaque plateforme se présente de façon très similaire avec un minimum de travail de votre part.
 
 ```csharp
 // Construct programmatically

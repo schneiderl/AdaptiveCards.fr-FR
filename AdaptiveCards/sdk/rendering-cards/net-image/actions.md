@@ -1,5 +1,5 @@
 ---
-title: Actions - Kit de développement logiciel de rendu des images de .NET
+title: Actions-SDK de rendu d’image .NET
 author: matthidinger
 ms.author: mahiding
 ms.date: 10/19/2017
@@ -11,6 +11,6 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59552401"
 ---
-# <a name="actions---net-image"></a>Actions - Image .NET
+# <a name="actions---net-image"></a>Actions-image .NET
 
-Les actions sont non pris en charge, envisagez que cela génère le rendu d’une image.
+Les actions ne sont pas prises en charge, ce qui est considéré comme un rendu sur une image.

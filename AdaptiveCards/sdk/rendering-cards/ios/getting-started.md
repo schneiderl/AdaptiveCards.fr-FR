@@ -1,5 +1,5 @@
 ---
-title: Kit SDK iOS
+title: SDK iOS
 author: matthidinger
 ms.author: mahiding
 ms.date: 06/26/2017
@@ -11,13 +11,13 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59552641"
 ---
-# <a name="getting-started---ios"></a>Mise en route - iOS
+# <a name="getting-started---ios"></a>Prise en main-iOS
 
-Ce convertisseur qui cible les contrôles natifs iOS.
+Convertisseur qui cible les contrôles natifs iOS.
 
-## <a name="install-pod"></a>Installation de pod
+## <a name="install-pod"></a>Installer Pod
 
-Il est disponible en tant qu’un pod.
+Cette fonction est disponible en tant que pod.
 
 [![CocoaPods](https://img.shields.io/cocoapods/v/AdaptiveCards.svg)](https://cocoapods.org/pods/AdaptiveCards)
 
@@ -33,4 +33,4 @@ Il est disponible en tant qu’un pod.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Consultez [restituer une carte](render-a-card.md) pour les prochaines étapes !
+Pour les prochaines étapes, voir [Effectuer le rendu d’une carte](render-a-card.md).

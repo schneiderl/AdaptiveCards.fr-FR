@@ -1,5 +1,5 @@
 ---
-title: Configuration de l’hôte - SDK de rendu Image .NET
+title: Configuration de l’hôte-SDK .NET Image Rendering
 author: matthidinger
 ms.author: mahiding
 ms.date: 10/19/2017
@@ -11,6 +11,6 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59553441"
 ---
-# <a name="host-config---net-image"></a>Configuration - Image .NET de l’hôte
+# <a name="host-config---net-image"></a>Configuration de l’hôte-image .NET
 
-Consultez le [docs WPF](../net-wpf/getting-started.md) pour une liste complète de ces options.
+Consultez les [documents WPF](../net-wpf/getting-started.md) pour une exécution complète de ces options.

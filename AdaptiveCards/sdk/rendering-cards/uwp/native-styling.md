@@ -1,5 +1,5 @@
 ---
-title: Style natif - SDK UWP
+title: Style natif-Kit de développement logiciel (SDK) UWP
 author: matthidinger
 ms.author: mahiding
 ms.date: 08/15/2018
@@ -11,33 +11,33 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59552521"
 ---
-# <a name="native-styling---uwp"></a>Style natif - UWP
+# <a name="native-styling---uwp"></a>Style natif-UWP
 
-Tandis que la configuration de l’hôte vous aidera à la plupart de la façon dont il sur chaque plateforme, il est probable que vous devrez faire certains styles natif sur chaque plateforme. 
+Bien que la configuration de l’hôte vous permette d’accéder à la plupart des cas sur chaque plateforme, il est probable que vous deviez effectuer des styles natifs sur chaque plateforme. 
 
-UWP facilite cette procédure en vous permettant de passer un ResourceDictionary pour style affiné, comportement, animations, etc.
+UWP facilite cette tâche en vous permettant de transmettre un ResourceDictionary pour un style, un comportement, des animations, etc. précis.
 
 | Élément | Noms de style |
 |---|---|
 | AdaptiveCard | Adaptive.Card| 
-| Action.OpenUrl  | Adaptive.Action.OpenUrl  |
-| Action.ShowCard | Adaptive.Action.ShowCard |
-| Action.Submit  | Adaptive.Action.Submit  |
-| colonne | Adaptive.Column, Adaptive.Action.Tap |
+| Action. OpenUrl  | Adaptative. action. OpenUrl  |
+| Action. ShowCard | Adaptive.Action.ShowCard |
+| Action. Submit  | Adaptative. action. Submit  |
+| colonne | Adaptative. Column, adaptative. action. TAP |
 | ColumnSet | Adaptive.ColumnSet, Adaptive.VerticalSeparator |
 | Conteneur | Adaptive.Container|
 | Input.ChoiceSet | Adaptive.Input.ChoiceSet,  Adaptive.Input.ChoiceSet.ComboBox, Adaptive.Input.ChoiceSet.CheckBox,  Adaptive.Input.ChoiceSet.Radio,  Adaptive.Input.ChoiceSet.ComboBoxItem |
-| Input.Date | Adaptive.Input.Text.Date
-| Input.Number | Adaptive.Input.Text.Number |
-| Input.Text | Adaptive.Input.Text |
-| Input.Time | Adaptive.Input.Text.Time |
+| Entrée. date | Adaptive.Input.Text.Date
+| Entrée. nombre | Adaptative. Input. Text. Number |
+| Input. Text | Adaptative. Input. Text |
+| Input. Time | Adaptative. Input. Text. Time |
 | Input.Toggle| Adaptive.Input.Toggle|
-| Image  | Adaptive.Image |
+| Image  | Adaptive. image |
 | ImageSet  | Adaptive.ImageSet |
 | FactSet | Adaptive.FactSet, Adaptive.Fact.Title, Adaptive.Fact.Value |
-| TextBlock  | Adaptive.TextBlock |
+| TextBlock  | Adaptive. TextBlock |
 
-Cet exemple de dictionnaire de ressource de XAML qui définit l’arrière-plan de toutes les TextBlocks sur « cyan ». Vous souhaiterez probablement que quelque chose plus avancé que cela 😁
+Cet exemple de dictionnaire de ressources XAML définit l’arrière-plan de tous les TextBlocks sur Aqua. Vous souhaiterez probablement une plus grande avancée que celle-ci😁
 
 ```xml
 <ResourceDictionary

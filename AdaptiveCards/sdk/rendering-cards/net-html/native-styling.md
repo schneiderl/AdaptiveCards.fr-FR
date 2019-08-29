@@ -1,5 +1,5 @@
 ---
-title: Style natif - Kit de développement logiciel .NET HTML
+title: Styles natifs-SDK HTML .NET
 author: matthidinger
 ms.author: mahiding
 ms.date: 10/19/2017
@@ -11,32 +11,32 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59552561"
 ---
-# <a name="native-styling---net-html"></a>Style natif - .NET HTML
+# <a name="native-styling---net-html"></a>Styles natifs-HTML .NET
 
-Tandis que la configuration de l’hôte vous aidera à la plupart de la façon dont il sur chaque plateforme, il est probable que vous devrez faire certains styles natif sur chaque plateforme. 
+Bien que la configuration de l’hôte vous permette d’accéder à la plupart des cas sur chaque plateforme, il est probable que vous deviez effectuer des styles natifs sur chaque plateforme. 
 
-HTML facilite cette procédure en ajoutant les classes CSS à chaque élément.
+Le langage HTML facilite cette tâche en ajoutant des classes CSS à chaque élément.
 
 | Élément | Classe CSS |
 |---|---|
 | AdaptiveCard | ac-adaptivecard |
-| Toutes les Actions | ac-pushButton | 
-| Sélectionnez les Actions | AC-sélectionnables |
-| Action.OpenUrl  | ac-action-openUrl |
-| Action.ShowCard | ac-action-showCard |
-| Action.Submit  | ac-action-submit  |
-| ActionSet | ac-actionset |
-| colonne | AC-colonne |
-| ColumnSet | AC-jeu de colonnes |
-| Conteneur | AC-container |
-| Toutes les entrées | alimentation en courant alternatif |
+| Toutes les actions | ac-pushButton | 
+| Sélectionner des actions | AC-sélectionnable |
+| Action. OpenUrl  | ac-action-openUrl |
+| Action. ShowCard | ac-action-showCard |
+| Action. Submit  | AC-action-envoyer  |
+| ActionSet | AC-actionset |
+| colonne | AC-Column |
+| ColumnSet | AC-columnset |
+| Conteneur | AC-Container |
+| Toutes les entrées | entrée c.a. |
 | Input.ChoiceSet | ac-multichoiceInput  |
-| Input.Date | ac-dateInput |
-| Input.Number | ac-numberInput |
-| Input.Text | ac-textInput |
-| Input.Time | ac-timeInput |
+| Entrée. date | ac-dateInput |
+| Entrée. nombre | AC-numberInput |
+| Input. Text | AC-textInput |
+| Input. Time | AC-timeInput |
 | Input.Toggle| - |
-| Image  | ac-image |
+| Image  | image AC |
 | ImageSet  | ac-imageset |
-| FactSet | AC-factset |
-| TextBlock  | ac-textblock |
+| FactSet | AC-FactSet |
+| TextBlock  | AC-TextBlock |

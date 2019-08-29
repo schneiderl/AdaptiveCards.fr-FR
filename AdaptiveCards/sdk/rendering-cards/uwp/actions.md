@@ -1,5 +1,5 @@
 ---
-title: Actions - SDK UWP
+title: Actions-Kit de développement logiciel (SDK) UWP
 author: matthidinger
 ms.author: mahiding
 ms.date: 06/26/2017
@@ -11,11 +11,11 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59552971"
 ---
-# <a name="actions---uwp"></a>Actions - UWP
+# <a name="actions---uwp"></a>Actions-UWP
 
-N’importe quel **actions** au sein de la carte s’affiche en tant que UWP **bouton**de, mais c’est à votre application à gérer que se passe-t-il quand un utilisateur appuie dessus (à l’exception des actions ShowCard... Voir extrait de code pour plus d’informations).
+Toutes les **actions** de la carte s’affichent en tant que **bouton**UWP, mais c’est à votre application de gérer ce qui se passe quand un utilisateur clique dessus (à l’exception des actions ShowCard... Pour plus d’informations, consultez l’extrait de code.
 
-Le `RenderedAdaptiveCard` objet fournit une `Action` événement à cet effet.
+L’objet `RenderedAdaptiveCard` fournit un événement `Action` à cette fin.
 
 ```csharp
 // Render a card (as previously shown)

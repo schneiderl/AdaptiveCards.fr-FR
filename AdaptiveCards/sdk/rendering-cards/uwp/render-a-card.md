@@ -1,5 +1,5 @@
 ---
-title: Afficher une carte - SDK UWP
+title: Rendu d’une carte-Kit de développement logiciel (SDK) UWP
 author: matthidinger
 ms.author: mahiding
 ms.date: 06/26/2017
@@ -11,13 +11,13 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59552431"
 ---
-# <a name="render-a-card---uwp"></a>Afficher une carte - UWP
+# <a name="render-a-card---uwp"></a>Rendu d’une carte UWP
 
-Voici comment effectuer le rendu d’une carte à l’aide du SDK UWP.
+Voici comment afficher une carte à l’aide du kit de développement logiciel (SDK) UWP.
 
-## <a name="create-an-instance-of-your-renderer"></a>Créez une instance de votre convertisseur
+## <a name="create-an-instance-of-your-renderer"></a>Créer une instance de votre convertisseur
 
-Créez une instance de la bibliothèque de convertisseur. 
+Créez une instance de la bibliothèque du convertisseur. 
 
 ```csharp
 using AdaptiveCards.Rendering.Uwp;
@@ -38,9 +38,9 @@ var card = AdaptiveCard.FromJsonString(jsonString);
 var card = AdaptiveCard.FromJson(jsonObject);
 ```
 
-## <a name="render-a-card"></a>Afficher une carte
+## <a name="render-a-card"></a>Effectuer le rendu d’une carte
 
-Acquérir une carte à partir d’une source et le rendre.
+Acquérir une carte à partir d’une source et la restituer.
 
 ```csharp
 RenderedAdaptiveCard renderedAdaptiveCard =  renderer.RenderAdaptiveCard(card);
@@ -58,7 +58,7 @@ if (renderedAdaptiveCard.FrameworkElement != null)
 
 ## <a name="example"></a>Exemple
 
-Voici un exemple à partir du convertisseur UWP.
+Voici un exemple du convertisseur UWP.
 
 ```csharp
 var renderer = new AdaptiveCardRenderer();

@@ -1,5 +1,5 @@
 ---
-title: Style natif - SDK JavaScript
+title: Styles natifs-SDK JavaScript
 author: matthidinger
 ms.author: mahiding
 ms.date: 11/28/2017
@@ -11,23 +11,23 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59552891"
 ---
-# <a name="native-styling---javascript"></a>Style natif - JavaScript
+# <a name="native-styling---javascript"></a>Styles natifs-JavaScript
 
-Utiliser CSS pour le style précis de la carte HTML.
+Utilisez CSS pour un style affiné du code HTML de la carte.
 
-Les classes CSS suivants seront ajoutés aux différents éléments.
+Les classes CSS suivantes seront ajoutées à différents éléments.
 
 | Classe CSS | Utilisation |
 |---|---|
-| .AC-container | Conteneurs |
-| .AC sélectionnable  | éléments avec `selectAction` |
-| .AC-image | image |
-| .ac-pushButton | actions rendues comme des boutons |
-| .ac-linkButton  | actions restituées comme liens |
-| entrée de .ac | Contrôles d’entrée|
-| .AC-textInput| Entrée de texte |
+| . AC-Container | recipie |
+| . AC-sélectionnable  | éléments avec`selectAction` |
+| . AC-image | image |
+| . AC-pushButton | actions rendues comme des boutons |
+| . AC-linkButton  | actions rendues comme des liens |
+| . AC-input | contrôles d’entrée|
+| . AC-textInput| entrée de texte |
 | .ac-multiline | entrée de texte multiligne |
-| .ac-numberInput | Saisie d’un nombre|
-| .ac-dateInput | entrée de date|
-| .ac-timeInput | entrées du temps |
-| .ac-multichoiceInput | entrée de choix|
+| . AC-numberInput | entrée de nombre|
+| . AC-dateInput | entrée de date|
+| . AC-timeInput | entrée de temps |
+| .ac-multichoiceInput | entrée à choix multichoix|

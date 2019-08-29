@@ -1,5 +1,5 @@
 ---
-title: Actions - Kit de développement logiciel JavaScript
+title: Actions-SDK JavaScript
 author: matthidinger
 ms.author: mahiding
 ms.date: 11/28/2017
@@ -11,7 +11,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59553111"
 ---
-# <a name="actions---javascript"></a>Actions - JavaScript
+# <a name="actions---javascript"></a>Actions-JavaScript
 
 ```js
 // Set the adaptive card's event handlers. onExecuteAction is invoked

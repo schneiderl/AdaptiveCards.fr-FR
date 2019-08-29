@@ -1,5 +1,5 @@
 ---
-title: Extensibilité - SDK UWP
+title: Extensibilité-Kit de développement logiciel (SDK) UWP
 author: matthidinger
 ms.author: mahiding
 ms.date: 06/26/2017
@@ -11,11 +11,11 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59553041"
 ---
-# <a name="extensibility---uwp"></a>Extensibilité - UWP
+# <a name="extensibility---uwp"></a>Extensibilité-UWP
 
-## <a name="changing-per-element-rendering"></a>Modification par le rendu de l’élément
+## <a name="changing-per-element-rendering"></a>Modification par élément rendu
 
-Implémenter une classe de convertisseur et définissez-le dans le convertisseur
+Implémenter une classe de convertisseur et la définir dans le convertisseur
 
 ```csharp
 // My custom renderer is going to replace how textblocks should render!

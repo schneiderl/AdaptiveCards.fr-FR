@@ -1,5 +1,5 @@
 ---
-title: Extensibilité - iOS SDK
+title: Extensibilité-Kit de développement logiciel (SDK) iOS
 author: matthidinger
 ms.author: mahiding
 ms.date: 06/26/2017
@@ -11,12 +11,12 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59553561"
 ---
-# <a name="extensibility---ios"></a>Extensibilité - iOS
+# <a name="extensibility---ios"></a>Extensibilité-iOS
 
-## <a name="changing-per-element-rendering"></a>Modification par le rendu de l’élément
+## <a name="changing-per-element-rendering"></a>Modification par élément rendu
 
-Les développeurs peuvent personnaliser l’apparence des éléments de AdaptiveCards renderred tels que TextBlock.
-Exemple suivant montre comment changer les couleurs d’arrière-plan de NumberInput.
+Les développeurs peuvent personnaliser l’apparence des éléments renderred AdaptiveCards tels que TextBlock.
+L’exemple suivant montre comment modifier la couleur d’arrière-plan de NumberInput.
 
 ```objective-c
 ACRRegistration *registration = [ACRRegistration getInstance];
@@ -53,8 +53,8 @@ ACRRegistration *registration = [ACRRegistration getInstance];
 
  ## <a name="additional-property"></a>Propriété supplémentaire
 
- Les développeurs peuvent également envoyer dans des propriétés supplémentaires dans le cadre de la charge utile json.
-Par exemple, outre « espacement » et « id » de la charge utile json pour BaseCardElement, un peut ajouter rayon pour les angles du TextBlock à sa charge utile json.
+ Les développeurs peuvent également envoyer des propriétés supplémentaires dans le cadre de la charge utile JSON.
+Par exemple, en plus de «l’espacement» et de l’ID de charge utile JSON pour BaseCardElement, vous pouvez ajouter RADIUS pour les angles de TextBlock à sa charge utile JSON.
 
  ```objective-c
  "type":"TextBlock",
@@ -70,10 +70,10 @@ Par exemple, outre « espacement » et « id » de la charge utile json pour
               radiusForMyTextBlock = dictionary[@"radius"];
           ...
 ```
- ## <a name="custom-parsing"></a>Personnaliser l’analyse
+ ## <a name="custom-parsing"></a>Analyse personnalisée
 
-Les développeurs peuvent également avoir l’analyse personnalisée et avoir le nouvel élément d’interface utilisateur ajouté à la carte adpative telles que de la barre de progression. Vérifiez les CustomProgressBarRenderer.mm en détail.
-Analyseur personnalisé doit implémenter ACOIBaseCardElementParser protocole. deserializeToCustomElement méthode doit analyse étant donné la charge utile json donnée comme NSData et retourner un pointeur vers l’objet UIView qui est ajouté à AdaptiveCard rendu objet.
+Les développeurs peuvent également avoir une analyse personnalisée et ajouter un nouvel élément d’interface utilisateur à la carte Adpative, comme la barre de progression. Pour plus d’informations, consultez CustomProgressBarRenderer.mm.
+L’analyseur personnalisé doit implémenter le protocole ACOIBaseCardElementParser. la méthode deserializeToCustomElement doit analyser la charge utile JSON donnée en tant que NSData et retourner un pointeur vers l’objet UIView qui sera ajouté à AdaptiveCard objet rendu.
 
 ```objective-c
       CustomProgressBarRenderer *progressBarRenderer = [[CustomProgressBarRenderer alloc] init];

@@ -1,5 +1,5 @@
 ---
-title: KIT DE DÉVELOPPEMENT LOGICIEL .NET WPF
+title: SDK .NET WPF
 author: matthidinger
 ms.author: mahiding
 ms.date: 10/19/2017
@@ -11,9 +11,9 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59553621"
 ---
-# <a name="getting-started---net-wpf"></a>Mise en route - .NET WPF
+# <a name="getting-started---net-wpf"></a>Prise en main-WPF .NET
 
-Comme décrit dans [mise en route](../../../authoring-cards/getting-started.md) page, une carte adaptative est un modèle d’objet de carte sérialisé en JSON. Cette bibliothèque rend plus facile rendre ce code JSON dans UI WPF que vous pouvez utiliser dans votre application.
+Comme nous l’avons décrit dans [prise en main](../../../authoring-cards/getting-started.md) page, une carte adaptative est un modèle objet de carte sérialisée JSON. Cette bibliothèque permet de rendre facilement ce JSON dans l’interface utilisateur WPF que vous pouvez utiliser dans votre application.
 
 ## <a name="nuget-install"></a>Installation de NuGet
 
@@ -23,9 +23,9 @@ Comme décrit dans [mise en route](../../../authoring-cards/getting-started.md) 
 Install-Package AdaptiveCards.Rendering.Wpf
 ```
 
-### <a name="xceed-enhanced-input-package"></a>Package d’entrée améliorées Xceed
+### <a name="xceed-enhanced-input-package"></a>Xceed package d’entrée amélioré
 
-Ce package facultatif améliore les contrôles d’entrée de carte adaptative au-delà de ce que WPF fournit prêts à l’emploi. Il a une dépendance `Extended.Wpf.Toolkit`
+Ce package facultatif améliore les contrôles d’entrée de carte adaptative au-delà de ce que WPF prête à l’emploi. Il a une dépendance sur`Extended.Wpf.Toolkit`
 
 [![Installation de NuGet](https://img.shields.io/nuget/vpre/AdaptiveCards.Rendering.Wpf.Xceed.svg)](https://www.nuget.org/packages/AdaptiveCards.Rendering.Wpf.Xceed)
 
@@ -33,12 +33,12 @@ Ce package facultatif améliore les contrôles d’entrée de carte adaptative a
 Install-Package AdaptiveCards.Rendering.Wpf.Xceed
 ```
 
-## <a name="wpf-visualizer-sample"></a>Visualiseur WPF, exemple
+## <a name="wpf-visualizer-sample"></a>Exemple de visualiseur WPF
 
-![Capture d’écran de visualiseur](../../../resources/media/tools/wpfvisualizer.png)
+![Capture d’écran du visualiseur](../../../resources/media/tools/wpfvisualizer.png)
 
-Le [visualiseur de WPF, exemple](https://github.com/Microsoft/AdaptiveCards/tree/master/source/dotnet/Samples/WPFVisualizer) vous permet de visualiser les cartes à l’aide de WPF.  Un `Host Config` éditeur est intégré pour la modification et l’affichage des paramètres de configuration d’hôte. Enregistrer ces paramètres en tant que JSON pour les utiliser dans un rendu dans votre application.
+L' [exemple du visualiseur WPF](https://github.com/Microsoft/AdaptiveCards/tree/master/source/dotnet/Samples/WPFVisualizer) vous permet de visualiser des cartes à l’aide de WPF.  Un `Host Config` éditeur est intégré pour la modification et l’affichage des paramètres de configuration de l’ordinateur hôte. Enregistrez ces paramètres en tant que JSON pour les utiliser dans le rendu de votre application.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Consultez [restituer une carte](render-a-card.md) pour les prochaines étapes !
+Pour les prochaines étapes, voir [Effectuer le rendu d’une carte](render-a-card.md).

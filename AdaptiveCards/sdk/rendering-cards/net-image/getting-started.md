@@ -1,5 +1,5 @@
 ---
-title: Kit de développement logiciel de rendu des images de .NET
+title: SDK de rendu d’image .NET
 author: matthidinger
 ms.author: mahiding
 ms.date: 10/19/2017
@@ -11,11 +11,11 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59552861"
 ---
-# <a name="getting-started---net-image"></a>Mise en route - Image .NET
+# <a name="getting-started---net-image"></a>Prise en main-image .NET
 
-Comme décrit dans [mise en route](../../../authoring-cards/getting-started.md) page, une carte adaptative est un modèle d’objet de carte sérialisé en JSON. Cette bibliothèque rend plus facile de rendu ce code JSON dans une image PNG.
+Comme nous l’avons décrit dans [prise en main](../../../authoring-cards/getting-started.md) page, une carte adaptative est un modèle objet de carte sérialisée JSON. Cette bibliothèque facilite le rendu de ce JSON dans une image PNG.
 
-Ce package peut même être utilisé sur un serveur pour générer des images et implémente toutes les questions de « thread STA magique » pour vous. 
+Ce package peut même être utilisé sur un serveur pour générer des images, et implémente tout le goo «Magic STA thread» pour vous. 
 
 ## <a name="nuget-install"></a>Installation de NuGet
 
@@ -27,4 +27,4 @@ Install-Package AdaptiveCards.Rendering.Wpf -IncludePrerelease
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Consultez [restituer une carte](render-a-card.md) pour les prochaines étapes !
+Pour les prochaines étapes, voir [Effectuer le rendu d’une carte](render-a-card.md).

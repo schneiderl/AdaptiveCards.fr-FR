@@ -1,5 +1,5 @@
 ---
-title: Extensibilité - Kit de développement logiciel .NET HTML
+title: Extensibilité-Kit de développement logiciel (SDK) HTML .NET
 author: matthidinger
 ms.author: mahiding
 ms.date: 10/19/2017
@@ -11,13 +11,13 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59552531"
 ---
-# <a name="extensibility---net-html"></a>Extensibilité - .NET HTML
+# <a name="extensibility---net-html"></a>Extensibilité-.NET HTML
 
-## <a name="custom-element-rendering"></a>Rendu de l’élément personnalisé
+## <a name="custom-element-rendering"></a>Rendu d’élément personnalisé
 
-Pour un contrôle total du convertisseur que vous pouvez utiliser la `ElementRenderers` propriété **ajouter**, **supprimer**, ou **remplacer** convertisseurs de valeur par défaut.
+Pour un contrôle total du convertisseur, vous pouvez utiliser la propriété `ElementRenderers` pour **ajouter**, **supprimer** ou **remplacer** les convertisseurs par défaut.
 
-L’exemple suivant montre comment vous pouvez définir un personnalisé `"type": "Rating"` élément et le rendre.
+L’exemple suivant montre comment définir un élément `"type": "Rating"` personnalisé et en effectuer le rendu.
 
 ```csharp
 // Register the new type with the JSON parser

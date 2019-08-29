@@ -1,5 +1,5 @@
 ---
-title: Afficher une carte - SDK de rendu Image .NET
+title: Rendu d’une carte-SDK de rendu d’image .NET
 author: matthidinger
 ms.author: mahiding
 ms.date: 10/19/2017
@@ -11,9 +11,9 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59552491"
 ---
-# <a name="render-a-card---net-image"></a>Afficher une carte - Image de .NET
+# <a name="render-a-card---net-image"></a>Rendre une carte-image .NET
 
-Voici comment effectuer le rendu d’une carte à l’aide de l’Image .NET SDK.
+Voici comment afficher une carte à l’aide du kit de développement logiciel (SDK) d’image .NET.
 
 ```csharp
 try
