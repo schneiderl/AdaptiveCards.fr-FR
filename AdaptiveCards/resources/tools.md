@@ -1,41 +1,41 @@
 ---
-title: Outils des cartes adaptatives
+title: Outils de cartes adaptatives
 author: matthidinger
 ms.author: mahiding
 ms.date: 03/14/2019
 ms.topic: article
 ms.openlocfilehash: ad520693224509deaf0ea1c2cd6a837089dbf2d5
 ms.sourcegitcommit: e002a988c570072d5bc24a1242eaaac0c9ce90df
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/14/2019
 ms.locfileid: "67137982"
 ---
-# <a name="tools-and-samples"></a>Outils et des exemples
+# <a name="tools-and-samples"></a>Outils et exemples
 
-## <a name="card-designer"></a>Concepteur de carte 
+## <a name="card-designer"></a>Concepteur de cartes 
 
-Vous avez besoin d’un outil concevoir vos cartes ? Ne cherchez plus que le concepteur basée sur navigateur de carte adaptative à [https://adaptivecards.io/designer](https://adaptivecards.io/designer)
+Vous avez besoin d’un outil pour concevoir vos cartes ? Ne cherchez pas plus loin. Sur [https://adaptivecards.io/designer](https://adaptivecards.io/designer), vous trouverez un concepteur de cartes adaptatives basé sur le navigateur.
 
-[![capture d’écran de concepteur](media/tools/designer.jpg)](https://adaptivecards.io/designer)
+[![capture d’écran du concepteur](media/tools/designer.jpg)](https://adaptivecards.io/designer)
 
 ### <a name="embed-the-designer-into-your-app"></a>Incorporer le concepteur dans votre application
 
-Mais pourquoi diriger vos utilisateurs il dès que possible **incorporer le Concepteur de carte directement dans votre site web** application à l’aide de notre bibliothèque JavaScript. 
+Mais pourquoi y envoyer vos utilisateurs quand vous pouvez **incorporer le concepteur de cartes directement dans votre application web** à l’aide de notre bibliothèque JavaScript. 
 
-Découvrez le [adaptivecards-concepteur](https://npmjs.com/adaptivecards-designer) package pour commencer.
+Pour bien démarrer, consultez le [package adaptivecards-designer](https://npmjs.com/adaptivecards-designer).
 
 ## <a name="schema-validation"></a>Validation de schéma
 
-Validation de schéma constitue un moyen efficace de faire plus simple de création et l’activation des outils.
+La validation de schéma est un excellent moyen de simplifier la création d’outils.
 
-Nous avons fourni un complète [fichier de schéma JSON](http://adaptivecards.io/schemas/1.2.0/adaptive-card.json) pour l’édition et la validation des cartes adaptatives dans json. Notez que l’URL de schéma est créée, les versions plus récentes des cartes adaptatives aura une URL correspondante.
+Nous mettons à votre disposition un [fichier de schéma JSON](http://adaptivecards.io/schemas/1.2.0/adaptive-card.json) complet pour la modification et la validation des cartes adaptatives dans JSON. Notez que l’URL de schéma a une version spécifique. Les versions plus récentes des cartes adaptatives auront une URL correspondante.
 
-Dans Visual Studio et Visual Studio Code, vous pouvez obtenir Intellisense automatique en incluant un `$schema` référence.
+Dans Visual Studio et Visual Studio Code, vous pouvez obtenir une fonctionnalité IntelliSense automatique en incluant une référence `$schema`.
 
-![bad](media/tools/invalidjson1.png)
+![incorrect](media/tools/invalidjson1.png)
 
-![Saisie semi-automatique](media/tools/autocomplete.png)
+![complétion automatique](media/tools/autocomplete.png)
 
 ## <a name="example"></a>Exemple
 
@@ -48,19 +48,19 @@ Dans Visual Studio et Visual Studio Code, vous pouvez obtenir Intellisense autom
 }
 ```
 
-## <a name="visual-studio-code-extension"></a>Extension de Visual Studio Code
+## <a name="visual-studio-code-extension"></a>Extension Visual Studio Code
 
-Nous avons créé une extension de code de Visual Studio qui vous permet de visualiser la carte que vous modifiez en temps réel à l’intérieur de l’éditeur lui-même. 
+Nous avons créé une extension Visual Studio Code qui vous permet de visualiser la carte que vous modifiez en temps réel dans l’éditeur lui-même. 
 
 ![extension](media/tools/vscode-extension.png)
 
-Pour installer, ouvrez Extensions Marketplace et recherchez **ADAPTATIF visionneuse carte**.
+Pour l’installer, ouvrez la Place de marché des extensions et recherchez **Adaptive Card Viewer**.
 
-![marketplace](media/tools/vscode-extension-marketplace.png)
+![place de marché](media/tools/vscode-extension-marketplace.png)
 
 ### <a name="usage"></a>Utilisation
 
-Lorsque vous modifiez un fichier .json avec une carte adaptative `$schema` propriété que vous pouvez afficher à l’aide de `Ctrl+Shift+V A`.
+Quand vous modifiez un fichier .json avec une propriété `$schema` de carte adaptative, vous pouvez la voir à l’aide de `Ctrl+Shift+V A`.
 ```json
 {
     "$schema": "http://adaptivecards.io/schemas/1.2.0/adaptive-card.json",
@@ -72,7 +72,7 @@ Lorsque vous modifiez un fichier .json avec une carte adaptative `$schema` propr
 
 ### <a name="options"></a>Options
 
-Le paramètre de Visual Studio Code suivant est disponible pour la visionneuse AdaptiveCards. Cela peut être défini dans les paramètres de l’utilisateur ou de paramètres de l’espace de travail.
+Le paramètre Visual Studio Code suivant est disponible pour la visionneuse AdaptiveCards. Vous pouvez le définir dans les paramètres utilisateur ou dans les paramètres de l’espace de travail.
 
 ```js
 {
@@ -81,12 +81,12 @@ Le paramètre de Visual Studio Code suivant est disponible pour la visionneuse A
 }
 ```
 
-## <a name="wpf-visualizer-sample"></a>Visualiseur WPF, exemple
+## <a name="wpf-visualizer-sample"></a>Exemple de visualiseur WPF
 
-Le [exemple de projet WPF visualiseur](https://github.com/Microsoft/AdaptiveCards/tree/master/source/dotnet/Samples/WPFVisualizer) vous permet de visualiser les cartes à l’aide de WPF/Xaml sur un ordinateur Windows.  Un `hostconfig` éditeur est intégré pour la modification et l’affichage des paramètres de configuration d’hôte. Enregistrer ces paramètres en tant que JSON pour les utiliser dans un rendu dans votre application.
+L’[exemple de projet de visualiseur WPF](https://github.com/Microsoft/AdaptiveCards/tree/master/source/dotnet/Samples/WPFVisualizer) vous permet de visualiser des cartes à l’aide de WPF/XAML sur un ordinateur Windows.  Un éditeur `hostconfig` est intégré pour modifier et voir les paramètres de configuration de l’hôte. Enregistrez ces paramètres au format JSON pour les utiliser dans le cadre du rendu de votre application.
 
 ![visualiseur WPF](media/tools/wpfvisualizer.png)
 
-## <a name="wpf-imagerender-sample"></a>WPF, exemple ImageRender
+## <a name="wpf-imagerender-sample"></a>Exemple ImageRender WPF
 
-Le [ImageRender exemple de projet](https://github.com/Microsoft/AdaptiveCards/tree/master/source/dotnet/Samples/AdaptiveCards.Sample.ImageRender) transforme n’importe quelle carte en un fichier PNG à partir de la ligne de commande à l’aide de WPF. 
+L’[exemple de projet ImageRender](https://github.com/Microsoft/AdaptiveCards/tree/master/source/dotnet/Samples/AdaptiveCards.Sample.ImageRender) convertit n’importe quelle carte au format PNG à partir de la ligne de commande à l’aide de WPF. 

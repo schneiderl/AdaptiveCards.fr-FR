@@ -6,45 +6,45 @@ ms.date: 05/16/2018
 ms.topic: article
 ms.openlocfilehash: f879c164b3471347ba8fa058827b3d79b09be4cd
 ms.sourcegitcommit: e002a988c570072d5bc24a1242eaaac0c9ce90df
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/14/2019
 ms.locfileid: "67138002"
 ---
-# <a name="future-work"></a>Travaux futurs
+# <a name="future-work"></a>Travail à venir
 
-Nous avons fait des progrès considérables définissant des cartes adaptatives, mais il existe toujours un grand nombre de tâches à effectuer. Notre espoir est que via les Communautés de développeurs active comme botness et des partenaires comme Slack et Kik, nous pouvons créer un écosystème exceptionnel de cartes d’inter-plateformes.
+Même si nous avançons à grands pas dans la définition des cartes adaptatives, il reste encore beaucoup de travail à faire. Nous espérons qu’avec des communautés de développeurs actives comme botness et d’excellents partenaires comme Slack et Kik, nous pourrons créer un excellent écosystème de cartes multiplateformes.
 
 ## <a name="roadmap"></a>Feuille de route
 
-Vous pouvez voir notre [actuel (non finale) feuille de route ici](https://portal.productboard.com/adaptivecards/1-adaptive-cards-portal/tabs/1-backlog). Notez que quoi que ce soit ici est susceptible de changer et n’est pas une garantie de livraison.
+Vous pouvez consulter notre [feuille de route actuelle (non finale) ici](https://portal.productboard.com/adaptivecards/1-adaptive-cards-portal/tabs/1-backlog). Notez que tout ce qui se trouve ici peut faire l’objet de modifications, et qu’il ne s’agit pas d’une garantie d’expédition.
 
-## <a name="future-ideas"></a>Idées futures
+## <a name="future-ideas"></a>Idées pour l’avenir
 
-Voici quelques idées futures, que nous avons, qui sont simplement dans la scène réfléchi. Si vous êtes intéressé par un de ces, faites-le nous savoir dans un commentaire.
+Voici quelques idées pour l’avenir, qui n’en sont encore qu’à l’étape du brainstorming. Si elles vous intéressent, faites-le nous savoir dans un commentaire.
 
-### <a name="great-looking-cards-from-data"></a>Excellents cartes qui recherchent des données
+### <a name="great-looking-cards-from-data"></a>Jolies cartes à partir des données
 
-Nous savons de nombreux auteurs de carte disposez déjà de données bien définies derrière leurs cartes. Notre objectif est d’Explorer un modèle de création de modèles qui permettrait de cartes à générer (côté serveur ou côté client) basé sur les données et un référentiel de modèles bien définis et personnalisables.
+Nous savons que de nombreux auteurs de cartes ont déjà des données bien définies sous-jacentes à leurs cartes. Notre plan consiste à explorer un modèle de création de modèles qui permettrait la génération de cartes (côté serveur ou côté client) en fonction des données et un référentiel de modèles bien définis et personnalisables.
 
-### <a name="make-cards-responsive"></a>Rendre des cartes réactive
+### <a name="make-cards-responsive"></a>Rendre les cartes réactives
 
-Dispositions de la carte doivent être réactives à l’espace disponible. Des cartes adaptatives sont adaptables aux différents appareils, les styles de l’expérience utilisateur et et infrastructures d’interface utilisateur, mais ils ne sont pas réactives encore. Propriétés supplémentaires doivent être définies sur les éléments qui permettent les producteurs de carte fournir les indications nécessaires pour les bibliothèques de rendu afin qu’ils peuvent modifier intelligemment la disposition d’une façon qui conserve l’intention de la carte.
+Les dispositions de cartes doivent être réactives à l’espace disponible. Les cartes adaptatives sont adaptables à différents appareils, styles d’expérience utilisateur et frameworks d’interface utilisateur, mais elles ne sont pas encore réactives. Des propriétés supplémentaires doivent être définies sur les éléments afin de permettre aux producteurs de cartes de fournir aux bibliothèques de rendu les indications nécessaires leur permettant de changer intelligemment la disposition d’une manière qui conserve l’intention de la carte.
 
 ### <a name="responsive-exploration"></a>Exploration réactive
 
-* Ajouter un **importance** propriété qui annote l’importance du contenu. Contenu moins importante peut être supprimé pour s’ajuster à la quantité d’espace disponible
-* Ajouter **contraintes** et **stratégie** propriétés décrivant comment réagir lorsque les contraintes ne peuvent pas être satisfaites. 
-  * Masquer le contenu ou réduire le contenu à la plus petite taille.
-  * Ajoutez un seuil qui, lorsque dépassée, change `columnSet` à carrousel de colonnes.
+* Ajouter une propriété d’**importance** qui annote l’importance du contenu. Le contenu moins important peut être supprimé afin que le contenu restant tienne dans l’espace disponible.
+* Ajouter des **contraintes** et des propriétés de **stratégie** décrivant comment réagir quand les contraintes ne peuvent pas être satisfaites. 
+  * Masquer le contenu ou réduire le contenu à une taille plus petite.
+  * Ajouter un seuil qui, en cas de dépassement, change `columnSet` en carrousel de colonnes.
 
-### <a name="new-element-types"></a>Nouveaux types d’élément
+### <a name="new-element-types"></a>Nouveaux types d’éléments
 
-* Mappages ? -intégrer une carte dans une carte avec la stratégie de secours en bitmap ou l’interactivité
-* *Quels éléments souhaitez-vous ou devez*?
+* Cartes ? - Incorporer une carte géographique dans une carte adaptative avec interactivité ou retour à la bitmap.
+* *Quels éléments souhaitez-vous ou vous faut-il* ?
 
 ### <a name="new-rendering-libraries"></a>Nouvelles bibliothèques de rendu
 
-* Réagir ?
+* React ?
 * Xamarin ?
-* *Quelles infrastructures voulez-vous ?*
+* *Quels frameworks souhaitez-vous ?*

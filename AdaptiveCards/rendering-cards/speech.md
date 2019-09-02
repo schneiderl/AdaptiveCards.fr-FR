@@ -1,24 +1,24 @@
 ---
-title: Gestion des voix
+title: Gestion de la parole
 author: matthidinger
 ms.author: mahiding
 ms.date: 06/26/2017
 ms.topic: article
 ms.openlocfilehash: 64eeaefbc2ac775b69bd48cc853beb729cb2c37f
 ms.sourcegitcommit: e002a988c570072d5bc24a1242eaaac0c9ce90df
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/14/2019
 ms.locfileid: "67137992"
 ---
-# <a name="handling-speech"></a>Gestion des voix
+# <a name="handling-speech"></a>Gestion de la parole
 
-En parole prise en charge des cartes adaptatives a le `speak` propriété qui contient des informations sur la façon dont une carte doit être lue à haute voix à un utilisateur.
+Pour prendre en charge la parole, les cartes adaptatives disposent de la propriété `speak`, qui contient des informations sur la façon dont une carte doit être lue à haute voix à un utilisateur.
 
-La balise de reconnaissance vocale peut être annotée à l’aide de [un balisage SSML](https://msdn.microsoft.com/en-us/library/office/hh361578(v=office.14).aspx). SSML vous donne le contrôle la vitesse, le ton, de la capacité inflexion de la reconnaissance vocale.  Il permet même vous à diffuser des flux audio ou d’un rendu un flux audio de synthèse vocale à partir de votre propre service, ce qui vous donne une grande quantité de personnalisation.
+La balise de parole peut être annotée à l’aide du [balisage SSML](https://msdn.microsoft.com/en-us/library/office/hh361578(v=office.14).aspx). SSML vous donne la possibilité de contrôler la vitesse, le ton et l’inflexion de la parole.  Il vous permet même de diffuser de l’audio ou de restituer un flux audio TTS à partir de votre propre service, ce qui vous donne beaucoup de personnalisation.
 
-Il existe 2 modèles pour parlent de l’utilisation de propriété par une application hôte :
-* **sur la distribution** : quand une carte est remise à un client peut choisir de lire la propriété de lecture de la carte décrire la carte dans sa globalité.
-* **à la demande** - pour prendre en charge un modèle d’accessibilité plus riche le prend en charge du schéma une lecture de balise par élément.  
-Cela permet aux clients de lire chaque élément aux destinataires avec des normes d’accessibilité.
+La propriété Speak peut être utilisée par une application hôte selon deux modèles :
+* **À la livraison** : lors de la livraison d’une carte, un client peut choisir de lire la propriété Speak pour obtenir une description de la carte dans son ensemble.
+* **À la demande** : afin de prendre en charge un modèle d’accessibilité plus riche, le schéma prend en charge une balise speak par élément.  
+Cela permet aux clients de lire chaque élément aux destinataires ayant des besoins d’accessibilité.
 

@@ -1,24 +1,24 @@
 ---
-title: Média de cartes adaptatives
+title: Contenu multimédia sur les cartes adaptatives
 author: matthidinger
 ms.author: mahiding
 ms.date: 5/14/2018
 ms.topic: article
 ms.openlocfilehash: d4c9e784fec66d2f3449e5780dda23d72ab2edf2
 ms.sourcegitcommit: f8de9c02b92cd8927a18e59e5650c92b2b78db06
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 07/26/2019
 ms.locfileid: "68523861"
 ---
-# <a name="adaptive-cards-media"></a>Média de cartes adaptatives
+# <a name="adaptive-cards-media"></a>Contenu multimédia sur les cartes adaptatives
 
 
-## <a name="introduction-video"></a>Vidéo de présentation
+## <a name="introduction-video"></a>Vidéo d’introduction
 
 [!VIDEO https://adaptivecardsblob.blob.core.windows.net/assets/AdaptiveCardsOverviewVideo.mp4]
 
-Vidéo 2:
+Vidéo 2 :
 
 <video controls width="100%" poster="../content/videoposter.png">
     <source src="https://adaptivecardsblob.blob.core.windows.net/assets/AdaptiveCardsOverviewVideo.mp4" type="video/mp4">
