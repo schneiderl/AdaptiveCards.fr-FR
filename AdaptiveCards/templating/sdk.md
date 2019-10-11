@@ -1,15 +1,15 @@
 ---
-title: SDK de création de modèles
+title: Kits SDK de création de modèles
 author: matthidinger
 ms.author: mahiding
 ms.date: 08/01/2019
 ms.topic: article
-ms.openlocfilehash: 5f60a458af99f1b88e8ee428a8f29f1849be9b62
-ms.sourcegitcommit: a16f53ba10a8607deacde5c8cc78927cac58657c
+ms.openlocfilehash: 3a9bfcd1bf8f87959a747997e04f5c5ad2a79980
+ms.sourcegitcommit: 90afb3729931b0e4cae19b17ef9e49453c2d2bf6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68878876"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72163619"
 ---
 # <a name="adaptive-card-templating-sdks"></a>SDK de création de cartes adaptatives
 
@@ -19,7 +19,7 @@ Les kits de développement logiciel (SDK) de création de cartes adaptatives fac
 
 > [!IMPORTANT] 
 > 
-> Ces fonctionnalités sont **en version préliminaire et sujettes à modification**. Vos commentaires sont non seulement des bienvenues, mais essentiels pour garantir que nous fournissons les fonctionnalités dont **vous** avez besoin.
+> Ces fonctionnalités sont **en préversion et sujettes à modification**. Vos commentaires sont non seulement bienvenus, mais essentiels pour garantir que nous fournissions les fonctionnalités dont **vous** avez besoin.
 > 
 > Au cours de la première version préliminaire, seul le SDK JavaScript est disponible, mais un kit de développement logiciel (SDK) .NET devrait bientôt arriver.
 
@@ -39,11 +39,11 @@ npm install adaptivecards-templating
 <script src="https://unpkg.com/adaptivecards-templating/dist/adaptivecards-templating.min.js"></script>
 ``` 
 
-### <a name="usage"></a>Utilisation
+### <a name="usage"></a>Usage
 
 L’exemple ci-dessous suppose que vous avez également installé la bibliothèque [adaptivecards](https://www.npmjs.com/package/adaptivecards) pour afficher la carte. 
 
-Si vous n’envisagez pas de restituer la carte, `parse` vous `render` pouvez supprimer le code et. 
+Si vous n’envisagez pas de rendre la carte, vous pouvez supprimer le code `parse` et `render`. 
 
 ```js
 import * as ACData from "adaptivecards-templating";
@@ -82,10 +82,42 @@ adaptiveCard.parse(card);
 var htmlElement = adaptiveCard.render();
 ```
 
-## <a name="net-coming-soon"></a>.NET (bientôt*disponible*)
-
-PAS ENCORE OPÉRATIONNEL: 
+## <a name="net"></a>.NET 
 
 ```console
-nuget install AdaptiveCards.Templating
+dotnet add package AdaptiveCards.Templating --version 0.1.0-alpha1
+```
+
+> [!NOTE]
+>
+> Envisagez de remplacer la version ci-dessus par la dernière version publiée
+
+Importer la bibliothèque 
+
+```cs
+using AdaptiveCards.Templating
+```
+
+Utilisez le moteur de création de modèles en passant votre modèle JSON et vos données JSON.
+
+```cs
+var templateJson = @"
+{
+    ""type"": ""AdaptiveCard"",
+    ""version"": ""1.0"",
+    ""body"": [
+        {
+            ""type"": ""TextBlock"",
+            ""text"": ""Hello {name}""
+        }
+    ]
+}";
+
+var dataJson = @"
+{
+    ""name"": ""Mickey Mouse""
+}";
+
+var transformer = new AdaptiveTransformer();
+var cardJson = transformer.Transform(templateJson, dataJson);
 ```

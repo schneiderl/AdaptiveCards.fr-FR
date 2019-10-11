@@ -4,12 +4,12 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 06/26/2017
 ms.topic: article
-ms.openlocfilehash: 487acab86d80d563210abe07968520ea7669498a
-ms.sourcegitcommit: 8c8067206f283d97a5aa4ec65ba23d3fe18962f1
+ms.openlocfilehash: 27c7d5ac7da3ae182667cbf8efa90d29f110d1d3
+ms.sourcegitcommit: ef03c0eff3272a36cfa88daf99c4d57e4bae9599
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68299537"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72042533"
 ---
 # <a name="adaptive-cards-overview"></a>Vue d’ensemble du format Cartes adaptatives 
 
@@ -76,8 +76,8 @@ En misant sur la simplicité et l’expressivité, Markdown a créé une descrip
 Il est plus facile d’effectuer un ajout plus tard que de rester dans l’erreur. Si nous avons été amenés à débattre de l’opportunité d’ajouter ou non quelque chose, nous avons choisi de l’ignorer.  Il est toujours plus facile d’ajouter une propriété que de conserver quelque chose que nous aurions aimé ne pas avoir à prendre en charge.
 
 
-## <a name="build-2018-session"></a>Session Build 2018
+## <a name="build-2019-session"></a>Session Build 2019
 
-La session Build 2018 suivante présente le format Cartes adaptatives dans les bots, Cortana, Outlook et Windows. 
+La session suivante de la conférence Microsoft Build présente les cartes adaptatives dans des cas d’utilisation très divers. 
 
-<iframe src="https://medius.studios.ms/Embed/Video/BRK2401?SFYT=true" width="960" height="540" allowFullScreen frameBorder="0"></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/wT1yFr_j6IM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
