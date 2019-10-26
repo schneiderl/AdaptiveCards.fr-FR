@@ -4,21 +4,21 @@ author: bekao
 ms.author: bekao
 ms.date: 09/27/2017
 ms.topic: article
-ms.openlocfilehash: ca92f0a2b6ef8a36c5394e4dd9853df59fef22b2
-ms.sourcegitcommit: 8c8067206f283d97a5aa4ec65ba23d3fe18962f1
+ms.openlocfilehash: 9e13ebad04c780db83d25129a9f5829a9d43ef69
+ms.sourcegitcommit: ce044dc969d9b9c47a52bd361bfe2b746071913b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68299556"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72917120"
 ---
 # <a name="extensibility---android"></a>Extensibilité – Android
 
-Le convertisseur Android peut être étendu pour prendre en charge plusieurs scénarios, notamment:
+Le convertisseur Android peut être étendu pour prendre en charge plusieurs scénarios, notamment :
 * [Analyse personnalisée des éléments de carte](#custom-parsing-of-card-elements)
 * [Rendu personnalisé d’éléments de carte](#custom-rendering-of-card-elements)
-* [Rendu personnalisé des actions](#custom-rendering-of-actions) (Depuis v 1.2)
-* [Chargement d’images personnalisées](#custom-image-loading) (Depuis v 1.0.1)
-* [Chargement de support personnalisé](#custom-media-loading) (Depuis v 1.1)
+* [Rendu personnalisé des actions](#custom-rendering-of-actions) (depuis v 1.2)
+* [Chargement d’images personnalisées](#custom-image-loading) (depuis v 1.0.1)
+* [Chargement de support personnalisé](#custom-media-loading) (depuis v 1.1)
 
 ## <a name="custom-parsing-of-card-elements"></a>Analyse personnalisée d’éléments de carte
 
@@ -91,7 +91,7 @@ Vient ensuite le rendu de l’élément personnalisé
 >
 > [Changements importants pour la version v1.2](#breaking-changes-for-v12)
 
-Pour définir notre propre convertisseur personnalisé pour notre type, nous devons d’abord créer une classe qui s’étend ```BaseCardElementRenderer```de:
+Pour définir notre propre convertisseur personnalisé pour notre type, nous devons d’abord créer une classe qui s’étend à partir de ```BaseCardElementRenderer```:
 ```java
 public class MyCardElementRenderer extends BaseCardElementRenderer
 {
@@ -122,7 +122,7 @@ RenderedAdaptiveCard renderedCard = AdaptiveCardRenderer.getInstance().render(co
 
 ### <a name="breaking-changes-for-v12"></a>Modifications avec rupture pour v 1.2
 
-La ```render``` méthode a été modifiée pour inclure ```RenderedAdaptiveCard``` le paramètre ```ContainerStyle``` et a été modifiée pour un RenderArgs où le ContainerStyle est maintenant contenu, de sorte qu’une classe qui étend BaseCardElementRenderer doit se présenter comme suit
+La méthode ```render``` a été modifiée pour inclure le paramètre ```RenderedAdaptiveCard``` et ```ContainerStyle``` a été modifiée pour un RenderArgs où le ContainerStyle est maintenant contenu, de sorte qu’une classe qui étend BaseCardElementRenderer doit se présenter comme suit
 
 ```
 public class MyCardElementRenderer extends BaseCardElementRenderer
@@ -136,7 +136,7 @@ public class MyCardElementRenderer extends BaseCardElementRenderer
 
 ## <a name="custom-parsing-of-card-actions"></a>Analyse personnalisée des actions de carte
 
-De même que l’analyse d’éléments de carte personnalisés dans v 1.2, il est possible d’analyser des actions personnalisées. Par exemple, imaginons que nous ayons un nouveau type d’action qui ressemble à ceci:
+De même que l’analyse d’éléments de carte personnalisés dans v 1.2, il est possible d’analyser des actions personnalisées. Par exemple, imaginons que nous ayons un nouveau type d’action qui ressemble à ceci :
 ```json
 {
     "type" : "MyAction",
@@ -144,7 +144,7 @@ De même que l’analyse d’éléments de carte personnalisés dans v 1.2, il e
 }
 ```
 
-Les lignes suivantes montrent comment l’analyser dans un ActionElement qui s’étend à partir de ```BaseActionElement```:
+Les lignes suivantes montrent comment l’analyser dans un ActionElement qui s’étend à partir du ```BaseActionElement```:
 ```java
 public class MyActionElement extends BaseActionElement
 {
@@ -202,7 +202,7 @@ public class MyActionParser extends ActionElementParser
 }
 ```
 
-Et les lignes suivantes montrent comment inscrire l’analyseur et récupérer un objet AdaptiveCard qui contient l’élément d’action personnalisé:
+Et les lignes suivantes montrent comment inscrire l’analyseur et récupérer un objet AdaptiveCard qui contient l’élément d’action personnalisé :
 ```java
 // Create an ActionParserRegistration and add your parser to it
 ActionParserRegistration actionParserRegistration = new ActionParserRegistration();
@@ -216,7 +216,7 @@ Le prochain rendu de l’action personnalisée
 
 ## <a name="custom-rendering-of-actions"></a>Rendu personnalisé des actions
 
-Pour définir notre propre convertisseur d’action personnalisé pour notre type, nous devons d’abord créer une classe qui s' ```BaseActionElementRenderer```étend de:
+Pour définir notre propre convertisseur d’action personnalisé pour notre type, nous devons d’abord créer une classe qui s’étend à partir de ```BaseActionElementRenderer```:
 ```java
 public class MyActionRenderer extends BaseActionElementRenderer
 {
@@ -255,7 +255,7 @@ RenderedAdaptiveCard renderedCard = AdaptiveCardRenderer.getInstance().render(co
 
 ## <a name="custom-rendering-of-actions"></a>Rendu personnalisé d’actions
 
-[!IMPORTANT]
+> [!IMPORTANT]
 > Des modifications du rendu personnalisé d’actions sont prévues pour la version v1.2 mais ne sont pas encore terminées
 
 ## <a name="custom-image-loading"></a>Chargement d’image personnalisée
@@ -380,13 +380,13 @@ La transformation d’un IOnlineImageLoader en IResourceResolver est une tâche 
 
 Comme vous pouvez le voir, plus grands changements sont les suivants :
 
-* ```loadOnlineImage(String, GenericImageLoaderAsync)```a été renommé en```resolveImageResource(String, GenericImageLoaderAsync)```
-* une surcharge pour ```resolveImageResource(String, GenericImageLoaderAsync)``` a été ajoutée ```resolveImageResource(String, GenericImageLoaderAsync, int)``` comme afin de prendre en charge les scénarios où la largeur maximale est requise
+* ```loadOnlineImage(String, GenericImageLoaderAsync)``` a été renommé en ```resolveImageResource(String, GenericImageLoaderAsync)```
+* une surcharge pour ```resolveImageResource(String, GenericImageLoaderAsync)``` a été ajoutée en tant que ```resolveImageResource(String, GenericImageLoaderAsync, int)``` afin de prendre en charge des scénarios où la largeur maximale est requise
 
 ## <a name="custom-media-loading"></a>Chargement de support personnalisé
 
 > [!IMPORTANT]
-> **N’oubliez pas ```IOnlineMediaLoader``` queaétéajoutéauniveaudel’API23ouAndroidM```MediaDataSource```**
+> **N’oubliez pas ```IOnlineMediaLoader``` nécessite ```MediaDataSource``` qui a été ajouté au niveau de l’API 23 ou Android M**
 
 En même temps que l’élément multimédia, a également été incluse l’interface IOnlineMediaLoader qui permet aux développeurs de remplacer la [MediaDataSource](https://developer.android.com/reference/android/media/MediaDataSource) utilisée pour l’élément mediaPlayer sous-jacent. **(Nécessite Android M)**
 

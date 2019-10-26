@@ -4,12 +4,12 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 08/01/2019
 ms.topic: article
-ms.openlocfilehash: 993618ed94eaea1a004c7893a5a3927c0d818cd6
-ms.sourcegitcommit: a16f53ba10a8607deacde5c8cc78927cac58657c
+ms.openlocfilehash: b99a2905fb000653b7ee75204221b832a2b5a907
+ms.sourcegitcommit: ce044dc969d9b9c47a52bd361bfe2b746071913b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68878896"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72917122"
 ---
 # <a name="adaptive-cards-template-language"></a>Langue du modèle de cartes adaptatives
 
@@ -19,19 +19,19 @@ La création de modèles permet de séparer les **données** de la **disposition
 
 > [!IMPORTANT] 
 > 
-> Ces fonctionnalités sont **en version préliminaire et sujettes à modification**. Vos commentaires sont non seulement des bienvenues, mais essentiels pour garantir que nous fournissons les fonctionnalités dont **vous** avez besoin.
+> Ces fonctionnalités sont **en préversion et sujettes à modification**. Vos commentaires sont non seulement bienvenus, mais essentiels pour garantir que nous fournissions les fonctionnalités dont **vous** avez besoin.
 
-Lors de la création d’un modèle, vous pouvez spécifier les données Inline avec la `AdaptiveCard` charge utile, ou au moment de l’exécution à l’aide des [Kits SDK de création de modèles](sdk.md).
+Lors de la création d’un modèle, vous pouvez spécifier les données Inline avec la charge utile `AdaptiveCard`, ou au moment de l’exécution à l’aide des [Kits SDK de création de modèles](sdk.md).
 
 ## <a name="specify-data-within-the-card"></a>Spécifier les données dans la carte
 
-Pour fournir des données directement dans la charge utile de la carte `$data` , ajoutez simplement `AdaptiveCard` un attribut à votre (voir ci-dessous).
+Pour fournir des données directement dans la charge utile de la carte, ajoutez simplement un attribut `$data` à votre `AdaptiveCard` (voir ci-dessous).
 
 ## <a name="binding-to-the-data"></a>Liaison aux données
 
-Vous pouvez lier les données au sein `body` de la ou `actions` de la carte.
+Vous pouvez lier les données au sein de la `body` ou `actions` de la carte.
 
-* La syntaxe de liaison `{` commence par et `}`se termine par. Par exemple,`{myProperty}`
+* La syntaxe de liaison commence par `{` et se termine par `}`. Par exemple, `{myProperty}`
 * Notation de points pour accéder aux sous-objets
 * Syntaxe de l’indexeur pour récupérer des propriétés par clé ou éléments dans un tableau
 * Gestion des valeurs NULL gracieuses pour les hiérarchies profondes
@@ -74,9 +74,9 @@ Vous pouvez lier les données au sein `body` de la ou `actions` de la carte.
 
 ## <a name="separating-the-template-from-the-data"></a>Séparation du modèle des données
 
-En guise d’alternative (et plus probable), vous allez créer un «modèle» de carte réutilisable sans inclure les données. Ce modèle peut être stocké en tant que fichier et ajouté au contrôle de code source.
+En guise d’alternative (et plus probable), vous allez créer un « modèle » de carte réutilisable sans inclure les données. Ce modèle peut être stocké en tant que fichier et ajouté au contrôle de code source.
 
-**EmployeeCardTemplate. JSON**
+**EmployeeCardTemplate.json**
 
 ```json
 {
@@ -135,12 +135,12 @@ var card = template.expand(dataContext);
 
 Le concepteur de cartes adaptatives a été mis à jour pour prendre en charge la création de modèles. 
 
-> Essayez une version préliminaire «vNext» à l’adresse suivante: **[https://vnext.adaptivecards.io/designer](https://vnext.adaptivecards.io/designer)**
+> Essayez une version préliminaire « vNext » à l’adresse suivante :  **[https://vnext.adaptivecards.io/designer](https://vnext.adaptivecards.io/designer)**
 
-[![image](https://user-images.githubusercontent.com/1432195/53214462-88d46980-3601-11e9-908d-253a1bb940a8.png)](http://vnext.adaptivecards.io/designer)
+[image![](https://user-images.githubusercontent.com/1432195/53214462-88d46980-3601-11e9-908d-253a1bb940a8.png)](http://vnext.adaptivecards.io/designer)
 
  
-Cette URL «vNext» va avoir des bogues et sera déployée fréquemment. **Effacez votre cache** pour vous assurer que vous disposez de la dernière version de et, si vous trouvez des bogues, faites-le nous savoir!
+Cette URL « vNext » va avoir des bogues et sera déployée fréquemment. **Effacez votre cache** pour vous assurer que vous disposez de la dernière version de et, si vous trouvez des bogues, faites-le nous savoir !
 
 * **Exemple d’éditeur de données** : spécifiez des exemples de données ici pour afficher la carte liée aux données en mode aperçu. Ce volet contient un petit bouton qui permet de remplir la structure de données à partir des données d’exemple existantes.
 * **Structure de données** : il s’agit de la structure de vos exemples de données. Les champs peuvent être glissés sur l’aire de conception pour créer une liaison avec eux 
@@ -153,7 +153,7 @@ Cette URL «vNext» va avoir des bogues et sera déployée fréquemment. **Effac
 
 Il existe quelques mots clés réservés pour accéder à différentes étendues de liaison. 
 
-*Remarque:* tous ces éléments ne sont pas implémentés dans la version préliminaire.
+*Remarque :* tous ces éléments ne sont pas implémentés dans la version préliminaire.
 
 ```json
 {
@@ -167,7 +167,7 @@ Il existe quelques mots clés réservés pour accéder à différentes étendues
 
 ### <a name="assigning-a-data-context-to-elements"></a>Assignation d’un contexte de données à des éléments
 
-Pour assigner un «contexte de données» à un `$data` élément, ajoutez un attribut à l’élément.
+Pour assigner un « contexte de données » à un élément, ajoutez un attribut `$data` à l’élément.
 
 ```json
 {
@@ -188,12 +188,12 @@ Pour assigner un «contexte de données» à un `$data` élément, ajoutez un at
 
 ## <a name="repeating-items-in-an-array"></a>Répétition d’éléments dans un tableau
 
-Cette partie est un peu «Dark Magic». Commentaires de bienvenue.
+Cette partie est un peu « Dark Magic ». Commentaires de bienvenue.
 
-* Si la `$data` propriété des objets est définie sur un **tableau**, l' **objet lui-même est répété pour chaque élément du tableau.** 
-* À mesure qu’elle est répétée, `$data` utilisée dans les liaisons de propriété est limitée à l' **élément individuel** dans le tableau.
+* Si la propriété `$data` d’objets est définie sur un **tableau**, l' **objet lui-même est répété pour chaque élément du tableau.** 
+* À mesure qu’il est répété, les `$data` utilisées dans les liaisons de propriété sont limitées à l' **élément individuel** dans le tableau.
 
-Par exemple, l' `TextBlock` exemple ci-dessous est répété 3 fois, `$data` car il s’agit d’un tableau. Notez comment la `text` propriété est liée à la `name` propriété d’un objet individuel dans le tableau. 
+Par exemple, le `TextBlock` ci-dessous est répété 3 fois, car il est `$data` est un tableau. Notez que la propriété `text` est liée à la propriété `name` d’un objet individuel dans le tableau. 
 
 ```json
 {
@@ -212,7 +212,7 @@ Par exemple, l' `TextBlock` exemple ci-dessous est répété 3 fois, `$data` car
 }
 ```
 
-**Ce qui donne:**
+**Ce qui donne :**
 
 ```json
 {
@@ -238,7 +238,7 @@ Par exemple, l' `TextBlock` exemple ci-dessous est répété 3 fois, `$data` car
 
 Aucun langage de création de modèles n’est terminé sans aucune fonction d’assistance. Nous allons fournir un ensemble standard de fonctions qui fonctionnent sur chaque kit de développement logiciel (SDK). 
 
-La syntaxe ici est toujours active dans l’air. Veuillez recommencer, mais voici ce que nous avons planifié:
+La syntaxe ici est toujours active dans l’air. Veuillez recommencer, mais voici ce que nous avons planifié :
 
 ### <a name="string-functions"></a>Fonctions de chaîne
 
@@ -260,12 +260,12 @@ La syntaxe ici est toujours active dans l’air. Veuillez recommencer, mais voic
 
 * if (*expression*, *TrueValue*, *FalseValue*)
 
-**`if`tels**
+**exemple de`if`**
 
 ```json
 {
     "type": "TextBlock",
-    "color": "if(priceChange >= 0, 'good', 'attention')"
+    "color": "{if(priceChange >= 0, 'good', 'attention')}"
 }
 ```
 
@@ -273,9 +273,9 @@ La syntaxe ici est toujours active dans l’air. Veuillez recommencer, mais voic
 
 * JSON. Parse-capacité à analyser une chaîne JSON 
 
-**`JSON.parse`tels**
+**exemple de`JSON.parse`**
 
-Il s’agit d’une réponse Azure DevOps `message` où la propriété est une chaîne sérialisée au format JSON. Pour accéder aux valeurs dans la chaîne, nous devons utiliser la `JSON.parse` fonction dans notre modèle.
+Il s’agit d’une réponse Azure DevOps où la propriété `message` est une chaîne sérialisée au format JSON. Pour accéder aux valeurs de la chaîne, nous devons utiliser la fonction `JSON.parse` dans notre modèle.
 
 **Données** 
 
@@ -290,7 +290,7 @@ Il s’agit d’une réponse Azure DevOps `message` où la propriété est une c
 }
 ```
 
-**Utilisation**
+**Syntaxe**
 
 ```json
 {
@@ -314,7 +314,7 @@ Nous voulons nous assurer que les hôtes peuvent ajouter des fonctions personnal
 
 ## <a name="conditional-layout"></a>Disposition conditionnelle
 
-Pour supprimer un élément entier si une condition est remplie, utilisez la `$when` propriété. Si `$when` prend `false` la valeur, l’élément ne s’affiche pas pour l’utilisateur.
+Pour supprimer l’intégralité d’un élément si une condition est remplie, utilisez la propriété `$when`. Si `$when` prend la valeur `false` l’élément ne s’affiche pas à l’utilisateur.
 
 ```json
 {
@@ -341,7 +341,7 @@ Pour supprimer un élément entier si une condition est remplie, utilisez la `$w
 
 ### <a name="composing-templates"></a>Composition de modèles
 
-Il n’existe actuellement aucune prise en charge pour composer les «parties» du modèle. Toutefois, nous explorons les options et espérons partager plus tôt. Toutes les pensées ici Bienvenue!
+Il n’existe actuellement aucune prise en charge pour composer les « parties » du modèle. Toutefois, nous explorons les options et espérons partager plus tôt. Toutes les pensées ici Bienvenue !
 
 
 ## <a name="examples"></a>Exemples
