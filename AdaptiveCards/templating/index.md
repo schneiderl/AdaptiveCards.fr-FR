@@ -4,12 +4,12 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 07/29/2019
 ms.topic: article
-ms.openlocfilehash: fdfe7b46614f046155ab84a5a487105d55afd7cb
-ms.sourcegitcommit: ef03c0eff3272a36cfa88daf99c4d57e4bae9599
+ms.openlocfilehash: 11ade4c2a41111f372873ea9a0677fe823c5b0ab
+ms.sourcegitcommit: 16a274ce5596001a1c5ab252d9d2a3db6a5a9a0d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72042536"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73750427"
 ---
 # <a name="adaptive-cards-templating-preview"></a>Création de modèles de cartes adaptatives (préversion)
 
@@ -57,13 +57,13 @@ Le langue de modèle est la syntaxe utilisée pour créer un modèle de carte ad
 > 
 > Suivez avec l’exemple ci-dessous en ouvrant un nouvel onglet pour
 >
-> **https://vnext.adaptivecards.io/designer**
+> **https://adaptivecards.io/designer**
 > 
 > Cliquez sur le bouton **Mode Aperçu** pour basculer entre le mode création et le mode aperçu.
 
 ![Capture d’écran du concepteur](content/2019-08-01-13-58-27.png)
 
-Le [« Concepteur vNext »](https://vnext.adaptivecards.io/designer) ajoute la prise en charge de la création de modèles et de la fourniture d’**exemples de données** pour afficher un aperçu de la carte en cours de conception.
+Le concepteur vient d’être mis à jour et prend maintenant en charge la création de modèles et fournit des **exemples de données** pour voir un aperçu de la carte en cours de conception.
 
 Collez l’exemple ci-dessous dans le volet de l’**éditeur de charge utile de carte** : 
 
