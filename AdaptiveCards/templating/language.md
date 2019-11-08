@@ -4,12 +4,12 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 08/01/2019
 ms.topic: article
-ms.openlocfilehash: b99a2905fb000653b7ee75204221b832a2b5a907
-ms.sourcegitcommit: ce044dc969d9b9c47a52bd361bfe2b746071913b
+ms.openlocfilehash: 42a1f43fbcfe1416820637af750acc960b9effde
+ms.sourcegitcommit: 16a274ce5596001a1c5ab252d9d2a3db6a5a9a0d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72917122"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73750400"
 ---
 # <a name="adaptive-cards-template-language"></a>Langue du modèle de cartes adaptatives
 
@@ -135,12 +135,9 @@ var card = template.expand(dataContext);
 
 Le concepteur de cartes adaptatives a été mis à jour pour prendre en charge la création de modèles. 
 
-> Essayez une version préliminaire « vNext » à l’adresse suivante :  **[https://vnext.adaptivecards.io/designer](https://vnext.adaptivecards.io/designer)**
+> Essayez-le à l’adresse suivante :  **[https://adaptivecards.io/designer](https://adaptivecards.io/designer)**
 
-[image![](https://user-images.githubusercontent.com/1432195/53214462-88d46980-3601-11e9-908d-253a1bb940a8.png)](http://vnext.adaptivecards.io/designer)
-
- 
-Cette URL « vNext » va avoir des bogues et sera déployée fréquemment. **Effacez votre cache** pour vous assurer que vous disposez de la dernière version de et, si vous trouvez des bogues, faites-le nous savoir !
+[image ![](https://user-images.githubusercontent.com/1432195/53214462-88d46980-3601-11e9-908d-253a1bb940a8.png)](https://adaptivecards.io/designer)
 
 * **Exemple d’éditeur de données** : spécifiez des exemples de données ici pour afficher la carte liée aux données en mode aperçu. Ce volet contient un petit bouton qui permet de remplir la structure de données à partir des données d’exemple existantes.
 * **Structure de données** : il s’agit de la structure de vos exemples de données. Les champs peuvent être glissés sur l’aire de conception pour créer une liaison avec eux 
@@ -346,7 +343,4 @@ Il n’existe actuellement aucune prise en charge pour composer les « parties�
 
 ## <a name="examples"></a>Exemples
 
-Nous n’avons qu’une quantité limitée d’exemples créés jusqu’à présent, mais jetez un coup d’œil ici pour commencer.
-
-* Charger les exemples dans le [Concepteur](http://vnext.adaptivecards.io/designer) en cliquant sur **ouvrir l’exemple**
-* Ou simplement [Parcourir un répertoire de ces derniers](https://github.com/Microsoft/AdaptiveCards/tree/js/template-engine/samples/v2.0/Scenarios) directement
+Parcourez la [page d’exemples](https://adaptivecards.io/samples) mise à jour pour explorer toutes sortes de cartes basées sur un modèle.
