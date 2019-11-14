@@ -4,12 +4,12 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 9/24/2018
 ms.topic: article
-ms.openlocfilehash: ea662d3c3906c9c83de306d82d2c9e0d4997e6ad
-ms.sourcegitcommit: 48838a50b5f0316e15b48d740a7dd0a5f96ebae4
+ms.openlocfilehash: 92b334a237c56c453a15a8a4a5f1a516c73abc57
+ms.sourcegitcommit: 16a274ce5596001a1c5ab252d9d2a3db6a5a9a0d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70923058"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73750409"
 ---
 # <a name="partners"></a>Partenaires 
 
@@ -21,7 +21,7 @@ Si vous souhaitez rejoindre l’écosystème de cartes adaptatives, veuillez [no
 
 Plateforme | Description | Documentation | Version
 ---------|-------------|---------------|---------
-[WebChat Bot Framework](https://github.com/Microsoft/BotFramework-WebChat)  | Contrôle de conversation web incorporable pour Microsoft Bot Framework | [Prise en main](https://docs.microsoft.com/en-us/adaptive-cards/get-started/bots) | 1.2 (Web Chat 4.5)
+[Bot Framework Web Chat](https://github.com/Microsoft/BotFramework-WebChat)  | Contrôle de conversation web incorporable pour Microsoft Bot Framework | [Prise en main](https://docs.microsoft.com/en-us/adaptive-cards/get-started/bots) | 1.2 (Web Chat 4.6)
 [Compétences Cortana](https://docs.microsoft.com/en-us/cortana/skills/adaptive-cards) | Assistant virtuel pour Windows 10 | [Prise en main](https://docs.microsoft.com/en-us/adaptive-cards/get-started/bots) | 1.0
 [Chronologie Windows](https://blogs.windows.com/windowsexperience/2017/12/19/announcing-windows-10-insider-preview-build-17063-pc/) | Nouvelle façon de reprendre les activités que vous avez démarrées sur ce PC, d’autres PC Windows et des appareils iOS/Android. | [Prise en main](https://docs.microsoft.com/en-us/adaptive-cards/get-started/windows) | 1.0
 [Messages actionnables Outlook](https://docs.microsoft.com/en-us/outlook/actionable-messages/)  | Joindre un message actionnable à un e-mail | [Prise en main](https://docs.microsoft.com/en-us/outlook/actionable-messages/) | 1.0
