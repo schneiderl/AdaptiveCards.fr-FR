@@ -1,15 +1,15 @@
 ---
 title: Kit de développement logiciel (SDK) Android
-author: bekao
-ms.author: bekao
+author: almedina-ms
+ms.author: almedina
 ms.date: 09/27/2017
 ms.topic: article
-ms.openlocfilehash: b5f1279317e6b34d2e3bccee2625d972ac185e04
-ms.sourcegitcommit: e002a988c570072d5bc24a1242eaaac0c9ce90df
+ms.openlocfilehash: d15e0963427babe045a4db6f93800e09e0d95da9
+ms.sourcegitcommit: 9a9973129c36a41f5e4af30d95ffc146820ad173
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67134277"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76145499"
 ---
 # <a name="getting-started---android"></a>Prise en main – Android
 

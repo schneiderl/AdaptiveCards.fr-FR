@@ -1,15 +1,15 @@
 ---
 title: Kit de développement logiciel (SDK) Android
-author: bekao
-ms.author: bekao
+author: almedina-ms
+ms.author: almedina
 ms.date: 09/27/2017
 ms.topic: article
-ms.openlocfilehash: 9e13ebad04c780db83d25129a9f5829a9d43ef69
-ms.sourcegitcommit: ce044dc969d9b9c47a52bd361bfe2b746071913b
+ms.openlocfilehash: ae5c1b2addf6fc5bcdda3defebb6de5925b58507
+ms.sourcegitcommit: 9a9973129c36a41f5e4af30d95ffc146820ad173
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72917120"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76145509"
 ---
 # <a name="extensibility---android"></a>Extensibilité – Android
 
@@ -380,7 +380,7 @@ La transformation d’un IOnlineImageLoader en IResourceResolver est une tâche 
 
 Comme vous pouvez le voir, plus grands changements sont les suivants :
 
-* ```loadOnlineImage(String, GenericImageLoaderAsync)``` a été renommé en ```resolveImageResource(String, GenericImageLoaderAsync)```
+* ```loadOnlineImage(String, GenericImageLoaderAsync)``` a été renommée ```resolveImageResource(String, GenericImageLoaderAsync)```
 * une surcharge pour ```resolveImageResource(String, GenericImageLoaderAsync)``` a été ajoutée en tant que ```resolveImageResource(String, GenericImageLoaderAsync, int)``` afin de prendre en charge des scénarios où la largeur maximale est requise
 
 ## <a name="custom-media-loading"></a>Chargement de support personnalisé

@@ -1,15 +1,15 @@
 ---
 title: Configuration de l’hôte-Android SDK
-author: bekao
-ms.author: bekao
+author: almedina-ms
+ms.author: almedina
 ms.date: 09/27/2017
 ms.topic: article
-ms.openlocfilehash: c44cf609fd52423a1ca17988a875c6dc48550007
-ms.sourcegitcommit: 99c7b64d6fc66da336c454951406fb42cd2a7427
+ms.openlocfilehash: 091e2093c380affc8c895d069a2f52061b991d2f
+ms.sourcegitcommit: 9a9973129c36a41f5e4af30d95ffc146820ad173
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59553341"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76145489"
 ---
 # <a name="host-config---android"></a>Configuration de l’hôte-Android
 

@@ -4,12 +4,12 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 08/01/2019
 ms.topic: article
-ms.openlocfilehash: 42a1f43fbcfe1416820637af750acc960b9effde
-ms.sourcegitcommit: 16a274ce5596001a1c5ab252d9d2a3db6a5a9a0d
+ms.openlocfilehash: 2c583f774451e60f825cd8fd2c38f2ea34c2f8de
+ms.sourcegitcommit: 9a9973129c36a41f5e4af30d95ffc146820ad173
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73750400"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76145399"
 ---
 # <a name="adaptive-cards-template-language"></a>Langue du modèle de cartes adaptatives
 
@@ -187,8 +187,9 @@ Pour assigner un « contexte de données » à un élément, ajoutez un attrib
 
 Cette partie est un peu « Dark Magic ». Commentaires de bienvenue.
 
-* Si la propriété `$data` d’objets est définie sur un **tableau**, l' **objet lui-même est répété pour chaque élément du tableau.** 
-* À mesure qu’il est répété, les `$data` utilisées dans les liaisons de propriété sont limitées à l' **élément individuel** dans le tableau.
+* Si la propriété `$data` d’un élément de carte adaptative est liée à un **tableau**, l' **élément lui-même est répété pour chaque élément du tableau.** 
+* Toutes les expressions de liaison (`{myProperty}`) utilisées dans les valeurs de propriété seront étendues à l' **élément individuel** dans le tableau.
+* En cas de liaison à un tableau de chaînes, utilisez `{$data}` pour accéder à l’élément de chaîne individuel. Par exemple, `"text": "{$data}"`
 
 Par exemple, le `TextBlock` ci-dessous est répété 3 fois, car il est `$data` est un tableau. Notez que la propriété `text` est liée à la propriété `name` d’un objet individuel dans le tableau. 
 
@@ -237,14 +238,14 @@ Aucun langage de création de modèles n’est terminé sans aucune fonction d�
 
 La syntaxe ici est toujours active dans l’air. Veuillez recommencer, mais voici ce que nous avons planifié :
 
-### <a name="string-functions"></a>Fonctions de chaîne
+### <a name="string-functions"></a>Fonctions de chaînes
 
 * substr
 * indexOf *(ne fonctionne pas encore)*
 * toUpper *(ne fonctionne pas encore)*
 * toLower *(ne fonctionne pas encore)*
 
-### <a name="number-functions"></a>Fonctions numériques
+### <a name="number-functions"></a>numériques, fonctions
 
 * Mise en forme (devise, décimal, etc.) *(ne fonctionne pas encore)*
 
@@ -257,7 +258,7 @@ La syntaxe ici est toujours active dans l’air. Veuillez recommencer, mais voic
 
 * if (*expression*, *TrueValue*, *FalseValue*)
 
-**exemple de`if`**
+**exemple de `if`**
 
 ```json
 {
@@ -270,7 +271,7 @@ La syntaxe ici est toujours active dans l’air. Veuillez recommencer, mais voic
 
 * JSON. Parse-capacité à analyser une chaîne JSON 
 
-**exemple de`JSON.parse`**
+**exemple de `JSON.parse`**
 
 Il s’agit d’une réponse Azure DevOps où la propriété `message` est une chaîne sérialisée au format JSON. Pour accéder aux valeurs de la chaîne, nous devons utiliser la fonction `JSON.parse` dans notre modèle.
 
@@ -287,7 +288,7 @@ Il s’agit d’une réponse Azure DevOps où la propriété `message` est une c
 }
 ```
 
-**Syntaxe**
+**Utilisation**
 
 ```json
 {
