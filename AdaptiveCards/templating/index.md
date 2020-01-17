@@ -4,12 +4,12 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 07/29/2019
 ms.topic: article
-ms.openlocfilehash: 11ade4c2a41111f372873ea9a0677fe823c5b0ab
-ms.sourcegitcommit: 16a274ce5596001a1c5ab252d9d2a3db6a5a9a0d
+ms.openlocfilehash: 6a818e5009a0ec65e7e17fe47cc0172d2e34ae31
+ms.sourcegitcommit: 9a9973129c36a41f5e4af30d95ffc146820ad173
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73750427"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76145549"
 ---
 # <a name="adaptive-cards-templating-preview"></a>Création de modèles de cartes adaptatives (préversion)
 
@@ -177,10 +177,10 @@ Les kits de développement logiciel (SDK) de création de modèles permettent de
 >
 > Au cours de la période de préversion initiale, nous ne disposons que d’un ensemble limité de kits de développement logiciel (SDK). Lors de la mise en production, des bibliothèques de création de modèles seront disponibles pour chaque plateforme de cartes adaptatives prise en charge.
 
-Plateforme | Installer | Documentation
+Plate-forme | Installer | Documentation
 --- | --- | ---
 JavaScript | `npm install adaptivecards-templating` | [Documentation](https://www.npmjs.com/package/adaptivecards-templating)
-.NET | `nuget install AdaptiveCards.Templating` | [Documentation](https://docs.microsoft.com/en-us/adaptive-cards/templating/sdk#net)
+.NET | `nuget install AdaptiveCards.Templating` | [Documentation](https://docs.microsoft.com/adaptive-cards/templating/sdk#net)
 
 ### <a name="javascript-example"></a>Exemple JavaScript
 
