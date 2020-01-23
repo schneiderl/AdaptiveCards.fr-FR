@@ -4,12 +4,12 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 06/26/2017
 ms.topic: article
-ms.openlocfilehash: 19e77b86da9d163f5fcf6a6074071a4638a8d793
-ms.sourcegitcommit: e002a988c570072d5bc24a1242eaaac0c9ce90df
+ms.openlocfilehash: 1dfd9b0c45a280905223e3286998b333b0a6ec6a
+ms.sourcegitcommit: 9a9973129c36a41f5e4af30d95ffc146820ad173
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "59552611"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76145340"
 ---
 # <a name="speech-and-advanced-customization"></a>Reconnaissance vocale et personnalisation avancée
 Nous vivons à une époque d'interaction vocale grâce à des services tels que Cortana.  Dès le premier jour, les cartes adaptatives sont conçues pour prendre en charge la reconnaissance vocale, ce qui permet de créer de nouveaux scénarios mains libres.
@@ -17,7 +17,7 @@ Nous vivons à une époque d'interaction vocale grâce à des services tels que 
 La balise `speak` permet à la carte adaptative d'être distribuée dans un environnement où l'affichage visuel ne constitue pas l'expérience principale, comme un tableau de bord de voiture au volant. 
 
 ## <a name="speak-property"></a>Propriété Speak
-Pour prendre en charge la reconnaissance vocale, nous disposons d'une propriété `speak` qui contient du texte à dire à l'utilisateur. Le texte peut être annoté en langage [SSML](https://msdn.microsoft.com/en-us/library/office/hh361578) (Speech Synthesis Markup Language). SSML contrôle la vitesse, le ton et l'inflexion de la voix.  Il vous permet même de diffuser de l'audio ou de restituer un flux audio TTS à partir de votre propre service, ce qui vous confère une grande flexibilité pour la personnalisation.
+Pour prendre en charge la reconnaissance vocale, nous disposons d'une propriété `speak` qui contient du texte à dire à l'utilisateur. Le texte peut être annoté en langage [SSML](https://msdn.microsoft.com/library/office/hh361578) (Speech Synthesis Markup Language). SSML contrôle la vitesse, le ton et l'inflexion de la voix.  Il vous permet même de diffuser de l'audio ou de restituer un flux audio TTS à partir de votre propre service, ce qui vous confère une grande flexibilité pour la personnalisation.
 
 La propriété Speak peut être utilisée par une application hôte selon deux modèles :
 
