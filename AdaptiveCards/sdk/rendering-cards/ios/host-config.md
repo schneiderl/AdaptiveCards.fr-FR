@@ -4,12 +4,12 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 06/26/2017
 ms.topic: article
-ms.openlocfilehash: b788ecc5c2371d2575e0165296365238535dd7c5
-ms.sourcegitcommit: 99c7b64d6fc66da336c454951406fb42cd2a7427
+ms.openlocfilehash: fa420c0a6e9e9b7e5713b6cc528de39335f0b56c
+ms.sourcegitcommit: 1e18c5dc0cf85d26f66335e312348bbfb903d95a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59553701"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76727475"
 ---
 # <a name="host-config---ios"></a>Configuration de l’hôte-iOS
 
@@ -27,7 +27,7 @@ ACOHostConfig *defaultConfig = [[ACHostConfig alloc] init];
 
 ## <a name="render-a-card-using-host-config"></a>Rendu d’une carte à l’aide de la configuration d’hôte
 
-Rederer utilise une carte adaptative et une configuration d’hôte. HostConfig peut être nil, auquel cas la valeur par défaut sera utilisée.
+Rederer utilise une carte adaptative et une configuration d’hôte. HostConfig peut être Nil et, s’il est Nil, la valeur par défaut est utilisée.
 
 ```objective-c
 ACRRenderResult *renderResult;
@@ -35,3 +35,11 @@ renderResult = [ACRRenderer render:cardParseResult.card
                             config:hostconfigParseResult.config
                    widthConstraint:300.0];
 ```
+
+## <a name="customization"></a>Personnalisation
+
+Il existe trois façons de personnaliser le rendu de carte adaptative :
+
+1. Configuration de l’hôte
+2. XIB
+3. Rendu d’élément personnalisé
