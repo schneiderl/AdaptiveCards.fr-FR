@@ -1,40 +1,40 @@
 ---
-title: Langue du modèle de cartes adaptatives
+title: Langage de modèle de cartes adaptatives
 author: matthidinger
 ms.author: mahiding
 ms.date: 08/01/2019
 ms.topic: article
 ms.openlocfilehash: 2c583f774451e60f825cd8fd2c38f2ea34c2f8de
 ms.sourcegitcommit: 9a9973129c36a41f5e4af30d95ffc146820ad173
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 01/16/2020
 ms.locfileid: "76145399"
 ---
-# <a name="adaptive-cards-template-language"></a>Langue du modèle de cartes adaptatives
+# <a name="adaptive-cards-template-language"></a>Langage de modèle de cartes adaptatives
 
-La création de modèles permet de séparer les **données** de la **disposition** dans votre carte adaptative. La langue du modèle est la syntaxe utilisée pour créer un modèle. 
+La création de modèles permet de séparer les **données** de la **disposition** dans votre carte adaptative. Le langage de modèle est la syntaxe utilisée pour créer un modèle. 
 
-> Pour obtenir une vue d' [ensemble de la création de modèles de cartes adaptatives](index.md) , consultez.
+> Lisez la [vue d’ensemble de la création de modèles de cartes adaptatives](index.md).
 
 > [!IMPORTANT] 
 > 
 > Ces fonctionnalités sont **en préversion et sujettes à modification**. Vos commentaires sont non seulement bienvenus, mais essentiels pour garantir que nous fournissions les fonctionnalités dont **vous** avez besoin.
 
-Lors de la création d’un modèle, vous pouvez spécifier les données Inline avec la charge utile `AdaptiveCard`, ou au moment de l’exécution à l’aide des [Kits SDK de création de modèles](sdk.md).
+Quand vous créez un modèle, vous pouvez soit spécifier les données inline avec la charge utile `AdaptiveCard`, soit les spécifier au moment de l’exécution à l’aide des [kits SDK de création de modèles](sdk.md).
 
-## <a name="specify-data-within-the-card"></a>Spécifier les données dans la carte
+## <a name="specify-data-within-the-card"></a>Spécifier des données dans la carte
 
 Pour fournir des données directement dans la charge utile de la carte, ajoutez simplement un attribut `$data` à votre `AdaptiveCard` (voir ci-dessous).
 
 ## <a name="binding-to-the-data"></a>Liaison aux données
 
-Vous pouvez lier les données au sein de la `body` ou `actions` de la carte.
+Vous pouvez établir une liaison aux données au sein de l’élément `body` ou `actions` de la carte.
 
-* La syntaxe de liaison commence par `{` et se termine par `}`. Par exemple, `{myProperty}`
-* Notation de points pour accéder aux sous-objets
-* Syntaxe de l’indexeur pour récupérer des propriétés par clé ou éléments dans un tableau
-* Gestion des valeurs NULL gracieuses pour les hiérarchies profondes
+* La syntaxe de liaison commence par `{` et se termine par `}`. Par exemple : `{myProperty}`
+* Notation par points pour accéder aux sous-objets
+* Syntaxe d’indexeur pour récupérer des propriétés par clé ou des éléments dans un tableau
+* Gestion appropriée des valeurs Null pour les hiérarchies profondes
 * *Documentation de la syntaxe d’échappement bientôt disponible*
 
 ```json
@@ -74,7 +74,7 @@ Vous pouvez lier les données au sein de la `body` ou `actions` de la carte.
 
 ## <a name="separating-the-template-from-the-data"></a>Séparation du modèle des données
 
-En guise d’alternative (et plus probable), vous allez créer un « modèle » de carte réutilisable sans inclure les données. Ce modèle peut être stocké en tant que fichier et ajouté au contrôle de code source.
+Une autre approche, d’ailleurs plus vraisemblable, consiste à créer un « modèle » de carte réutilisable sans inclure les données. Vous pouvez stocker ce modèle en tant que fichier et l’ajouter au contrôle de code source.
 
 **EmployeeCardTemplate.json**
 
@@ -98,11 +98,11 @@ En guise d’alternative (et plus probable), vous allez créer un « modèle �
 }
 ```
 
-Ensuite, chargez-la et fournissez les données au moment de l’exécution à l’aide des [Kits SDK de création de modèles](sdk.md).
+Ensuite, chargez-le et fournissez les données au moment de l’exécution à l’aide des [kits SDK de création de modèles](sdk.md).
 
 **Exemple JavaScript**
 
-Utilisation du package [adaptivecards-Templating](https://npmjs.com/package/adaptivecards-templating) .
+Cet exemple utilise le package [adaptivecards-templating](https://npmjs.com/package/adaptivecards-templating).
 
 ```js
 var template = new ACData.Template({ 
@@ -135,22 +135,22 @@ var card = template.expand(dataContext);
 
 Le concepteur de cartes adaptatives a été mis à jour pour prendre en charge la création de modèles. 
 
-> Essayez-le à l’adresse suivante :  **[https://adaptivecards.io/designer](https://adaptivecards.io/designer)**
+> Faites un essai sur : **[https://adaptivecards.io/designer](https://adaptivecards.io/designer)**
 
-[image ![](https://user-images.githubusercontent.com/1432195/53214462-88d46980-3601-11e9-908d-253a1bb940a8.png)](https://adaptivecards.io/designer)
+[![image](https://user-images.githubusercontent.com/1432195/53214462-88d46980-3601-11e9-908d-253a1bb940a8.png)](https://adaptivecards.io/designer)
 
-* **Exemple d’éditeur de données** : spécifiez des exemples de données ici pour afficher la carte liée aux données en mode aperçu. Ce volet contient un petit bouton qui permet de remplir la structure de données à partir des données d’exemple existantes.
-* **Structure de données** : il s’agit de la structure de vos exemples de données. Les champs peuvent être glissés sur l’aire de conception pour créer une liaison avec eux 
-* **Mode aperçu** -Appuyez sur le bouton de barre d’outils pour basculer entre l’expérience de modification et l’exemple d’expérience de l’aperçu des données
-* **Ouvrir l’exemple** : cliquez sur ce bouton pour ouvrir divers exemples de charge utile.
+* **Éditeur d’exemple de données** : spécifiez un exemple de données ici pour voir la carte liée aux données en « Mode Aperçu ». Ce volet contient un petit bouton permettant de remplir la structure de données avec un exemple de données existant.
+* **Structure de données** : il s’agit de la structure de votre exemple de données. Pour créer une liaison à des champs, faites-les glisser sur l’aire de conception. 
+* **Mode Aperçu** : appuyez sur le bouton de la barre d’outils pour basculer entre l’expérience de modification et l’expérience d’aperçu de l’exemple de données.
+* **Ouvrir l’exemple** : cliquez sur ce bouton pour ouvrir divers exemples de charge utile.
 
 ## <a name="advanced-binding"></a>Liaison avancée
 
-### <a name="binding-scopes"></a>Portées de liaison
+### <a name="binding-scopes"></a>Étendues de liaison
 
-Il existe quelques mots clés réservés pour accéder à différentes étendues de liaison. 
+Des mots clés réservés vous donnent accès à différentes étendues de liaison. 
 
-*Remarque :* tous ces éléments ne sont pas implémentés dans la version préliminaire.
+*Remarque* : Ils ne sont pas tous implémentés dans la préversion.
 
 ```json
 {
@@ -162,9 +162,9 @@ Il existe quelques mots clés réservés pour accéder à différentes étendues
 }
 ```
 
-### <a name="assigning-a-data-context-to-elements"></a>Assignation d’un contexte de données à des éléments
+### <a name="assigning-a-data-context-to-elements"></a>Affectation d’un contexte de données à des éléments
 
-Pour assigner un « contexte de données » à un élément, ajoutez un attribut `$data` à l’élément.
+Pour affecter un « contexte de données » à un élément, ajoutez un attribut `$data` à l’élément.
 
 ```json
 {
@@ -185,13 +185,13 @@ Pour assigner un « contexte de données » à un élément, ajoutez un attrib
 
 ## <a name="repeating-items-in-an-array"></a>Répétition d’éléments dans un tableau
 
-Cette partie est un peu « Dark Magic ». Commentaires de bienvenue.
+Cette partie relève un peu de la « magie noire ». Vos commentaires sont les bienvenus.
 
-* Si la propriété `$data` d’un élément de carte adaptative est liée à un **tableau**, l' **élément lui-même est répété pour chaque élément du tableau.** 
-* Toutes les expressions de liaison (`{myProperty}`) utilisées dans les valeurs de propriété seront étendues à l' **élément individuel** dans le tableau.
-* En cas de liaison à un tableau de chaînes, utilisez `{$data}` pour accéder à l’élément de chaîne individuel. Par exemple, `"text": "{$data}"`
+* Si la propriété `$data` d’un élément de carte adaptative est liée à un **tableau**, **cet élément est répété pour chaque élément du tableau**. 
+* Toute expression de liaison (`{myProperty}`) utilisée dans les valeurs de propriété a pour étendue l’**élément individuel** dans le tableau.
+* En cas de liaison à un tableau de chaînes, utilisez `{$data}` pour accéder à l’élément de chaîne individuel. Par exemple : `"text": "{$data}"`
 
-Par exemple, le `TextBlock` ci-dessous est répété 3 fois, car il est `$data` est un tableau. Notez que la propriété `text` est liée à la propriété `name` d’un objet individuel dans le tableau. 
+Par exemple, le `TextBlock` ci-dessous est répété 3 fois car `$data` est un tableau. Notez que la propriété `text` est liée à la propriété `name` d’un objet individuel dans le tableau. 
 
 ```json
 {
@@ -234,31 +234,31 @@ Par exemple, le `TextBlock` ci-dessous est répété 3 fois, car il est `$data` 
 
 ## <a name="functions"></a>Fonctions
 
-Aucun langage de création de modèles n’est terminé sans aucune fonction d’assistance. Nous allons fournir un ensemble standard de fonctions qui fonctionnent sur chaque kit de développement logiciel (SDK). 
+Aucun langage de création de modèles ne serait complet sans des fonctions d’assistance. Nous allons proposer un ensemble standard de fonctions qui marcheront sur chaque SDK. 
 
-La syntaxe ici est toujours active dans l’air. Veuillez recommencer, mais voici ce que nous avons planifié :
+La syntaxe présentée ici étant toujours en suspens, revenez plus tard. Voici toutefois une ébauche de ce que nous avons l’intention de faire :
 
-### <a name="string-functions"></a>Fonctions de chaînes
+### <a name="string-functions"></a>Fonctions de chaîne
 
 * substr
 * indexOf *(ne fonctionne pas encore)*
 * toUpper *(ne fonctionne pas encore)*
 * toLower *(ne fonctionne pas encore)*
 
-### <a name="number-functions"></a>numériques, fonctions
+### <a name="number-functions"></a>Fonctions numériques
 
-* Mise en forme (devise, décimal, etc.) *(ne fonctionne pas encore)*
+* Mise en forme (devise, décimale, etc.) *(ne fonctionne pas encore)*
 
 ### <a name="date-functions"></a>Fonctions de date
 
-* Analyse des formats de chaîne de date bien connus *(ne fonctionne pas encore)*
-* Mise en forme des représentations de date/heure connues *(ne fonctionnant pas encore)*
+* Analyse des formats de chaîne de date connus *(ne fonctionne pas encore)*
+* Mise en forme des représentations de date/heure connues *(ne fonctionne pas encore)*
 
 ### <a name="conditional-functions"></a>Fonctions conditionnelles
 
-* if (*expression*, *TrueValue*, *FalseValue*)
+* if(*expression*, *valeur_true*, *valeur_false*)
 
-**exemple de `if`**
+**Exemple `if`**
 
 ```json
 {
@@ -269,11 +269,11 @@ La syntaxe ici est toujours active dans l’air. Veuillez recommencer, mais voic
 
 ### <a name="data-manipulation"></a>Manipulation de données
 
-* JSON. Parse-capacité à analyser une chaîne JSON 
+* JSON.parse : capacité à analyser une chaîne JSON 
 
-**exemple de `JSON.parse`**
+**Exemple `JSON.parse`**
 
-Il s’agit d’une réponse Azure DevOps où la propriété `message` est une chaîne sérialisée au format JSON. Pour accéder aux valeurs de la chaîne, nous devons utiliser la fonction `JSON.parse` dans notre modèle.
+Il s’agit d’une réponse Azure DevOps où la propriété `message` est une chaîne sérialisée au format JSON. Pour pouvoir accéder aux valeurs de la chaîne, nous devons utiliser la fonction `JSON.parse` dans notre modèle.
 
 **Données** 
 
@@ -297,7 +297,7 @@ Il s’agit d’une réponse Azure DevOps où la propriété `message` est une c
 }
 ```
 
-**Ce qui se traduit par**
+**Ce qui donne**
 
 ```json
 {
@@ -308,11 +308,11 @@ Il s’agit d’une réponse Azure DevOps où la propriété `message` est une c
 
 ### <a name="custom-functions"></a>Fonctions personnalisées
 
-Nous voulons nous assurer que les hôtes peuvent ajouter des fonctions personnalisées, ce qui signifie que nous avons besoin d’une prise en charge fiable de la prise en charge de secours si une fonction n’est pas prise en charge Nous sommes toujours en cours d’évaluation.
+Nous voulons nous assurer que les hôtes peuvent ajouter des fonctions personnalisées, ce qui signifie qu’il nous faut une stratégie de secours fiable pour gérer les fonctions non prises en charge. Ceci est encore à l’étude.
 
 ## <a name="conditional-layout"></a>Disposition conditionnelle
 
-Pour supprimer l’intégralité d’un élément si une condition est remplie, utilisez la propriété `$when`. Si `$when` prend la valeur `false` l’élément ne s’affiche pas à l’utilisateur.
+Pour supprimer un élément entier si une condition est remplie, utilisez la propriété `$when`. Si `$when` prend la valeur `false`, l’utilisateur ne voit pas l’élément.
 
 ```json
 {
@@ -339,9 +339,9 @@ Pour supprimer l’intégralité d’un élément si une condition est remplie, 
 
 ### <a name="composing-templates"></a>Composition de modèles
 
-Il n’existe actuellement aucune prise en charge pour composer les « parties » du modèle. Toutefois, nous explorons les options et espérons partager plus tôt. Toutes les pensées ici Bienvenue !
+À l’heure actuelle, il n’est pas possible de composer ensemble les « parties » d’un modèle. Toutefois, nous explorons différentes pistes et espérons vous en dire plus très bientôt. Vos idées sont les bienvenues !
 
 
 ## <a name="examples"></a>Exemples
 
-Parcourez la [page d’exemples](https://adaptivecards.io/samples) mise à jour pour explorer toutes sortes de cartes basées sur un modèle.
+Parcourez la [page d’exemples](https://adaptivecards.io/samples) mise à jour pour explorer toutes sortes de nouvelles cartes basées sur des modèles.

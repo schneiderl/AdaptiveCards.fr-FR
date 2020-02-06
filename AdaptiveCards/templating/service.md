@@ -1,65 +1,65 @@
 ---
-title: Service de modèle de cartes adaptatives
+title: Service de modèles de cartes adaptatives
 author: matthidinger
 ms.author: mahiding
 ms.date: 08/01/2019
 ms.topic: article
 ms.openlocfilehash: 81d1e598b6157b6ba1fedbf458a7c624705afcd5
 ms.sourcegitcommit: a16f53ba10a8607deacde5c8cc78927cac58657c
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 08/09/2019
 ms.locfileid: "68878886"
 ---
-# <a name="adaptive-cards-template-service"></a>Service de modèle de cartes adaptatives
+# <a name="adaptive-cards-template-service"></a>Service de modèles de cartes adaptatives
 
-Le service de modèle de cartes adaptatives est un service de preuve de concept qui permet à quiconque de rechercher, de contribuer et de partager un ensemble de modèles connus.
+Le service de modèles de cartes adaptatives est un service de preuve de concept qui permet à quiconque de trouver, modifier et partager un ensemble de modèles bien connus.
 
-Elle est utile si vous souhaitez afficher des données, mais ne souhaitez pas avoir à écrire une carte adaptative personnalisée pour celle-ci.
+Il est utile si vous voulez afficher des données sans avoir à écrire une carte adaptative personnalisée pour celles-ci.
 
-> Pour obtenir une vue d' [ensemble de la création de modèles de cartes adaptatives](index.md) , consultez.
+> Lisez la [vue d’ensemble de la création de modèles de cartes adaptatives](index.md).
 
 > [!IMPORTANT] 
 > 
-> *Termes et contrats* 
+> *Termes et contrat* 
 > 
-> Ce service de **niveau alpha** est fourni «en l’État», avec toutes les erreurs et n’est en aucun cas pris en charge. Toute collecte de données à partir du service est soumise à la [déclaration de confidentialité Microsoft](https://go.microsoft.com/fwlink/?LinkID=824704).
+> Ce service de **niveau alpha** est fourni « en l’état », avec tous ses défauts et sans aucun support. Toute collecte de données à partir du service est soumise à la [déclaration de confidentialité de Microsoft](https://go.microsoft.com/fwlink/?LinkID=824704).
 > 
-> Ces fonctionnalités sont **en version préliminaire et sujettes à modification**. Vos commentaires sont non seulement des bienvenues, mais essentiels pour garantir que nous fournissons les fonctionnalités dont **vous** avez besoin.
+> Ces fonctionnalités sont **en préversion et sujettes à modification**. Vos commentaires sont non seulement bienvenus, mais essentiels pour garantir que nous fournissions les fonctionnalités dont **vous** avez besoin.
 
-## <a name="how-does-the-service-help-me"></a>Comment le service m’aide-t-il?
+## <a name="how-does-the-service-help-me"></a>En quoi le service peut-il m’aider ?
 
-Supposons que vous disposiez d’un élément de données, peut-être des données financières, des données Microsoft Graph, des données schema.org ou des données personnalisées à partir de mon organisation. 
+Prenons un exemple : je viens de recevoir des données. Il peut s’agir de données financières, de données Microsoft Graph, de données schema.org ou de données personnalisées provenant de mon organisation. 
 
-Je souhaite à présent afficher les données à un utilisateur. 
+Je souhaite les présenter à un utilisateur. 
 
-Traditionnellement, cela signifie écrire du code d’interface utilisateur personnalisé dans toutes les piles frontales que je livre aux utilisateurs finaux.
+Pour cela, je dois normalement écrire un code d’interface utilisateur personnalisé dans toutes les piles front-end que je livre aux utilisateurs finaux.
 
-Mais que se passe-t-il si mon application pouvait «apprendre» de nouveaux modèles d’interface utilisateur en fonction du type de données? Un monde où tout le monde peut contribuer, améliorer et partager des modèles d’interface utilisateur communs, au sein de leurs propres projets, au sein d’une organisation ou pour l’ensemble de l’Internet.
+Imaginons maintenant un monde dans lequel mon application pourrait « apprendre » de nouveaux modèles d’interface utilisateur en fonction du type de données. Un monde où quiconque pourrait participer à l’élaboration de modèles d’interface utilisateur communs, les améliorer et les partager au sein de leurs propres projets, au sein d’une organisation voire à l’échelle de l’Internet.
 
-## <a name="what-is-the-card-template-service"></a>Qu’est-ce que le service de modèle de carte?
+## <a name="what-is-the-card-template-service"></a>Qu’est-ce que le service de modèles de cartes ?
 
-Le service de modèle de carte est un point de terminaison REST simple qui permet d’obtenir les éléments suivants:
+Le service de modèles de cartes est un point de terminaison REST simple qui vous aide à effectuer les tâches suivantes :
 
 * **Rechercher** un modèle en analysant la structure de vos données
-* **Obtenir** un modèle pour pouvoir le lier directement sur le client, *sans envoyer vos données au serveur ou sans jamais quitter l’appareil*
-* **Remplissage** d’un modèle sur le serveur, lorsque la liaison de données côté client n’est pas appropriée ou possible
+* **Obtenir** un modèle pour pouvoir le lier directement sur le client *sans envoyer vos données au serveur ni quitter l’appareil*
+* **Remplir** un modèle sur le serveur quand la liaison de données côté client n’est pas appropriée ou possible
 
-En arrière-plan, est:
+Derrière tout cela :
 
-* Un référentiel de modèles Open source partagé, sauvegardé par GitHub. *(Le référentiel est actuellement privé, mais sera rendu public dès que nous mettrons des points faibles.)*
-* Tous les modèles sont des fichiers JSON plats dans le référentiel, ce qui permet de modifier, de contribuer et de partager une partie naturelle d’un flux de travail de développement.
-* Le code du service sera mis à disposition pour que vous puissiez l’héberger là où vous le souhaitez. 
+* Un dépôt de modèles open source et partagés, basé sur GitHub. *(Le dépôt est actuellement privé, mais il sera rendu public dès que nous aurons réglé quelques détails.)*
+* Tous les modèles étant des fichiers JSON plats dans le dépôt, les opérations de modification, de contribution et de partage s’inscrivent naturellement dans un workflow de développeur.
+* Vous aurez également accès au code du service pour pouvoir l’héberger là où vous le souhaitez. 
 
 ## <a name="using-the-service"></a>Utilisation du service
 
-### <a name="get-all-templates"></a>Récupération de tous les modèles 
+### <a name="get-all-templates"></a>Obtenir tous les modèles 
 
 Ce point de terminaison retourne une liste de tous les modèles connus.
 
 > `HTTP GET https://templates.adaptivecards.io/list`
 
-**Extrait de réponse**
+**Extrait de la réponse**
 
 ```json
 {
@@ -77,7 +77,7 @@ Ce point de terminaison retourne une liste de tous les modèles connus.
 }
 ```
 
-### <a name="find-a-template"></a>Rechercher un modèle
+### <a name="find-a-template"></a>Trouver un modèle
 
 Ce point de terminaison tente de trouver un modèle en analysant la structure de vos données.
 
@@ -85,15 +85,15 @@ Ce point de terminaison tente de trouver un modèle en analysant la structure de
 
 #### <a name="example"></a>Exemple
 
-Supposons que je clique juste sur un point de terminaison [Microsoft Graph](https://graph.microsoft.com) pour obtenir des données organisationnelles à mon sujet.
+Prenons un exemple : je viens d’accéder à un point de terminaison [Microsoft Graph](https://graph.microsoft.com) pour obtenir des données organisationnelles me concernant.
 
 > `HTTP GET https://graph.microsoft.com/v1.0/me/`
 
-![Capture d’écran de l’Explorateur graphique](content/2019-08-01-12-08-13.png)
+![Capture d’écran de l’Afficheur Graph](content/2019-08-01-12-08-13.png)
 
-Cette API a renvoyé des **données JSON**, mais comment l' **Afficher** aux utilisateurs à l’aide de cartes adaptatives? 
+Cette API retourne des **données JSON**, mais comment puis-je **les présenter** aux utilisateurs au moyen de cartes adaptatives ? 
 
-Tout d’abord, je souhaite voir s’il existe un modèle pour ce type de données. je fais donc une requête `/find` http au point de terminaison avec `POST body`mes données dans le.
+Tout d’abord, je souhaite voir s’il existe un modèle pour ce type de données. J’envoie donc une requête HTTP au point de terminaison `/find` avec mes données dans `POST body`.
 
 ```
 HTTP POST https://templates.adaptivecards.io/find
@@ -116,7 +116,7 @@ HTTP POST https://templates.adaptivecards.io/find
 }
 ```
 
-**Lutte**
+**Réponse :**
 
 ```json
 [
@@ -127,25 +127,25 @@ HTTP POST https://templates.adaptivecards.io/find
 ]
 ```
 
-Le service retourne une liste de tous les modèles correspondants, ainsi qu' `confidence` une indication de la fermeture de la correspondance. Je peux maintenant utiliser cette URL de modèle pour **récupérer** le modèle ou le **remplir** côté serveur.
+Le service retourne une liste de tous les modèles correspondants, ainsi qu’une valeur `confidence` indiquant le degré de correspondance. Je peux à présent utiliser l’URL de ce modèle pour **obtenir** le modèle ou le **remplir** côté serveur.
 
 ### <a name="get-a-template"></a>Obtenir un modèle
 
-Un modèle récupéré à partir de ce point de terminaison peut être rempli avec les données au moment de l’exécution [à l’aide des Kits SDK templatng](sdk.md).
+Un modèle récupéré à partir de ce point de terminaison peut être rempli avec des données au moment de l’exécution [à l’aide des kits SDK de création de modèles](sdk.md).
 
 > `HTTP GET https://templates.adaptivecards.io/[TEMPLATE-PATH]`
 
-Vous pouvez également inclure des «exemples de données» avec le modèle, ce qui rend la modification dans le concepteur plus conviviale:
+Vous pouvez également inclure un « exemple de données » avec le modèle, ce qui rend la modification dans le concepteur plus conviviale :
 
 > `HTTP GET https://templates.adaptivecards.io/[TEMPLATE-PATH]?sampleData=true`
 
 #### <a name="example"></a>Exemple
 
-Nous obtenons le modèle de `/find` profil Microsoft Graph qui a été retourné ci-dessus.
+Nous obtenons le modèle de profil Microsoft Graph retourné par `/find` ci-dessus.
 
 `HTTP GET https://templates.adaptivecards.io/graph.microsoft.com/Profile.json`
 
-**Extrait de réponse**
+**Extrait de la réponse**
 
 ```json
 {
@@ -165,17 +165,17 @@ Nous obtenons le modèle de `/find` profil Microsoft Graph qui a été retourné
 }
 ```
 
-Utilisez maintenant ce modèle avec les [Kits de développement](sdk.md) logiciel (SDK) de création de modèles pour créer une carte adaptative prête à l’emploi.
+Utilisez maintenant ce modèle avec les [kits SDK de création de modèles](sdk.md) pour créer une carte adaptative prête pour l’affichage.
 
 ### <a name="populate-a-template-server-side"></a>Remplir un modèle côté serveur
 
-Dans certains cas, il peut s’avérer inutile de remplir un modèle sur le client.  Pour ces cas d’utilisation, vous pouvez faire en sorte que le service retourne une carte adaptative entièrement remplie, prête à être transmise à n’importe quel convertisseur de carte adaptative.
+Dans certains cas, il est inutile de remplir un modèle sur le client.  Vous pouvez alors faire en sorte que le service retourne une carte adaptative entièrement remplie, prête à être passée à n’importe quel renderer de carte adaptative.
 
 > `HTTP POST https://templates.adaptivecards.io/[TEMPLATE-PATH]`
 
 #### <a name="example"></a>Exemple
 
-Nous allons remplir le modèle de profil Microsoft Graph qui a été `/find` retourné à l’aide des données ci-dessus.
+Remplissons le modèle de profil Microsoft Graph retourné par `/find` à l’aide des données ci-dessus.
 
 ```
 HTTP POST https://templates.adaptivecards.io/graph.microsoft.com/Profile.json
@@ -198,7 +198,7 @@ HTTP POST https://templates.adaptivecards.io/graph.microsoft.com/Profile.json
 }
 ```
 
-**Extrait de réponse**
+**Extrait de la réponse**
 
 ```json
 {
@@ -218,18 +218,18 @@ HTTP POST https://templates.adaptivecards.io/graph.microsoft.com/Profile.json
 }
 ```
 
-Notez que la réponse a remplacé le texte de la `TextBlock` première `"Megan Bowen"` par au `"{name}"`lieu de, comme `GET` dans la demande. Ce AdaptiveCard peut désormais être passé à n’importe quel convertisseur de carte adaptative sans passer par la création de modèles côté client.
+Notez que la réponse remplace le texte `"{name}"` du premier `TextBlock` par `"Megan Bowen"`, comme dans la requête `GET`. Cette carte adaptative peut désormais être passée à n’importe quel renderer de carte adaptative sans passer par la création de modèles côté client.
 
-## <a name="contributing-templates"></a>Modèles contributeurs
+## <a name="contributing-templates"></a>Contribution aux modèles
 
-Le service de modèle est associé à un GitHub référentiel (qui est actuellement **privé**), mais nous allons ouvrir la source une fois que nous aurons des terminaisons libres.
+Le service de modèles s’appuie sur un dépôt GitHub (actuellement **privé**), que nous mettrons à disposition en open source après avoir réglé quelques détails.
 
-Nous espérons qu’en utilisant GitHub comme magasin de stockage pour les modèles, nous pouvons «démocratiser» le processus de création, d’amélioration et de partage de modèles. Tout le monde peut soumettre une demande de tirage incluant un modèle entièrement nouveau ou apporter des améliorations à celles qui existent déjà... tout cela dans l’expérience conviviale du développeur de GitHub.
+Nous espérons que l’utilisation de GitHub comme magasin de stockage pour les modèles nous permettra de « démocratiser » le processus de création, d’amélioration et de partage de modèles. N’importe qui peut envoyer une demande de tirage (pull request) incluant un modèle entièrement nouveau ou améliorer des modèles existants... le tout dans l’expérience de développement conviviale de GitHub.
 
-## <a name="self-hosting-the-service"></a>Hébergement automatique du service
+## <a name="self-hosting-the-service"></a>Auto-hébergement du service
 
-Tous les types de données ne sont pas adaptés au service de modèle de cartes adaptatives «central `https://templates.adaptivecards.io`» hébergé à l’adresse. 
+Tous les types de données ne sont pas appropriés pour le service de modèles de cartes adaptatives « central » hébergé sur `https://templates.adaptivecards.io`. 
 
-Nous voulons nous assurer que tout le monde peut héberger le service de modèle au sein de votre organisation. le code source sera donc mis à disposition et nous faciliterons le déploiement sur Azure ou votre propre serveur principal.
+Nous voulons faire en sorte que le service de modèles puisse être hébergé par toute personne au sein de votre organisation. Nous veillerons donc à mettre à disposition le code source et à faciliter le déploiement sur Azure ou votre propre back-end.
 
-En savoir plus à ce jour ultérieurement.
+De plus amples informations seront annoncées à une date ultérieure.
