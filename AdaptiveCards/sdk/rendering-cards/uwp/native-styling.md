@@ -4,12 +4,12 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 08/15/2018
 ms.topic: article
-ms.openlocfilehash: da3b95dc53c55c81fbbbbed6ee7605f86eb427a9
-ms.sourcegitcommit: 99c7b64d6fc66da336c454951406fb42cd2a7427
+ms.openlocfilehash: 565c61535adc5b316cb8b1f3ad77e511012e7612
+ms.sourcegitcommit: 1e18c5dc0cf85d26f66335e312348bbfb903d95a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59552521"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77454042"
 ---
 # <a name="native-styling---uwp"></a>Style natif-UWP
 
@@ -20,10 +20,10 @@ UWP facilite cette tâche en vous permettant de transmettre un ResourceDictionar
 | Élément | Noms de style |
 |---|---|
 | AdaptiveCard | Adaptive.Card| 
-| Action. OpenUrl  | Adaptative. action. OpenUrl  |
-| Action. ShowCard | Adaptive.Action.ShowCard |
-| Action. Submit  | Adaptative. action. Submit  |
-| colonne | Adaptative. Column, adaptative. action. TAP |
+| Action.OpenUrl  | Adaptative. action. OpenUrl  |
+| Action.ShowCard | Adaptive.Action.ShowCard |
+| Action.Submit  | Adaptative. action. Submit  |
+| Column | Adaptative. Column, adaptative. action. TAP |
 | ColumnSet | Adaptive.ColumnSet, Adaptive.VerticalSeparator |
 | Conteneur | Adaptive.Container|
 | Input.ChoiceSet | Adaptive.Input.ChoiceSet,  Adaptive.Input.ChoiceSet.ComboBox, Adaptive.Input.ChoiceSet.CheckBox,  Adaptive.Input.ChoiceSet.Radio,  Adaptive.Input.ChoiceSet.ComboBoxItem |
@@ -37,7 +37,7 @@ UWP facilite cette tâche en vous permettant de transmettre un ResourceDictionar
 | FactSet | Adaptive.FactSet, Adaptive.Fact.Title, Adaptive.Fact.Value |
 | TextBlock  | Adaptive. TextBlock |
 
-Cet exemple de dictionnaire de ressources XAML définit l’arrière-plan de tous les TextBlocks sur Aqua. Vous souhaiterez probablement une plus grande avancée que celle-ci😁
+Cet exemple de dictionnaire de ressources XAML définit l’arrière-plan de tous les TextBlocks sur Aqua. Vous souhaiterez probablement une plus grande avancée que cette 😁
 
 ```xml
 <ResourceDictionary

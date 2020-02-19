@@ -4,12 +4,12 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 06/26/2017
 ms.topic: article
-ms.openlocfilehash: 85c8807d2a368e00b414b427fae8a9f0253873c8
-ms.sourcegitcommit: 99c7b64d6fc66da336c454951406fb42cd2a7427
+ms.openlocfilehash: 6f14830a643b064c6169cf3143bbc7cd4ce45937
+ms.sourcegitcommit: 1e18c5dc0cf85d26f66335e312348bbfb903d95a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59553671"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77454972"
 ---
 # <a name="host-config---uwp"></a>Configuration de l’hôte-UWP
 

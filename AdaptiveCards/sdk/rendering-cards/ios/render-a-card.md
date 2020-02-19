@@ -4,12 +4,12 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 06/26/2017
 ms.topic: article
-ms.openlocfilehash: 7d8d8410c030584dc5a518af7e6473d1d51f3991
-ms.sourcegitcommit: e002a988c570072d5bc24a1242eaaac0c9ce90df
+ms.openlocfilehash: d47b94595c22afa51a0d4cf9666771203cd79c7e
+ms.sourcegitcommit: 1e18c5dc0cf85d26f66335e312348bbfb903d95a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67134326"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77454742"
 ---
 # <a name="render-a-card---ios"></a>Effectuer le rendu d’une carte – iOS
 
@@ -31,7 +31,7 @@ NSArray<ACRParseWarning *> warnings = cardPraseResult.parseWarnings;
 
 ## <a name="render-a-card"></a>Afficher une carte
 
-Rederer utilise une carte adaptative et une configuration d’hôte. HostConfig peut être nil, auquel cas la valeur par défaut sera utilisée.
+Rederer utilise une carte adaptative et une configuration d’hôte. HostConfig peut être Nil et, s’il est Nil, la valeur par défaut est utilisée.
 L’UIView retourné utilise autolayout. La largeur sera contrainte à la valeur définie par widthConstraint. Si la valeur 0 est utilisée, elle n’est pas liée.
 La hauteur n’est pas liée et, quand elle est retournée, elle a la hauteur des sommes de tous les contenus rendus. Pour lier la dimension de la vue, utilisez NSLayoutConstraint. La dimension exacte est accessible à partir du contexte de la viewDidLayoutSubview du viewcontroller de sa superview, ou sa méthode du même nom en cas d’utilisation d’ACRViewController.
 

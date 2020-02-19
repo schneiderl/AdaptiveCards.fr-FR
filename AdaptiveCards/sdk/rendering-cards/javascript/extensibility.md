@@ -4,23 +4,23 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 11/28/2017
 ms.topic: article
-ms.openlocfilehash: 464fda8c83f9943d316f43fec811511ab9696916
-ms.sourcegitcommit: 99c7b64d6fc66da336c454951406fb42cd2a7427
+ms.openlocfilehash: 4c43637d81bcf43251638133c66d1c77b92ace56
+ms.sourcegitcommit: 1e18c5dc0cf85d26f66335e312348bbfb903d95a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59552631"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77454672"
 ---
 # <a name="extensibility---javascript"></a>Extensibilité-JavaScript
 
 ## <a name="implement-and-register-a-custom-element"></a>Implémenter et inscrire un élément personnalisé
 
-Les étapes de création d’un type d’élément de carte adaptative personnalisé sont les suivantes:
-- Créer une classe à partir de`CardElement`
-- Implémenter `getJsonTypeName`ses `parse`méthodes `toJSON`,, et`internalRender` `renderSpeech`
+Les étapes de création d’un type d’élément de carte adaptative personnalisé sont les suivantes :
+- Créer une classe à partir de `CardElement`
+- Implémenter ses méthodes `getJsonTypeName`, `parse`, `toJSON`, `internalRender` et `renderSpeech`
 - Inscrivez-le en l’ajoutant au registre des éléments du convertisseur
 
-Prenons un exemple et implémentons un élément de barre de progression simple:
+Prenons un exemple et implémentons un élément de barre de progression simple :
 
 ```typescript
 import * as Adaptive from "adaptivecards";
@@ -136,7 +136,7 @@ export class ProgressBar extends Adaptive.CardElement {
 }
 ```
 
-C'est tout ! À présent, il vous suffit d’inscrire la classe de barre de progression auprès du convertisseur:
+C’est terminé. À présent, il vous suffit d’inscrire la classe de barre de progression auprès du convertisseur :
 
 ```typescript
 Adaptive.AdaptiveCard.elementTypeRegistry.registerType("ProgressBar", () => { return new ProgressBar(); });
@@ -144,7 +144,7 @@ Adaptive.AdaptiveCard.elementTypeRegistry.registerType("ProgressBar", () => { re
 
 ## <a name="implement-and-register-a-custom-action"></a>Implémenter et inscrire une action personnalisée
 
-Les étapes de création d’une action de carte adaptative personnalisée sont essentiellement les mêmes que celles des éléments personnalisés. Voici un exemple simple d’action d’alerte qui affiche simplement une boîte de message avec du texte configurable:
+Les étapes de création d’une action de carte adaptative personnalisée sont essentiellement les mêmes que celles des éléments personnalisés. Voici un exemple simple d’action d’alerte qui affiche simplement une boîte de message avec du texte configurable :
 
 ```typescript
 import * as Adaptive from "adaptivecards";
@@ -176,7 +176,7 @@ export class AlertAction extends Adaptive.Action {
 }
 ```
 
-Inscrivez maintenant la nouvelle action:
+Inscrivez maintenant la nouvelle action :
 
 ```
 Adaptive.AdaptiveCard.actionTypeRegistry.registerType("Action.Alert", () => { return new AlertAction(); });
@@ -184,7 +184,7 @@ Adaptive.AdaptiveCard.actionTypeRegistry.registerType("Action.Alert", () => { re
 
 ## <a name="example"></a>Exemple
 
-Voici un exemple de carte qui utilise à la fois l’élément ProgressBar et l’action AlertAction:
+Voici un exemple de carte qui utilise à la fois l’élément ProgressBar et l’action AlertAction :
 ```
 {
     "type": "AdaptiveCard",
@@ -212,4 +212,4 @@ Voici un exemple de carte qui utilise à la fois l’élément ProgressBar et l�
 }
 ```
 
-Et voici comment il est rendu: ![image](https://user-images.githubusercontent.com/1334689/52665466-8155e780-2ec0-11e9-841a-7d272ad1d103.png)
+Voici comment il s’affiche : ![image](https://user-images.githubusercontent.com/1334689/52665466-8155e780-2ec0-11e9-841a-7d272ad1d103.png)

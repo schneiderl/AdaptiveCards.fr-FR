@@ -4,12 +4,12 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 10/19/2017
 ms.topic: article
-ms.openlocfilehash: 620940dee873742898d58979c61827320bc3c202
-ms.sourcegitcommit: 99c7b64d6fc66da336c454951406fb42cd2a7427
+ms.openlocfilehash: 5b829d9eefe933f133c8532030856849802c5eb5
+ms.sourcegitcommit: 1e18c5dc0cf85d26f66335e312348bbfb903d95a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59552561"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77454492"
 ---
 # <a name="native-styling---net-html"></a>Styles natifs-HTML .NET
 
@@ -22,11 +22,11 @@ Le langage HTML facilite cette tâche en ajoutant des classes CSS à chaque él�
 | AdaptiveCard | ac-adaptivecard |
 | Toutes les actions | ac-pushButton | 
 | Sélectionner des actions | AC-sélectionnable |
-| Action. OpenUrl  | ac-action-openUrl |
-| Action. ShowCard | ac-action-showCard |
-| Action. Submit  | AC-action-envoyer  |
+| Action.OpenUrl  | ac-action-openUrl |
+| Action.ShowCard | ac-action-showCard |
+| Action.Submit  | AC-action-envoyer  |
 | ActionSet | AC-actionset |
-| colonne | AC-Column |
+| Column | AC-Column |
 | ColumnSet | AC-columnset |
 | Conteneur | AC-Container |
 | Toutes les entrées | entrée c.a. |

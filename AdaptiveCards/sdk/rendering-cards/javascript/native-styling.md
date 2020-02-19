@@ -4,12 +4,12 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 11/28/2017
 ms.topic: article
-ms.openlocfilehash: 6f086d268abcaeb7fa159b74708597e89aafaf53
-ms.sourcegitcommit: 99c7b64d6fc66da336c454951406fb42cd2a7427
+ms.openlocfilehash: 687a90dd572ba2df786816fdd9dc313746cca982
+ms.sourcegitcommit: 1e18c5dc0cf85d26f66335e312348bbfb903d95a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59552891"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77454642"
 ---
 # <a name="native-styling---javascript"></a>Styles natifs-JavaScript
 
@@ -19,12 +19,12 @@ Les classes CSS suivantes seront ajoutées à différents éléments.
 
 | Classe CSS | Utilisation |
 |---|---|
-| . AC-Container | recipie |
-| . AC-sélectionnable  | éléments avec`selectAction` |
+| . AC-Container | conteneurs |
+| . AC-sélectionnable  | éléments avec `selectAction` |
 | . AC-image | image |
 | . AC-pushButton | actions rendues comme des boutons |
 | . AC-linkButton  | actions rendues comme des liens |
-| . AC-input | contrôles d’entrée|
+| . AC-input | contrôles d'entrée|
 | . AC-textInput| entrée de texte |
 | .ac-multiline | entrée de texte multiligne |
 | . AC-numberInput | entrée de nombre|

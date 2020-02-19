@@ -4,12 +4,12 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 06/26/2017
 ms.topic: article
-ms.openlocfilehash: c3dcae7ef2347201b5f7ce02baf3204db7ee27d6
-ms.sourcegitcommit: 99c7b64d6fc66da336c454951406fb42cd2a7427
+ms.openlocfilehash: 13245ced3f4f657e13793bfdf1d212e44d2b6a41
+ms.sourcegitcommit: 1e18c5dc0cf85d26f66335e312348bbfb903d95a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59553561"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77454762"
 ---
 # <a name="extensibility---ios"></a>Extensibilité-iOS
 
@@ -54,7 +54,7 @@ ACRRegistration *registration = [ACRRegistration getInstance];
  ## <a name="additional-property"></a>Propriété supplémentaire
 
  Les développeurs peuvent également envoyer des propriétés supplémentaires dans le cadre de la charge utile JSON.
-Par exemple, en plus de «l’espacement» et de l’ID de charge utile JSON pour BaseCardElement, vous pouvez ajouter RADIUS pour les angles de TextBlock à sa charge utile JSON.
+Par exemple, en plus de « l’espacement » et de l’ID de charge utile JSON pour BaseCardElement, vous pouvez ajouter RADIUS pour les angles de TextBlock à sa charge utile JSON.
 
  ```objective-c
  "type":"TextBlock",
