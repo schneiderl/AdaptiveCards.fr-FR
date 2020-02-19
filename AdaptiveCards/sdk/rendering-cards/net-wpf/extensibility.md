@@ -4,20 +4,20 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 10/19/2017
 ms.topic: article
-ms.openlocfilehash: 4f89784f711727deb538b2ed2195007ca8e6aca1
-ms.sourcegitcommit: e002a988c570072d5bc24a1242eaaac0c9ce90df
+ms.openlocfilehash: 3e5bb9239d4b4200262648350d67d6494eed9724
+ms.sourcegitcommit: 1e18c5dc0cf85d26f66335e312348bbfb903d95a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67134320"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77454322"
 ---
-# <a name="extensibility---net-wpf"></a><span data-ttu-id="d81f7-102">Extensibilité – WPF .NET</span><span class="sxs-lookup"><span data-stu-id="d81f7-102">Extensibility - .NET WPF</span></span>
+# <a name="extensibility---net-wpf"></a><span data-ttu-id="f2b00-102">Extensibilité – WPF .NET</span><span class="sxs-lookup"><span data-stu-id="f2b00-102">Extensibility - .NET WPF</span></span>
 
-## <a name="custom-element-rendering"></a><span data-ttu-id="d81f7-103">Rendu d’élément personnalisé</span><span class="sxs-lookup"><span data-stu-id="d81f7-103">Custom Element Rendering</span></span>
+## <a name="custom-element-rendering"></a><span data-ttu-id="f2b00-103">Rendu d’élément personnalisé</span><span class="sxs-lookup"><span data-stu-id="f2b00-103">Custom Element Rendering</span></span>
 
-<span data-ttu-id="d81f7-104">Pour un contrôle total du convertisseur, vous pouvez utiliser la propriété `ElementRenderers` pour **ajouter**, **supprimer** ou **remplacer** les convertisseurs par défaut.</span><span class="sxs-lookup"><span data-stu-id="d81f7-104">For full control of the renderer you can use the `ElementRenderers` property to **add**, **remove**, or **override** default renderers.</span></span>
+<span data-ttu-id="f2b00-104">Pour un contrôle total du convertisseur, vous pouvez utiliser la propriété `ElementRenderers` pour **ajouter**, **supprimer** ou **remplacer** les convertisseurs par défaut.</span><span class="sxs-lookup"><span data-stu-id="f2b00-104">For full control of the renderer you can use the `ElementRenderers` property to **add**, **remove**, or **override** default renderers.</span></span>
 
-<span data-ttu-id="d81f7-105">L’exemple suivant montre comment définir un élément `"type": "Rating"` personnalisé et en effectuer le rendu.</span><span class="sxs-lookup"><span data-stu-id="d81f7-105">The following example shows how you could define a custom `"type": "Rating"` element and render it.</span></span>
+<span data-ttu-id="f2b00-105">L’exemple suivant montre comment définir un élément `"type": "Rating"` personnalisé et en effectuer le rendu.</span><span class="sxs-lookup"><span data-stu-id="f2b00-105">The following example shows how you could define a custom `"type": "Rating"` element and render it.</span></span>
 
 ```csharp
 // Register the new type with the JSON parser

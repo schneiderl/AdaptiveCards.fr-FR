@@ -4,20 +4,20 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 11/28/2017
 ms.topic: article
-ms.openlocfilehash: 6e20e19d9b72c034675abc8e37f2493986127c20
-ms.sourcegitcommit: 99c7b64d6fc66da336c454951406fb42cd2a7427
+ms.openlocfilehash: 16e4b3e057137e361be52d654fa937c5dae5ff6f
+ms.sourcegitcommit: 1e18c5dc0cf85d26f66335e312348bbfb903d95a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59553121"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77454582"
 ---
-# <a name="render-a-card---javascript"></a><span data-ttu-id="ab892-102">Rendre une carte-JavaScript</span><span class="sxs-lookup"><span data-stu-id="ab892-102">Render a card - JavaScript</span></span>
+# <a name="render-a-card---javascript"></a><span data-ttu-id="5a65a-102">Rendre une carte-JavaScript</span><span class="sxs-lookup"><span data-stu-id="5a65a-102">Render a card - JavaScript</span></span>
 
-<span data-ttu-id="ab892-103">Voici comment afficher une carte à l’aide du kit de développement logiciel (SDK) JavaScript.</span><span class="sxs-lookup"><span data-stu-id="ab892-103">Here's how to render a card using the JavaScript SDK.</span></span>
+<span data-ttu-id="5a65a-103">Voici comment afficher une carte à l’aide du kit de développement logiciel (SDK) JavaScript.</span><span class="sxs-lookup"><span data-stu-id="5a65a-103">Here's how to render a card using the JavaScript SDK.</span></span>
 
-## <a name="usage"></a><span data-ttu-id="ab892-104">Utilisation</span><span class="sxs-lookup"><span data-stu-id="ab892-104">Usage</span></span>
+## <a name="usage"></a><span data-ttu-id="5a65a-104">Utilisation</span><span class="sxs-lookup"><span data-stu-id="5a65a-104">Usage</span></span>
 
-### <a name="import-the-module"></a><span data-ttu-id="ab892-105">Importer le module</span><span class="sxs-lookup"><span data-stu-id="ab892-105">Import the module</span></span>
+### <a name="import-the-module"></a><span data-ttu-id="5a65a-105">Importer le module</span><span class="sxs-lookup"><span data-stu-id="5a65a-105">Import the module</span></span>
 
 ```js
 // import the module
@@ -30,7 +30,7 @@ var AdaptiveCards = require("adaptivecards");
 AdaptiveCards.renderCard(...);
 ```
 
-## <a name="render-a-card"></a><span data-ttu-id="ab892-106">Effectuer le rendu d’une carte</span><span class="sxs-lookup"><span data-stu-id="ab892-106">Render a card</span></span>
+## <a name="render-a-card"></a><span data-ttu-id="5a65a-106">Effectuer le rendu d’une carte</span><span class="sxs-lookup"><span data-stu-id="5a65a-106">Render a card</span></span>
 
 ```js
 // Author a card
