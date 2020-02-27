@@ -4,12 +4,12 @@ author: paulcam206
 ms.author: paulcam
 ms.date: 09/18/2018
 ms.topic: reference
-ms.openlocfilehash: 46ba9987cf162e95ab86dcdafa55e10df29b1121
-ms.sourcegitcommit: 99c7b64d6fc66da336c454951406fb42cd2a7427
+ms.openlocfilehash: 848ce3dd2ccca1f975dfd330c1c88292c753641d
+ms.sourcegitcommit: 1e18c5dc0cf85d26f66335e312348bbfb903d95a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59552591"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77454922"
 ---
 # <a name="what-is-hostconfig"></a>Qu’est-ce que HostConfig ?
 `HostConfig` est un **objet de configuration partagé multiplateforme** qui spécifie comment un renderer de carte adaptative génère l’interface utilisateur.

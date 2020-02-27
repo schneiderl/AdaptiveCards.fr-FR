@@ -4,12 +4,12 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 8/15/2019
 ms.topic: article
-ms.openlocfilehash: 13f2239763b1cba75134758807dcc18cd7587ebd
-ms.sourcegitcommit: aa044167fd0b32b485ea2ce014afcf0b332bf1a2
+ms.openlocfilehash: b3a12ac71b99af6208d3b7e80a3777f703d279ec
+ms.sourcegitcommit: 1e18c5dc0cf85d26f66335e312348bbfb903d95a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69536868"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77454862"
 ---
 # <a name="adaptive-cards-for-microsoft-flow"></a>Cartes adaptatives pour Microsoft Flow
 

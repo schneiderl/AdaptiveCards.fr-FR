@@ -4,12 +4,12 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 06/26/2017
 ms.topic: article
-ms.openlocfilehash: b6d303e15f8d51aa3f1f944304b1fa4f11f9c206
-ms.sourcegitcommit: e002a988c570072d5bc24a1242eaaac0c9ce90df
+ms.openlocfilehash: 423971a4beec7a8bfce48ecdf530ffea4dbb54e7
+ms.sourcegitcommit: 1e18c5dc0cf85d26f66335e312348bbfb903d95a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67138112"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77454952"
 ---
 # <a name="extensibility"></a>Extensibilité
 
