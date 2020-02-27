@@ -4,12 +4,12 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 09/15/2017
 ms.topic: article
-ms.openlocfilehash: b39493f82f3378e5a554abc6df890d6821869671
-ms.sourcegitcommit: e002a988c570072d5bc24a1242eaaac0c9ce90df
+ms.openlocfilehash: 607ce40e70e0e54e61a572853a521d2dd70a5c23
+ms.sourcegitcommit: 1e18c5dc0cf85d26f66335e312348bbfb903d95a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67138022"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77454912"
 ---
 # <a name="adaptive-card-renderer-specification"></a>Spécification de renderer de carte adaptative
 
@@ -47,7 +47,7 @@ La spécification suivante décrit comment implémenter un renderer de carte ada
 ## <a name="versioning"></a>Contrôle de version
 
 1. Un renderer **DOIT** implémenter une version particulière du schéma. 
-1. Le constructeur `AdaptiveCard` **DOIT** attribuer à la propriété `version` une valeur par défaut basée sur la version actuelle du schéma. 
+1. Le constructeur `AdaptiveCard`**DOIT** attribuer à la propriété `version` une valeur par défaut basée sur la version actuelle du schéma. 
 1. Si un renderer rencontre une propriété `version` dans le `AdaptiveCard` qui est supérieure à la version prise en charge, il **DOIT** retourner le `fallbackText` à la place.
 
 ## <a name="rendering"></a>Rendu
@@ -106,7 +106,7 @@ Cela permet aux propriétés qui sont indépendantes de la plateforme d’être 
 1. Les renderers **DOIVENT** exposer un paramètre de **Configuration d’hôte** pour héberger des applications.
 1. Un style **DOIT** être appliqué à tous les éléments en fonction de leurs paramètres de configuration d’hôte respectifs.
 
-### <a name="native-platform-styling"></a>Style de plateforme natif
+### <a name="native-platform-styling"></a>Style de plateforme native
 
 1. Chaque type d’élément **DOIT** attacher un style de plateforme natif à l’élément d’interface utilisateur généré. Par exemple, dans le code HTML nous avons ajouté une classe CSS aux types d’éléments et, en XAML, nous affectons un style spécifique.
 
@@ -119,7 +119,7 @@ Cela permet aux propriétés qui sont indépendantes de la plateforme d’être 
 ## <a name="actions"></a>Actions
 
 1. Si `supportsInteractivity` de configuration de l’hôte est `false`, un renderer **NE DOIT PAS** afficher d’action.
-1. La propriété `actions` **DOIT** être rendue sous forme de boutons dans un type de barre d’action, généralement au bas de la carte. 
+1. La propriété `actions`**DOIT** être rendue sous forme de boutons dans un type de barre d’action, généralement au bas de la carte. 
 1. Quand un bouton est enfoncé, il **DOIT** permettre à l’application hôte de gérer l’événement. 
 1. L’événement **DOIT** transmettre toutes les propriétés associées avec l’action.
 1. L’événement **DOIT** transmettre le `AdaptiveCard` qui a été exécuté.
@@ -143,7 +143,7 @@ Action | Comportement
 L’action Submit se comporte comme un envoi de formulaire HTML, sauf que là où le code HTML déclenche généralement une requête HTTP, les cartes adaptatives laissent à chaque application hôte le soin de déterminer ce que signifie pour elles « envoi ». 
 
 1. Quand cela **DOIT** déclencher un événement, l’utilisateur appuie sur l’action appelée.  
-1. La propriété `data` **DOIT** être incluse dans la charge utile de rappel.
+1. La propriété `data`**DOIT** être incluse dans la charge utile de rappel.
 1. Pour `Action.Submit`, un renderer **DOIT** recueillir toutes les entrées sur la carte et récupérer leurs valeurs. 
 
 ### <a name="selectaction"></a>selectAction

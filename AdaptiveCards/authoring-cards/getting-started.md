@@ -4,12 +4,12 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 11/9/2017
 ms.topic: article
-ms.openlocfilehash: 9d363da0c10b242e23d2594984292fcc1f31382f
-ms.sourcegitcommit: e002a988c570072d5bc24a1242eaaac0c9ce90df
+ms.openlocfilehash: c9a0ad07ba5fefbcdc35239591c02fe0720b5b66
+ms.sourcegitcommit: 1e18c5dc0cf85d26f66335e312348bbfb903d95a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "59552681"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77454842"
 ---
 # <a name="getting-started"></a>Prise en main 
 
@@ -20,7 +20,7 @@ Une carte adaptative est un modèle d'objet de carte sérialisé au format JSON.
 La structure de base d'une carte est la suivante :
 
 * `AdaptiveCard` : l'objet racine décrit la carte adaptative proprement dite, avec sa composition en termes d'éléments, ses actions, la façon dont elle doit être lue et la version du schéma requise pour la restituer.
-* `body` : le corps de la carte est constitué de blocs de construction appelés `elements`. Les éléments peuvent être composés selon des combinaisons quasiment infinies pour créer de nombreux types de cartes. 
+* `body` -le corps de la carte est constitué de modules appelés `elements`. Les éléments peuvent être composés selon des combinaisons quasiment infinies pour créer de nombreux types de cartes. 
 * `actions` : beaucoup de cartes disposent d'un ensemble d'actions applicables par l'utilisateur. Cette propriété décrit les actions qui sont généralement présentées sur une « barre d'action », en bas.
 
 ### <a name="example-card"></a>Exemple de carte
