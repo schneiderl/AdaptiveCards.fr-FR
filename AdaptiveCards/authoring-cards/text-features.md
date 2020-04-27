@@ -5,10 +5,10 @@ ms.author: mahiding
 ms.date: 11/09/2017
 ms.topic: article
 ms.openlocfilehash: f7ea40b80df4d976c0a8a86b15254018fdf2fac6
-ms.sourcegitcommit: 1e18c5dc0cf85d26f66335e312348bbfb903d95a
+ms.sourcegitcommit: e6418d692296e06be7412c95c689843f9db5240d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 04/24/2020
 ms.locfileid: "77454872"
 ---
 # <a name="text-features"></a>Fonctionnalités de texte

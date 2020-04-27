@@ -5,10 +5,10 @@ ms.author: mahiding
 ms.date: 06/26/2017
 ms.topic: article
 ms.openlocfilehash: a562a05a91676dc5e6d8b51690acc4788802fb99
-ms.sourcegitcommit: 1e18c5dc0cf85d26f66335e312348bbfb903d95a
+ms.sourcegitcommit: e6418d692296e06be7412c95c689843f9db5240d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 04/24/2020
 ms.locfileid: "77454932"
 ---
 # <a name="rendering-cards-inside-your-application"></a>Rendu de cartes à l’intérieur de votre application
@@ -21,7 +21,7 @@ Il est facile d’afficher des cartes adaptatives à l’intérieur de votre app
 
 ## <a name="adaptive-cards-sdks"></a>SDK de cartes adaptatives
 
-|Plate-forme|Installer|Générer|Docs|État|
+|Plateforme|Installer|Build|Documentation|État|
 |---|---|---|---|---|
 | JavaScript | [![Installation npm](https://img.shields.io/npm/v/adaptivecards.svg)](https://www.npmjs.com/package/adaptivecards) | [Source](https://github.com/Microsoft/AdaptiveCards/tree/master/source/nodejs)| [Documentation](../sdk/rendering-cards/javascript/getting-started.md) | ![État de la build](https://img.shields.io/vso/build/Microsoft/56cf629e-8f3a-4412-acbc-bf69366c552c/20564.svg) |
 | .NET WPF | [![Installation NuGet](https://img.shields.io/nuget/vpre/AdaptiveCards.Rendering.Wpf.svg)](https://www.nuget.org/packages/AdaptiveCards.Rendering.Wpf) | [Source](https://github.com/Microsoft/AdaptiveCards/tree/master/source/dotnet)| [Documentation](../sdk/rendering-cards/net-wpf/getting-started.md) | ![État de la build](https://img.shields.io/vso/build/Microsoft/56cf629e-8f3a-4412-acbc-bf69366c552c/20596.svg) |
@@ -54,7 +54,7 @@ Il existe plusieurs façons de personnaliser ce qui est rendu.
 
 Un [HostConfig](host-config.md) est un objet de configuration multiplateforme et partagé qui contrôle le style et le comportement de base des cartes à l’intérieur de votre application. Il définit des éléments tels que les tailles de police, l’espacement entre les éléments, les couleurs, le nombre d’actions prises en charge, et ainsi de suite. 
 
-### <a name="native-platform-styling"></a>Style de plateforme natif
+### <a name="native-platform-styling"></a>Style de plateforme native
 
 La plupart des frameworks d’interface utilisateur vous permettent d’appliquer un style à la carte rendue à l’aide du style de framework d’interface utilisateur natif. Par exemple, en HTML vous pouvez spécifier des classes CSS pour le code HTML, et en XAML vous pouvez passer un ResourceDictionary personnalisé pour obtenir un contrôle affiné de la sortie.
 

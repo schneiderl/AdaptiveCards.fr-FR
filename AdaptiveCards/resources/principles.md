@@ -5,10 +5,10 @@ ms.author: mahiding
 ms.date: 5/14/2018
 ms.topic: article
 ms.openlocfilehash: 243ad63fc585c5afc3fa396b86ff6261e8a7ee93
-ms.sourcegitcommit: 1e18c5dc0cf85d26f66335e312348bbfb903d95a
+ms.sourcegitcommit: e6418d692296e06be7412c95c689843f9db5240d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 04/24/2020
 ms.locfileid: "77454812"
 ---
 # <a name="motivations-and-principles"></a>Motivations et principes

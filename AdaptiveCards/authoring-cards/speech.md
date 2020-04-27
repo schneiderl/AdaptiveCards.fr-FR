@@ -5,10 +5,10 @@ ms.author: mahiding
 ms.date: 06/26/2017
 ms.topic: article
 ms.openlocfilehash: 1dfd9b0c45a280905223e3286998b333b0a6ec6a
-ms.sourcegitcommit: 9a9973129c36a41f5e4af30d95ffc146820ad173
+ms.sourcegitcommit: e6418d692296e06be7412c95c689843f9db5240d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 04/24/2020
 ms.locfileid: "76145340"
 ---
 # <a name="speech-and-advanced-customization"></a>Reconnaissance vocale et personnalisation avancée

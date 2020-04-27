@@ -5,10 +5,10 @@ ms.author: mahiding
 ms.date: 06/26/2017
 ms.topic: article
 ms.openlocfilehash: 39bdc64ed3244aca68d36c886a9562d964ded217
-ms.sourcegitcommit: 9a9973129c36a41f5e4af30d95ffc146820ad173
+ms.sourcegitcommit: e6418d692296e06be7412c95c689843f9db5240d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 04/24/2020
 ms.locfileid: "76145389"
 ---
 # <a name="adaptive-cards-for-windows-developers"></a>Cartes adaptatives pour développeurs Windows
@@ -39,7 +39,7 @@ Il existe un excellent module d’apprentissage de 45 minutes qui couvre ces ét
 
 [Intégrer des cartes adaptatives dans Chronologie Windows 10](https://docs.microsoft.com/learn/modules/integrate-app-into-windows-10-timeline/)
 
-### <a name="learn-more"></a>Pour en savoir plus
+### <a name="learn-more"></a>En savoir plus
 
 Cette session de la conférence Build 2017 couvre en détail les activités de l'utilisateur.
 
