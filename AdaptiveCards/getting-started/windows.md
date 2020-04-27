@@ -5,25 +5,25 @@ ms.author: mahiding
 ms.date: 06/26/2017
 ms.topic: article
 ms.openlocfilehash: 39bdc64ed3244aca68d36c886a9562d964ded217
-ms.sourcegitcommit: 9a9973129c36a41f5e4af30d95ffc146820ad173
+ms.sourcegitcommit: e6418d692296e06be7412c95c689843f9db5240d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 04/24/2020
 ms.locfileid: "76145389"
 ---
-# <a name="adaptive-cards-for-windows-developers"></a><span data-ttu-id="288d4-102">Cartes adaptatives pour développeurs Windows</span><span class="sxs-lookup"><span data-stu-id="288d4-102">Adaptive Cards for Windows Developers</span></span>
+# <a name="adaptive-cards-for-windows-developers"></a><span data-ttu-id="99186-102">Cartes adaptatives pour développeurs Windows</span><span class="sxs-lookup"><span data-stu-id="99186-102">Adaptive Cards for Windows Developers</span></span>
 
-## <a name="timeline"></a><span data-ttu-id="288d4-103">Chronologie</span><span class="sxs-lookup"><span data-stu-id="288d4-103">Timeline</span></span>
+## <a name="timeline"></a><span data-ttu-id="99186-103">Chronologie</span><span class="sxs-lookup"><span data-stu-id="99186-103">Timeline</span></span>
 
-<span data-ttu-id="288d4-104">La première expérience Windows compatible avec les cartes adaptatives est la Chronologie, une toute nouvelle expérience introduite pour la première fois dans Windows 10 1803.</span><span class="sxs-lookup"><span data-stu-id="288d4-104">The first Windows experience to supports Adaptive Cards is Timeline, a brand new experience first introduced in Windows 10 1803.</span></span> 
+<span data-ttu-id="99186-104">La première expérience Windows compatible avec les cartes adaptatives est la Chronologie, une toute nouvelle expérience introduite pour la première fois dans Windows 10 1803.</span><span class="sxs-lookup"><span data-stu-id="99186-104">The first Windows experience to supports Adaptive Cards is Timeline, a brand new experience first introduced in Windows 10 1803.</span></span> 
 
 ![Chronologie](media/windows/timeline.png)
 
-### <a name="useractivity-api"></a><span data-ttu-id="288d4-106">API UserActivity</span><span class="sxs-lookup"><span data-stu-id="288d4-106">UserActivity API</span></span>
+### <a name="useractivity-api"></a><span data-ttu-id="99186-106">API UserActivity</span><span class="sxs-lookup"><span data-stu-id="99186-106">UserActivity API</span></span>
 
-<span data-ttu-id="288d4-107">L'API [`Windows.ApplicationModel.UserActivities.UserActivity`](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity) permet de renseigner une activité dans la Chronologie.</span><span class="sxs-lookup"><span data-stu-id="288d4-107">The [`Windows.ApplicationModel.UserActivities.UserActivity`](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity) API is what populates an Activity into Timeline.</span></span>
+<span data-ttu-id="99186-107">L'API [`Windows.ApplicationModel.UserActivities.UserActivity`](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity) permet de renseigner une activité dans la Chronologie.</span><span class="sxs-lookup"><span data-stu-id="99186-107">The [`Windows.ApplicationModel.UserActivities.UserActivity`](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity) API is what populates an Activity into Timeline.</span></span>
 
-<span data-ttu-id="288d4-108">La carte adaptative sera fournie via la propriété `Content` de `VisualElement`, comme illustré ci-dessous :</span><span class="sxs-lookup"><span data-stu-id="288d4-108">The Adaptive Card will be supplied via the `Content` property of `VisualElement`, as seen below:</span></span>
+<span data-ttu-id="99186-108">La carte adaptative sera fournie via la propriété `Content` de `VisualElement`, comme illustré ci-dessous :</span><span class="sxs-lookup"><span data-stu-id="99186-108">The Adaptive Card will be supplied via the `Content` property of `VisualElement`, as seen below:</span></span>
 
 ```csharp
 UserActivity userActivity = await channel.GetOrCreateUserActivityAsync(activityId, new HostName("contoso.com"));
@@ -33,26 +33,26 @@ userActivity.VisualElements.Content = AdaptiveCardBuilder.CreateAdaptiveCardFrom
 await userActivity.SaveAsync();
 ```
 
-### <a name="learning-module"></a><span data-ttu-id="288d4-109">Module d’apprentissage</span><span class="sxs-lookup"><span data-stu-id="288d4-109">Learning Module</span></span>
+### <a name="learning-module"></a><span data-ttu-id="99186-109">Module d’apprentissage</span><span class="sxs-lookup"><span data-stu-id="99186-109">Learning Module</span></span>
 
-<span data-ttu-id="288d4-110">Il existe un excellent module d’apprentissage de 45 minutes qui couvre ces étapes de bout en bout.</span><span class="sxs-lookup"><span data-stu-id="288d4-110">There is a great 45-min learn module that covers these steps end-to-end.</span></span>
+<span data-ttu-id="99186-110">Il existe un excellent module d’apprentissage de 45 minutes qui couvre ces étapes de bout en bout.</span><span class="sxs-lookup"><span data-stu-id="99186-110">There is a great 45-min learn module that covers these steps end-to-end.</span></span>
 
-[<span data-ttu-id="288d4-111">Intégrer des cartes adaptatives dans Chronologie Windows 10</span><span class="sxs-lookup"><span data-stu-id="288d4-111">Integrate adaptive cards into Windows 10 Timeline</span></span>](https://docs.microsoft.com/learn/modules/integrate-app-into-windows-10-timeline/)
+[<span data-ttu-id="99186-111">Intégrer des cartes adaptatives dans Chronologie Windows 10</span><span class="sxs-lookup"><span data-stu-id="99186-111">Integrate adaptive cards into Windows 10 Timeline</span></span>](https://docs.microsoft.com/learn/modules/integrate-app-into-windows-10-timeline/)
 
-### <a name="learn-more"></a><span data-ttu-id="288d4-112">Pour en savoir plus</span><span class="sxs-lookup"><span data-stu-id="288d4-112">Learn more</span></span>
+### <a name="learn-more"></a><span data-ttu-id="99186-112">En savoir plus</span><span class="sxs-lookup"><span data-stu-id="99186-112">Learn more</span></span>
 
-<span data-ttu-id="288d4-113">Cette session de la conférence Build 2017 couvre en détail les activités de l'utilisateur.</span><span class="sxs-lookup"><span data-stu-id="288d4-113">This session at Build 2017 covers User Activities in detial.</span></span>
+<span data-ttu-id="99186-113">Cette session de la conférence Build 2017 couvre en détail les activités de l'utilisateur.</span><span class="sxs-lookup"><span data-stu-id="99186-113">This session at Build 2017 covers User Activities in detial.</span></span>
 
 <iframe src="https://channel9.msdn.com/Events/Build/2017/B8108/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe>
 
-## <a name="other-windows-surfaces"></a><span data-ttu-id="288d4-114">Autres surfaces Windows</span><span class="sxs-lookup"><span data-stu-id="288d4-114">Other Windows Surfaces</span></span>
-<span data-ttu-id="288d4-115">Nous n'avons rien à présenter pour le moment, mais nous préparons l'intégration de cartes adaptatives dans d'autres expériences Windows.</span><span class="sxs-lookup"><span data-stu-id="288d4-115">We don't have anything to share just yet, but we're working on incorporating Adaptive Cards into more Windows experiences.</span></span>
+## <a name="other-windows-surfaces"></a><span data-ttu-id="99186-114">Autres surfaces Windows</span><span class="sxs-lookup"><span data-stu-id="99186-114">Other Windows Surfaces</span></span>
+<span data-ttu-id="99186-115">Nous n'avons rien à présenter pour le moment, mais nous préparons l'intégration de cartes adaptatives dans d'autres expériences Windows.</span><span class="sxs-lookup"><span data-stu-id="99186-115">We don't have anything to share just yet, but we're working on incorporating Adaptive Cards into more Windows experiences.</span></span>
 
-## <a name="dive-in"></a><span data-ttu-id="288d4-116">Lancez-vous !</span><span class="sxs-lookup"><span data-stu-id="288d4-116">Dive in!</span></span>
+## <a name="dive-in"></a><span data-ttu-id="99186-116">Lancez-vous !</span><span class="sxs-lookup"><span data-stu-id="99186-116">Dive in!</span></span>
 
-<span data-ttu-id="288d4-117">Ce didacticiel ne fait qu'effleurer le sujet. N'hésitez donc pas à revenir très bientôt et à utiliser les liens ci-dessous pour en savoir plus sur les cartes adaptatives.</span><span class="sxs-lookup"><span data-stu-id="288d4-117">We've barely scratched the surface in this tutorial, so check back soon and browse the links below to explore more about Adaptive Cards.</span></span>
+<span data-ttu-id="99186-117">Ce didacticiel ne fait qu'effleurer le sujet. N'hésitez donc pas à revenir très bientôt et à utiliser les liens ci-dessous pour en savoir plus sur les cartes adaptatives.</span><span class="sxs-lookup"><span data-stu-id="99186-117">We've barely scratched the surface in this tutorial, so check back soon and browse the links below to explore more about Adaptive Cards.</span></span>
 
-* <span data-ttu-id="288d4-118">[Parcourir des exemples de cartes](http://adaptivecards.io/samples/) pour trouver l'inspiration</span><span class="sxs-lookup"><span data-stu-id="288d4-118">[Browse Sample cards](http://adaptivecards.io/samples/) for inspiration</span></span>
-* <span data-ttu-id="288d4-119">Utiliser l'[Explorateur de schémas](http://adaptivecards.io/explorer) pour en savoir plus sur les éléments disponibles</span><span class="sxs-lookup"><span data-stu-id="288d4-119">Use the [Schema Explorer](http://adaptivecards.io/explorer) to learn the available elements</span></span>
-* <span data-ttu-id="288d4-120">Générer une carte à l'aide du [Visualiseur interactif](http://adaptivecards.io/visualizer/index.html?hostApp=Skype)</span><span class="sxs-lookup"><span data-stu-id="288d4-120">Build a card using the [Interactive Visualizer](http://adaptivecards.io/visualizer/index.html?hostApp=Skype)</span></span>
-* <span data-ttu-id="288d4-121">[Nous contacter](http://adaptivecards.io/connect) pour nous faire part de vos commentaires</span><span class="sxs-lookup"><span data-stu-id="288d4-121">[Get in touch](http://adaptivecards.io/connect) with any feedback you have</span></span>
+* <span data-ttu-id="99186-118">[Parcourir des exemples de cartes](http://adaptivecards.io/samples/) pour trouver l'inspiration</span><span class="sxs-lookup"><span data-stu-id="99186-118">[Browse Sample cards](http://adaptivecards.io/samples/) for inspiration</span></span>
+* <span data-ttu-id="99186-119">Utiliser l'[Explorateur de schémas](http://adaptivecards.io/explorer) pour en savoir plus sur les éléments disponibles</span><span class="sxs-lookup"><span data-stu-id="99186-119">Use the [Schema Explorer](http://adaptivecards.io/explorer) to learn the available elements</span></span>
+* <span data-ttu-id="99186-120">Générer une carte à l'aide du [Visualiseur interactif](http://adaptivecards.io/visualizer/index.html?hostApp=Skype)</span><span class="sxs-lookup"><span data-stu-id="99186-120">Build a card using the [Interactive Visualizer](http://adaptivecards.io/visualizer/index.html?hostApp=Skype)</span></span>
+* <span data-ttu-id="99186-121">[Nous contacter](http://adaptivecards.io/connect) pour nous faire part de vos commentaires</span><span class="sxs-lookup"><span data-stu-id="99186-121">[Get in touch](http://adaptivecards.io/connect) with any feedback you have</span></span>
