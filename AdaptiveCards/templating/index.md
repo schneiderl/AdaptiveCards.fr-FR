@@ -4,12 +4,12 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 07/29/2019
 ms.topic: article
-ms.openlocfilehash: 6a818e5009a0ec65e7e17fe47cc0172d2e34ae31
-ms.sourcegitcommit: 9a9973129c36a41f5e4af30d95ffc146820ad173
+ms.openlocfilehash: ab3a3f335b52a06dbb2219159e15e5033e715ba1
+ms.sourcegitcommit: e6418d692296e06be7412c95c689843f9db5240d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76145549"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82136165"
 ---
 # <a name="adaptive-cards-templating-preview"></a>Création de modèles de cartes adaptatives (préversion)
 
@@ -27,7 +27,7 @@ La création de modèles permet de séparer des **données** d’une **dispositi
 
 Aujourd’hui, il est impossible de créer une carte à l’aide du [concepteur de carte adaptative](https://adaptivecards.io/designer) et d’utiliser ce JSON pour alimenter la charge utile avec du **contenu dynamique**. Pour ce faire, vous devez écrire du code personnalisé pour générer une chaîne JSON, ou utiliser les kits de développement logiciel (SDK) Modèle objet pour créer un modèle objet représentant votre carte et le sérialiser dans JSON. Dans les deux cas, le concepteur effectue une opération unidirectionnelle ponctuelle et facilite l’ajustement du modèle de carte une fois celle-ci convertie en code.
 
-### <a name="it-makes-tranmissions-over-the-wire-smaller"></a>Il réduit le volume des transmissions par câble
+### <a name="it-makes-transmissions-over-the-wire-smaller"></a>Il réduit le volume des transmissions par câble
 
 Imaginez un monde où un modèle et des données peuvent être combinés **directement sur le client**. Cela signifie que, si vous utilisez le même modèle plusieurs fois, ou souhaitez le mettre à jour avec de nouvelles données, vous devez simplement envoyer de nouvelles données à l’appareil qui réutilise le même modèle indéfiniment.
 

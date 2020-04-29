@@ -4,12 +4,12 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 08/01/2019
 ms.topic: article
-ms.openlocfilehash: 8ccccd3c3e67324acf123e03b947372e1517faab
-ms.sourcegitcommit: 1e18c5dc0cf85d26f66335e312348bbfb903d95a
+ms.openlocfilehash: db211fc3bac27dc980ae87983a918a35730f8e5e
+ms.sourcegitcommit: e6418d692296e06be7412c95c689843f9db5240d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77454982"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82136185"
 ---
 # <a name="adaptive-cards-template-service"></a>Service de modèles de cartes adaptatives
 
@@ -222,7 +222,7 @@ Notez que la réponse remplace le texte `"{name}"` du premier `TextBlock` par `"
 
 ## <a name="contributing-templates"></a>Contribution aux modèles
 
-Le service de modèles s’appuie sur un dépôt GitHub (actuellement **privé**), que nous mettrons à disposition en open source après avoir réglé quelques détails.
+Les modèles sont hébergés sur GitHub dans le dépôt [adaptivecards-templates](https://github.com/microsoft/adaptivecards-templates).
 
 Nous espérons que l’utilisation de GitHub comme magasin de stockage pour les modèles nous permettra de « démocratiser » le processus de création, d’amélioration et de partage de modèles. N’importe qui peut envoyer une demande de tirage (pull request) incluant un modèle entièrement nouveau ou améliorer des modèles existants... le tout dans l’expérience de développement conviviale de GitHub.
 
@@ -230,6 +230,6 @@ Nous espérons que l’utilisation de GitHub comme magasin de stockage pour les 
 
 Tous les types de données ne sont pas appropriés pour le service de modèles de cartes adaptatives « central » hébergé sur `https://templates.adaptivecards.io`. 
 
-Nous voulons faire en sorte que le service de modèles puisse être hébergé par toute personne au sein de votre organisation. Nous veillerons donc à mettre à disposition le code source et à faciliter le déploiement sur Azure ou votre propre back-end.
+Nous voulons nous assurer que tout le monde peut héberger le service de modèles au sein de votre organisation, c’est pourquoi le code source est disponible sur GitHub et peut être facilement déployé sur votre propre fonction Azure. 
 
-De plus amples informations seront annoncées à une date ultérieure.
+Commencez ici ➡ [adaptivecards-templates](https://github.com/microsoft/adaptivecards-templates)
