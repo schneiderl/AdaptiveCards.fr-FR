@@ -4,12 +4,12 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 06/26/2017
 ms.topic: article
-ms.openlocfilehash: d47b94595c22afa51a0d4cf9666771203cd79c7e
-ms.sourcegitcommit: 1e18c5dc0cf85d26f66335e312348bbfb903d95a
+ms.openlocfilehash: 6248c174775db687a5419f8feb6e0b23b0dcd870
+ms.sourcegitcommit: e6418d692296e06be7412c95c689843f9db5240d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77454742"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82136195"
 ---
 # <a name="render-a-card---ios"></a>Effectuer le rendu d’une carte – iOS
 
@@ -41,7 +41,7 @@ if(cardParseResult.isValid){
     renderResult = [ACRRenderer render:cardParseResult.card config:nil widthConstraint:335];
 }
 ``` 
-### <a name="example"></a>Exemple
+### <a name="example"></a> Exemple
 
 ```objective-c
 --------------------------------------------------------------------------------
@@ -97,7 +97,7 @@ ViewController.m
 
 ```swift
 --------------------------------------------------------------------------------
-ViewController.swft
+ViewController.swift
 --------------------------------------------------------------------------------
 
 import UIKit
