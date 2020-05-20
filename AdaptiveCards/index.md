@@ -4,12 +4,12 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 06/26/2017
 ms.topic: article
-ms.openlocfilehash: 27c7d5ac7da3ae182667cbf8efa90d29f110d1d3
-ms.sourcegitcommit: e6418d692296e06be7412c95c689843f9db5240d
+ms.openlocfilehash: 272a7dc7c31fc3da8e5b27ff7479b249c4ef4226
+ms.sourcegitcommit: c921a7bb15a95c0ceb803ad375501ee3b8bef028
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "72042533"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83631297"
 ---
 # <a name="adaptive-cards-overview"></a>Vue d’ensemble du format Cartes adaptatives 
 
@@ -73,7 +73,7 @@ Nous voulons que les cartes adaptatives soient expressives et universelles, mais
 En misant sur la simplicité et l’expressivité, Markdown a créé une description simple et cohérente du contenu des documents.  De la même façon, nous pensons que le format Cartes adaptatives peut créer un moyen simple et expressif de décrire le contenu d’une carte.
 
 ### <a name="when-in-doubt-keep-it-out"></a>En cas de doute, ignorer
-Il est plus facile d’effectuer un ajout plus tard que de rester dans l’erreur. Si nous avons été amenés à débattre de l’opportunité d’ajouter ou non quelque chose, nous avons choisi de l’ignorer.  Il est toujours plus facile d’ajouter une propriété que de conserver quelque chose que nous aurions aimé ne pas avoir à prendre en charge.
+Il est plus facile d’effectuer un ajout plus tard que de rester avec une erreur. Si nous avons été amenés à débattre de l’opportunité d’ajouter ou non quelque chose, nous avons choisi de l’ignorer.  Il est toujours plus facile d’ajouter une propriété que de conserver quelque chose que nous aurions aimé ne pas avoir à prendre en charge.
 
 
 ## <a name="build-2019-session"></a>Session Build 2019

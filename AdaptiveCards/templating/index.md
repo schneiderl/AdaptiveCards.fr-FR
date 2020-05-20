@@ -2,24 +2,34 @@
 title: Vue d’ensemble de la création de modèles
 author: matthidinger
 ms.author: mahiding
-ms.date: 07/29/2019
+ms.date: 05/18/2020
 ms.topic: article
-ms.openlocfilehash: ab3a3f335b52a06dbb2219159e15e5033e715ba1
-ms.sourcegitcommit: e6418d692296e06be7412c95c689843f9db5240d
+ms.openlocfilehash: db1f44c4465db88d375dec728bcb32d5933ef702
+ms.sourcegitcommit: c921a7bb15a95c0ceb803ad375501ee3b8bef028
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82136165"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83631371"
 ---
-# <a name="adaptive-cards-templating-preview"></a>Création de modèles de cartes adaptatives (préversion)
+# <a name="adaptive-cards-templating"></a>Création de modèles de cartes adaptatives
 
 Nous sommes heureux de partager une préversion de nouveaux outils qui vous aideront à **créer**, **réutiliser** et **partager** des cartes adaptatives. 
 
 > [!IMPORTANT] 
 > 
-> Ces fonctionnalités sont **en préversion et sujettes à modification**. Vos commentaires sont non seulement bienvenus, mais essentiels pour garantir que nous fournissions les fonctionnalités dont **vous** avez besoin.
+> **Changements cassants** dans la version **RC (Release Candidate) de mai 2020**
+>
+> La version Release Candidate de la création de modèles contient des changements cassants mineurs que vous devez connaître si vous utilisez les anciens packages. Voir ci-dessous pour plus de détails.
 
-## <a name="how-can-templating-help-you"></a>Comment la création de modèles peut-elle vous aider ?
+
+## <a name="breaking-changes-as-of-may-2020"></a>Changements cassants de mai 2020
+
+1. La syntaxe de liaison a changé et passe de `{...}` à `${...}`. 
+    * Par exemple : `"text": "Hello {name}"` devient `"text": "Hello ${name}"`
+2. L’API JavaScript ne contient plus d’objet `EvaluationContext`. Passez simplement vos données à la fonction `expand`. Consultez la [page du SDK](sdk.md) pour obtenir les détails complets.
+3. L’API .NET a été reconçue pour correspondre davantage à l’API JavaScript. Consultez la [page du SDK](sdk.md) pour obtenir les détails complets.
+
+## <a name="how-can-templating-help-you"></a>Comment la création de modèles peut vous aider
 
 La création de modèles permet de séparer des **données** d’une **disposition** dans une carte adaptative. 
 
@@ -51,7 +61,7 @@ Il est composé de 3 composants principaux :
 
 ## <a name="template-language"></a>Langage de modèle
 
-Le langue de modèle est la syntaxe utilisée pour créer un modèle de carte adaptative. 
+Le langage de modèle est la syntaxe utilisée pour créer un modèle de carte adaptative. 
 
 > [!NOTE]
 > 
@@ -85,7 +95,7 @@ Collez l’exemple ci-dessous dans le volet de l’**éditeur de charge utile de
                     "items": [
                         {
                             "type": "Image",
-                            "url": "{photo}",
+                            "url": "${photo}",
                             "altText": "Profile picture",
                             "size": "Small",
                             "style": "Person"
@@ -98,7 +108,7 @@ Collez l’exemple ci-dessous dans le volet de l’**éditeur de charge utile de
                     "items": [
                         {
                             "type": "TextBlock",
-                            "text": "Hi {name}!",
+                            "text": "Hi ${name}!",
                             "size": "Medium"
                         },
                         {
@@ -112,7 +122,7 @@ Collez l’exemple ci-dessous dans le volet de l’**éditeur de charge utile de
         },
         {
             "type": "TextBlock",
-            "text": "Your manager is: **{manager.name}**"
+            "text": "Your manager is: **${manager.name}**"
         },
         {
             "type": "TextBlock",
@@ -122,9 +132,9 @@ Collez l’exemple ci-dessous dans le volet de l’**éditeur de charge utile de
             "type": "FactSet",
             "facts": [
                 {
-                    "$data": "{peers}",
-                    "title": "{name}",
-                    "value": "{title}"
+                    "$data": "${peers}",
+                    "title": "${name}",
+                    "value": "${title}"
                 }
             ]
         }
@@ -175,12 +185,12 @@ Les kits de développement logiciel (SDK) de création de modèles permettent de
 
 > [!NOTE]
 >
-> Au cours de la période de préversion initiale, nous ne disposons que d’un ensemble limité de kits de développement logiciel (SDK). Lors de la mise en production, des bibliothèques de création de modèles seront disponibles pour chaque plateforme de cartes adaptatives prise en charge.
+> À ce jour, les kits SDK de création de modèles sont disponibles pour .NET et NodeJS. Nous publierons au fur et à mesure les kits SDK pour toutes les autres plateformes de cartes adaptatives comme iOS, Android, UWP, etc.
 
-Plate-forme | Installer | Documentation
---- | --- | ---
-JavaScript | `npm install adaptivecards-templating` | [Documentation](https://www.npmjs.com/package/adaptivecards-templating)
-.NET | `nuget install AdaptiveCards.Templating` | [Documentation](https://docs.microsoft.com/adaptive-cards/templating/sdk#net)
+Plateforme | Package | Installer | Documentation
+--- | --- | --- | ---
+JavaScript | [![Installation npm](https://img.shields.io/npm/v/adaptivecards-templating.svg)](https://www.npmjs.com/package/adaptivecards-templating) | `npm install adaptivecards-templating` | [Documentation](https://www.npmjs.com/package/adaptivecards-templating)
+.NET | [![Installation NuGet](https://img.shields.io/nuget/vpre/AdaptiveCards.Templating.svg)](https://www.nuget.org/packages/AdaptiveCards.Templating) | `dotnet add package AdaptiveCards.Templating` | [Documentation](https://docs.microsoft.com/adaptive-cards/templating/sdk#net)
 
 ### <a name="javascript-example"></a>Exemple JavaScript
 
@@ -191,12 +201,11 @@ var template = new ACData.Template({
     // EmployeeCardTemplate goes here
 });
 
-var dataContext = new ACData.EvaluationContext();
-dataContext.$root = {
-    // Data goes here
-};
-
-var card = template.expand(dataContext);
+var card = template.expand({
+    $root: {
+        // Your data goes here
+    }
+});
 // Now you have an AdaptiveCard ready to render!
 ```
 
@@ -218,6 +227,4 @@ Tous les modèles sont des fichiers JSON plats stockés dans un référentiel Gi
 
 ## <a name="whats-next-and-sending-feedback"></a>Étapes suivantes et envoi de commentaires
 
-La création de modèles et la séparation de la présentation et des données nous rapprochent de l’objectif de notre mission : « un écosystème pour l’échange de contenu de carte de manière commune et cohérente ».
-
-Nous sommes impatients de pouvoir partager des informations supplémentaires dès que possible. En attendant, veuillez nous faire part de vos commentaires ici, sur [GitHub](https://github.com/microsoft/AdaptiveCards) ou sur Twitter **[@MattHidinger](https://twitter.com/matthidinger)** / **#AdaptiveCards**. 
+La création de modèles et la séparation de la présentation et des données nous rapprochent de l’objectif de notre mission : « un écosystème pour un échange de contenu standardisé entre les applications et les services ». Nous avons beaucoup à dire dans ce domaine, donc restez à l’écoute et partagez votre expérience sur [GitHub](https://github.com/Microsoft/AdaptiveCards/issues) !
