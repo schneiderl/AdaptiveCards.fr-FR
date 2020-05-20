@@ -40,7 +40,7 @@
       href: sdk/rendering-cards/toc.yml
     - name: SDK du concepteur
       href: sdk/designer.md
-- name: Création de modèles (préversion)
+- name: Création de modèles
   items:
     - name: Vue d’ensemble
       href: templating/index.md
