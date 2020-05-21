@@ -4,20 +4,20 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 06/26/2017
 ms.topic: article
-ms.openlocfilehash: 6248c174775db687a5419f8feb6e0b23b0dcd870
-ms.sourcegitcommit: e6418d692296e06be7412c95c689843f9db5240d
+ms.openlocfilehash: 3970a6ee0673388069cedbcfbe3ef1e6670eb748
+ms.sourcegitcommit: c921a7bb15a95c0ceb803ad375501ee3b8bef028
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82136195"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83631397"
 ---
-# <a name="render-a-card---ios"></a><span data-ttu-id="453b2-102">Effectuer le rendu d’une carte – iOS</span><span class="sxs-lookup"><span data-stu-id="453b2-102">Render a card - iOS</span></span>
+# <a name="render-a-card---ios"></a><span data-ttu-id="3c4bf-102">Effectuer le rendu d’une carte – iOS</span><span class="sxs-lookup"><span data-stu-id="3c4bf-102">Render a card - iOS</span></span>
 
-<span data-ttu-id="453b2-103">Voici comment effectuer le rendu d’une carte à l’aide du Kit de développement logiciel (SDK) iOS.</span><span class="sxs-lookup"><span data-stu-id="453b2-103">Here's how to render a card using the iOS SDK.</span></span>
+<span data-ttu-id="3c4bf-103">Voici comment effectuer le rendu d’une carte à l’aide du Kit de développement logiciel (SDK) iOS.</span><span class="sxs-lookup"><span data-stu-id="3c4bf-103">Here's how to render a card using the iOS SDK.</span></span>
 
-## <a name="create-a-card-from-a-json-string"></a><span data-ttu-id="453b2-104">Créer une carte à partir d’une chaîne JSON</span><span class="sxs-lookup"><span data-stu-id="453b2-104">Create a card from a JSON string</span></span>
+## <a name="create-a-card-from-a-json-string"></a><span data-ttu-id="3c4bf-104">Créer une carte à partir d’une chaîne JSON</span><span class="sxs-lookup"><span data-stu-id="3c4bf-104">Create a card from a JSON string</span></span>
 
-<span data-ttu-id="453b2-105">Une AdaptiveCard est générée à partir de la chaîne JSON :</span><span class="sxs-lookup"><span data-stu-id="453b2-105">AdaptiveCard is generated from JSON string</span></span>
+<span data-ttu-id="3c4bf-105">Une AdaptiveCard est générée à partir de la chaîne JSON :</span><span class="sxs-lookup"><span data-stu-id="3c4bf-105">AdaptiveCard is generated from JSON string</span></span>
 
 ```objective-c
 
@@ -25,23 +25,23 @@ NSString *jsonStr = @"{ \"type\": \"AdaptiveCard\", \"version\": \"1.0\", \"body
 ACOAdaptiveCardParseResult *cardParseResult = [ACOAdaptiveCard fromJson:jsonStr];
 
 /// access for parse warnings and errors
-NSArray<NSError *> errors = cardParseResult.parseErrors;
-NSArray<ACRParseWarning *> warnings = cardPraseResult.parseWarnings;
+NSArray<NSError *> *errors = cardParseResult.parseErrors;
+NSArray<ACRParseWarning *> *warnings = cardParseResult.parseWarnings;
 ```
 
-## <a name="render-a-card"></a><span data-ttu-id="453b2-106">Afficher une carte</span><span class="sxs-lookup"><span data-stu-id="453b2-106">Render a Card</span></span>
+## <a name="render-a-card"></a><span data-ttu-id="3c4bf-106">Afficher une carte</span><span class="sxs-lookup"><span data-stu-id="3c4bf-106">Render a Card</span></span>
 
-<span data-ttu-id="453b2-107">Rederer utilise une carte adaptative et une configuration d’hôte. HostConfig peut être Nil et, s’il est Nil, la valeur par défaut est utilisée.</span><span class="sxs-lookup"><span data-stu-id="453b2-107">Rederer takes adaptive card and host config. HostConfig can be nil, and if nil, default value will be used.</span></span>
-<span data-ttu-id="453b2-108">L’UIView retourné utilise autolayout.</span><span class="sxs-lookup"><span data-stu-id="453b2-108">Returned UIView uses autolayout.</span></span> <span data-ttu-id="453b2-109">La largeur sera contrainte à la valeur définie par widthConstraint.</span><span class="sxs-lookup"><span data-stu-id="453b2-109">Width will be constraint to the value set by widthConstraint.</span></span> <span data-ttu-id="453b2-110">Si la valeur 0 est utilisée, elle n’est pas liée.</span><span class="sxs-lookup"><span data-stu-id="453b2-110">If 0 value is used, it won't be bound.</span></span>
-<span data-ttu-id="453b2-111">La hauteur n’est pas liée et, quand elle est retournée, elle a la hauteur des sommes de tous les contenus rendus.</span><span class="sxs-lookup"><span data-stu-id="453b2-111">Height is not bound, and when returned it will have the height of sums of all contents rendered.</span></span> <span data-ttu-id="453b2-112">Pour lier la dimension de la vue, utilisez NSLayoutConstraint.</span><span class="sxs-lookup"><span data-stu-id="453b2-112">To bound the view dimension, please use NSLayoutConstraint.</span></span> <span data-ttu-id="453b2-113">La dimension exacte est accessible à partir du contexte de la viewDidLayoutSubview du viewcontroller de sa superview, ou sa méthode du même nom en cas d’utilisation d’ACRViewController.</span><span class="sxs-lookup"><span data-stu-id="453b2-113">The exact dimension is accessible from the context of viewDidLayoutSubview of its superview's viewcontroller or its method with the same name if ACRViewController is used.</span></span>
+<span data-ttu-id="3c4bf-107">Rederer utilise une carte adaptative et une configuration d’hôte. HostConfig peut être Nil et, s’il est Nil, la valeur par défaut est utilisée.</span><span class="sxs-lookup"><span data-stu-id="3c4bf-107">Rederer takes adaptive card and host config. HostConfig can be nil, and if nil, default value will be used.</span></span>
+<span data-ttu-id="3c4bf-108">L’UIView retourné utilise autolayout.</span><span class="sxs-lookup"><span data-stu-id="3c4bf-108">Returned UIView uses autolayout.</span></span> <span data-ttu-id="3c4bf-109">La largeur sera contrainte à la valeur définie par widthConstraint.</span><span class="sxs-lookup"><span data-stu-id="3c4bf-109">Width will be constraint to the value set by widthConstraint.</span></span> <span data-ttu-id="3c4bf-110">Si la valeur 0 est utilisée, elle n’est pas liée.</span><span class="sxs-lookup"><span data-stu-id="3c4bf-110">If 0 value is used, it won't be bound.</span></span>
+<span data-ttu-id="3c4bf-111">La hauteur n’est pas liée et, quand elle est retournée, elle a la hauteur des sommes de tous les contenus rendus.</span><span class="sxs-lookup"><span data-stu-id="3c4bf-111">Height is not bound, and when returned it will have the height of sums of all contents rendered.</span></span> <span data-ttu-id="3c4bf-112">Pour lier la dimension de la vue, utilisez NSLayoutConstraint.</span><span class="sxs-lookup"><span data-stu-id="3c4bf-112">To bound the view dimension, please use NSLayoutConstraint.</span></span> <span data-ttu-id="3c4bf-113">La dimension exacte est accessible à partir du contexte de la viewDidLayoutSubview du viewcontroller de sa superview, ou sa méthode du même nom en cas d’utilisation d’ACRViewController.</span><span class="sxs-lookup"><span data-stu-id="3c4bf-113">The exact dimension is accessible from the context of viewDidLayoutSubview of its superview's viewcontroller or its method with the same name if ACRViewController is used.</span></span>
 
 ```objective-c
-ACRRenderResult *renderResult;
+ACRRenderResult *renderResult = nil;
 if(cardParseResult.isValid){
     renderResult = [ACRRenderer render:cardParseResult.card config:nil widthConstraint:335];
 }
 ``` 
-### <a name="example"></a><span data-ttu-id="453b2-114"> Exemple</span><span class="sxs-lookup"><span data-stu-id="453b2-114">Example</span></span>
+### <a name="example"></a><span data-ttu-id="3c4bf-114">Exemple</span><span class="sxs-lookup"><span data-stu-id="3c4bf-114">Example</span></span>
 
 ```objective-c
 --------------------------------------------------------------------------------
@@ -60,7 +60,7 @@ ViewController.m
     [super viewDidLoad];
 
     NSString *jsonStr = @"{ \"type\": \"AdaptiveCard\", \"version\": \"1.0\", \"body\": [ { \"type\": \"Image\", \"url\": \"http://adaptivecards.io/content/adaptive-card-50.png\", \"horizontalAlignment\":\"center\" }, { \"type\": \"TextBlock\", \"horizontalAlignment\":\"center\", \"text\": \"Hello **Adaptive Cards!**\" } ], \"actions\": [ { \"type\": \"Action.OpenUrl\", \"title\": \"Learn more\", \"url\": \"http://adaptivecards.io\" }, { \"type\": \"Action.OpenUrl\", \"title\": \"GitHub\", \"url\": \"http://github.com/Microsoft/AdaptiveCards\" } ] }";
-    ACRRenderResult *renderResult;
+    ACRRenderResult *renderResult = nil;
     ACOAdaptiveCardParseResult *cardParseResult = [ACOAdaptiveCard fromJson:jsonStr];
     if(cardParseResult.isValid){
         renderResult = [ACRRenderer render:cardParseResult.card config:nil widthConstraint:335];
