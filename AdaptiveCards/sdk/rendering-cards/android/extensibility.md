@@ -1,20 +1,20 @@
 ---
-title: Kit de développement logiciel (SDK) Android
+title: Extensibilité Android SDK
 author: almedina-ms
 ms.author: almedina
 ms.date: 09/27/2017
 ms.topic: article
-ms.openlocfilehash: ae5c1b2addf6fc5bcdda3defebb6de5925b58507
-ms.sourcegitcommit: 9a9973129c36a41f5e4af30d95ffc146820ad173
+ms.openlocfilehash: 1281a31c333474c1899831acab28c962ce8e4514
+ms.sourcegitcommit: c921a7bb15a95c0ceb803ad375501ee3b8bef028
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76145509"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83631316"
 ---
 # <a name="extensibility---android"></a>Extensibilité – Android
 
 Le convertisseur Android peut être étendu pour prendre en charge plusieurs scénarios, notamment :
-* [Analyse personnalisée des éléments de carte](#custom-parsing-of-card-elements)
+* [Analyse personnalisée d’éléments de carte](#custom-parsing-of-card-elements)
 * [Rendu personnalisé d’éléments de carte](#custom-rendering-of-card-elements)
 * [Rendu personnalisé des actions](#custom-rendering-of-actions) (depuis v 1.2)
 * [Chargement d’images personnalisées](#custom-image-loading) (depuis v 1.0.1)
@@ -91,7 +91,7 @@ Vient ensuite le rendu de l’élément personnalisé
 >
 > [Changements importants pour la version v1.2](#breaking-changes-for-v12)
 
-Pour définir notre propre convertisseur personnalisé pour notre type, nous devons d’abord créer une classe qui s’étend à partir de ```BaseCardElementRenderer```:
+Pour définir notre propre convertisseur personnalisé pour notre type, nous devons d’abord créer une classe qui s’étend de ```BaseCardElementRenderer``` :
 ```java
 public class MyCardElementRenderer extends BaseCardElementRenderer
 {
@@ -120,9 +120,9 @@ CardRendererRegistration.getInstance().registerRenderer("MyType", new CustomBlah
 RenderedAdaptiveCard renderedCard = AdaptiveCardRenderer.getInstance().render(context, fragmentManager, adaptiveCard, cardActionHandler,  hostConfig);
 ```
 
-### <a name="breaking-changes-for-v12"></a>Modifications avec rupture pour v 1.2
+### <a name="breaking-changes-for-v12"></a>Changements importants pour la version v1.2
 
-La méthode ```render``` a été modifiée pour inclure le paramètre ```RenderedAdaptiveCard``` et ```ContainerStyle``` a été modifiée pour un RenderArgs où le ContainerStyle est maintenant contenu, de sorte qu’une classe qui étend BaseCardElementRenderer doit se présenter comme suit
+La ```render``` méthode a été modifiée pour inclure le ```RenderedAdaptiveCard``` paramètre et ```ContainerStyle``` a été modifiée pour un RenderArgs où le ContainerStyle est maintenant contenu, de sorte qu’une classe qui étend BaseCardElementRenderer doit se présenter comme suit
 
 ```
 public class MyCardElementRenderer extends BaseCardElementRenderer
@@ -144,7 +144,7 @@ De même que l’analyse d’éléments de carte personnalisés dans v 1.2, il e
 }
 ```
 
-Les lignes suivantes montrent comment l’analyser dans un ActionElement qui s’étend à partir du ```BaseActionElement```:
+Les lignes suivantes montrent comment l’analyser dans un ActionElement qui s’étend à partir de ```BaseActionElement``` :
 ```java
 public class MyActionElement extends BaseActionElement
 {
@@ -216,7 +216,7 @@ Le prochain rendu de l’action personnalisée
 
 ## <a name="custom-rendering-of-actions"></a>Rendu personnalisé des actions
 
-Pour définir notre propre convertisseur d’action personnalisé pour notre type, nous devons d’abord créer une classe qui s’étend à partir de ```BaseActionElementRenderer```:
+Pour définir notre propre convertisseur d’action personnalisé pour notre type, nous devons d’abord créer une classe qui s’étend de ```BaseActionElementRenderer``` :
 ```java
 public class MyActionRenderer extends BaseActionElementRenderer
 {
@@ -281,11 +281,11 @@ public class OnlineImageLoader implements IOnlineImageLoader
     @Override
     public HttpRequestResult<Bitmap> loadOnlineImage(String url, GenericImageLoaderAsync loader) throws IOException, URISyntaxException
     {
-        String catImnageUri = "http://adaptivecards.io/content/cats/1.png";
-        byte[] bytes = HttpRequestHelper.get(catImnageUri);
+        String catImageUri = "http://adaptivecards.io/content/cats/1.png";
+        byte[] bytes = HttpRequestHelper.get(catImageUri);
         if (bytes == null)
         {
-            throw new IOException("Failed to retrieve content from " + catImnageUri);
+            throw new IOException("Failed to retrieve content from " + catImageUri);
         }
 
         Bitmap bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
@@ -381,12 +381,12 @@ La transformation d’un IOnlineImageLoader en IResourceResolver est une tâche 
 Comme vous pouvez le voir, plus grands changements sont les suivants :
 
 * ```loadOnlineImage(String, GenericImageLoaderAsync)``` a été renommée ```resolveImageResource(String, GenericImageLoaderAsync)```
-* une surcharge pour ```resolveImageResource(String, GenericImageLoaderAsync)``` a été ajoutée en tant que ```resolveImageResource(String, GenericImageLoaderAsync, int)``` afin de prendre en charge des scénarios où la largeur maximale est requise
+* une surcharge pour ```resolveImageResource(String, GenericImageLoaderAsync)``` a été ajoutée comme afin de ```resolveImageResource(String, GenericImageLoaderAsync, int)``` prendre en charge les scénarios où la largeur maximale est requise
 
 ## <a name="custom-media-loading"></a>Chargement de support personnalisé
 
 > [!IMPORTANT]
-> **N’oubliez pas ```IOnlineMediaLoader``` nécessite ```MediaDataSource``` qui a été ajouté au niveau de l’API 23 ou Android M**
+> **N’oubliez pas ```IOnlineMediaLoader``` ```MediaDataSource``` que a été ajouté au niveau de l’API 23 ou Android M**
 
 En même temps que l’élément multimédia, a également été incluse l’interface IOnlineMediaLoader qui permet aux développeurs de remplacer la [MediaDataSource](https://developer.android.com/reference/android/media/MediaDataSource) utilisée pour l’élément mediaPlayer sous-jacent. **(Nécessite Android M)**
 

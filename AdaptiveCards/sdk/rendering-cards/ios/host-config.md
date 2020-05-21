@@ -4,12 +4,12 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 06/26/2017
 ms.topic: article
-ms.openlocfilehash: fa420c0a6e9e9b7e5713b6cc528de39335f0b56c
-ms.sourcegitcommit: 1e18c5dc0cf85d26f66335e312348bbfb903d95a
+ms.openlocfilehash: 614fc4a91941f59e422470c37ee90faa547bcede
+ms.sourcegitcommit: c921a7bb15a95c0ceb803ad375501ee3b8bef028
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76727475"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83631304"
 ---
 # <a name="host-config---ios"></a>Configuration de l’hôte-iOS
 
@@ -27,7 +27,7 @@ ACOHostConfig *defaultConfig = [[ACHostConfig alloc] init];
 
 ## <a name="render-a-card-using-host-config"></a>Rendu d’une carte à l’aide de la configuration d’hôte
 
-Rederer utilise une carte adaptative et une configuration d’hôte. HostConfig peut être Nil et, s’il est Nil, la valeur par défaut est utilisée.
+Le convertisseur utilise une carte adaptative et une configuration d’hôte. HostConfig peut être Nil et, s’il est Nil, la valeur par défaut est utilisée.
 
 ```objective-c
 ACRRenderResult *renderResult;

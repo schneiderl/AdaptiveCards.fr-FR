@@ -4,12 +4,12 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 10/19/2017
 ms.topic: article
-ms.openlocfilehash: 0280e37506e1034572f518b1f596e8f1a3bb30be
-ms.sourcegitcommit: 1e18c5dc0cf85d26f66335e312348bbfb903d95a
+ms.openlocfilehash: 3ecc0e3bc30c8750cbe40dbf94946ab604b492ce
+ms.sourcegitcommit: c921a7bb15a95c0ceb803ad375501ee3b8bef028
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77454462"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83631330"
 ---
 # <a name="render-a-card---net-html"></a>Effectuer le rendu d’une carte – HTML .NET
 
@@ -37,7 +37,7 @@ AdaptiveSchemaVersion schemaVersion = renderer.SupportedSchemaVersion; // 1.0
 ```csharp
 // Build a simple card
 // In the real world this would probably be provided as JSON
-AdaptiveCard card = new AdaptiveCard()
+AdaptiveCard card = new AdaptiveCard(renderer.SupportedSchemaVersion)
 {
     Body = { new AdaptiveTextBlock() { Text = "Hello World" } }
 };
