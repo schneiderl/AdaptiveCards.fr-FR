@@ -2,14 +2,14 @@
 title: Langage de modèle de cartes adaptatives
 author: matthidinger
 ms.author: mahiding
-ms.date: 08/01/2019
+ms.date: 05/18/2020
 ms.topic: article
-ms.openlocfilehash: ffd2ec065550f483bf602483eebf622565f7f47a
-ms.sourcegitcommit: e6418d692296e06be7412c95c689843f9db5240d
+ms.openlocfilehash: 1b5a7df25eedb96ec6edfe02912d328ab59d2801
+ms.sourcegitcommit: c921a7bb15a95c0ceb803ad375501ee3b8bef028
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82136175"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83631343"
 ---
 # <a name="adaptive-cards-template-language"></a>Langage de modèle de cartes adaptatives
 
@@ -19,23 +19,51 @@ La création de modèles permet de séparer les **données** de la **disposition
 
 > [!IMPORTANT] 
 > 
-> Ces fonctionnalités sont **en préversion et sujettes à modification**. Vos commentaires sont non seulement bienvenus, mais essentiels pour garantir que nous fournissions les fonctionnalités dont **vous** avez besoin.
+> **Changements cassants** dans la version **RC (Release Candidate) de mai 2020**
+>
+> Nous avons travaillé dur à la publication des modèles et nous sommes dans la dernière ligne droite ! Nous avons dû apporter des modifications mineures avant de finaliser la version.
 
-Quand vous créez un modèle, vous pouvez soit spécifier les données inline avec la charge utile `AdaptiveCard`, soit les spécifier au moment de l’exécution à l’aide des [kits SDK de création de modèles](sdk.md).
+## <a name="breaking-changes-as-of-may-2020"></a>Changements cassants de mai 2020
 
-## <a name="specify-data-within-the-card"></a>Spécifier des données dans la carte
+1. La syntaxe de liaison a changé et passe de `{...}` à `${...}`.
+    * Par exemple : `"text": "Hello {name}"` devient `"text": "Hello ${name}"`
+    
+## <a name="binding-to-data"></a>Liaison de données
 
-Pour fournir des données directement dans la charge utile de la carte, ajoutez simplement un attribut `$data` à votre `AdaptiveCard` (voir ci-dessous).
+L’écriture d’un modèle est aussi simple que de remplacer le contenu « non statique » de votre carte par des « expressions de liaison ».
 
-## <a name="binding-to-the-data"></a>Liaison aux données
+### <a name="static-card-payload"></a>Charge utile de carte statique
 
-Vous pouvez établir une liaison aux données au sein de l’élément `body` ou `actions` de la carte.
+```json
+{
+   "type": "TextBlock",
+   "text": "Matt"
+}
+```
 
-* La syntaxe de liaison commence par `{` et se termine par `}`. Par exemple : `{myProperty}`
-* Notation par points pour accéder aux sous-objets
-* Syntaxe d’indexeur pour récupérer des propriétés par clé ou des éléments dans un tableau
-* Gestion appropriée des valeurs Null pour les hiérarchies profondes
-* *Documentation de la syntaxe d’échappement bientôt disponible*
+### <a name="template-payload"></a>Charge utile de modèle
+
+```json
+{
+   "type": "TextBlock",
+   "text": "${firstName}"
+}
+```
+
+* Les expressions de liaison peuvent être placées à n’importe quel endroit où le contenu statique peut se trouver.
+* La syntaxe de liaison commence par `${` et se termine par `}`. Par exemple : `${myProperty}`
+* Utilisez la *notation par points* pour accéder aux sous-objets d’une hiérarchie d’objets. Par exemple : `${myParent.myChild}`
+* Grâce à une gestion appropriée des valeurs Null, vous n’obtiendrez pas d’exceptions si vous accédez à une propriété Null dans un graphique d’objet.
+* Utilisez la *syntaxe d’indexeur* pour récupérer des propriétés par clé ou les éléments d’un tableau. Par exemple : `${myArray[0]}`
+
+## <a name="providing-the-data"></a>Ajout des données
+
+Maintenant que vous disposez d’un modèle, vous devez lui ajouter des données pour le finaliser. Pour ce faire, vous avez deux options :
+
+1. **Option A : Inline dans la charge utile du modèle**. Vous pouvez fournir les données inline dans la charge utile du modèle `AdaptiveCard`. Pour ce faire, il vous suffit d’ajouter un attribut `$data` à l’objet racine `AdaptiveCard`.
+2. **Option B : En tant qu’objet de données distinct**. Avec cette option, vous fournissez deux objets distincts au [SDK de création de modèles](sdk.md) au moment de l’exécution : `template` et `data`. Il s’agit de l’approche la plus courante, car en général, vous créez un modèle, puis vous y ajoutez des données dynamiques ultérieurement.
+
+### <a name="option-a-inline-data"></a>Option A : Données inline
 
 ```json
 {
@@ -58,23 +86,23 @@ Vous pouvez établir une liaison aux données au sein de l’élément `body` ou
     "body": [
         {
             "type": "TextBlock",
-            "text": "Hi {employee.name}! Here's a bit about your org..."
+            "text": "Hi ${employee.name}! Here's a bit about your org..."
         },
         {
             "type": "TextBlock",
-            "text": "Your manager is: {employee.manager.name}"
+            "text": "Your manager is: ${employee.manager.name}"
         },
         {
             "type": "TextBlock",
-            "text": "3 of your peers are: {employee.peers[0].name}, {employee.peers[1].name}, {employee.peers[2].name}"
+            "text": "3 of your peers are: ${employee.peers[0].name}, ${employee.peers[1].name}, ${employee.peers[2].name}"
         }
     ]
 }
 ```
 
-## <a name="separating-the-template-from-the-data"></a>Séparation du modèle des données
+### <a name="option-b-separating-the-template-from-the-data"></a>Option B : Séparation du modèle des données
 
-Une autre approche, d’ailleurs plus vraisemblable, consiste à créer un « modèle » de carte réutilisable sans inclure les données. Vous pouvez stocker ce modèle en tant que fichier et l’ajouter au contrôle de code source.
+Une autre approche, d’ailleurs plus vraisemblable, consiste à créer un modèle de carte réutilisable sans y inclure de données. Vous pouvez stocker ce modèle en tant que fichier et l’ajouter au contrôle de code source.
 
 **EmployeeCardTemplate.json**
 
@@ -84,15 +112,15 @@ Une autre approche, d’ailleurs plus vraisemblable, consiste à créer un « m
     "body": [
         {
             "type": "TextBlock",
-            "text": "Hi {employee.name}! Here's a bit about your org..."
+            "text": "Hi ${employee.name}! Here's a bit about your org..."
         },
         {
             "type": "TextBlock",
-            "text": "Your manager is: {employee.manager.name}"
+            "text": "Your manager is: ${employee.manager.name}"
         },
         {
             "type": "TextBlock",
-            "text": "3 of your peers are: {employee.peers[0].name}, {employee.peers[1].name}, {employee.peers[2].name}"
+            "text": "3 of your peers are: ${employee.peers[0].name}, ${employee.peers[1].name}, ${employee.peers[2].name}"
         }
     ]
 }
@@ -110,24 +138,24 @@ var template = new ACData.Template({
 });
 
 // Specify data at runtime
-var dataContext = new ACData.EvaluationContext();
-dataContext.$root = {
-    "employee": {
-        "name": "Matt",
-        "manager": { "name": "Thomas" },
-        "peers": [{
-            "name": "Andrew" 
-        }, { 
-            "name": "Lei"
-        }, { 
-            "name": "Mary Anne"
-        }, { 
-            "name": "Adam"
-        }]
+var card = template.expand({
+    $root: {
+        "employee": {
+            "name": "Matt",
+            "manager": { "name": "Thomas" },
+            "peers": [{
+                "name": "Andrew" 
+            }, { 
+                "name": "Lei"
+            }, { 
+                "name": "Mary Anne"
+            }, { 
+                "name": "Adam"
+            }]
+        }
     }
-};
+});
 
-var card = template.expand(dataContext);
 // Now you have an AdaptiveCard ready to render!
 ```
 
@@ -140,7 +168,6 @@ Le concepteur de cartes adaptatives a été mis à jour pour prendre en charge l
 [![image](https://user-images.githubusercontent.com/1432195/53214462-88d46980-3601-11e9-908d-253a1bb940a8.png)](https://adaptivecards.io/designer)
 
 * **Éditeur d’exemple de données** : spécifiez un exemple de données ici pour voir la carte liée aux données en « Mode Aperçu ». Ce volet contient un petit bouton permettant de remplir la structure de données avec un exemple de données existant.
-* **Structure de données** : il s’agit de la structure de votre exemple de données. Pour créer une liaison à des champs, faites-les glisser sur l’aire de conception. 
 * **Mode Aperçu** : appuyez sur le bouton de la barre d’outils pour basculer entre l’expérience de modification et l’expérience d’aperçu de l’exemple de données.
 * **Ouvrir l’exemple** : cliquez sur ce bouton pour ouvrir divers exemples de charge utile.
 
@@ -150,15 +177,12 @@ Le concepteur de cartes adaptatives a été mis à jour pour prendre en charge l
 
 Des mots clés réservés vous donnent accès à différentes étendues de liaison. 
 
-*Remarque* : Ils ne sont pas tous implémentés dans la préversion.
-
 ```json
 {
-    "{<property>}": "Implicitly binds to `$data.<property>`",
+    "${<property>}": "Implicitly binds to `$data.<property>`",
     "$data": "The current data object",
     "$root": "The root data object. Useful when iterating to escape to parent object",
-    "$index": "The current index when iterating",
-    "$host": "Access properties of the host *(not working yet)*"
+    "$index": "The current index when iterating"
 }
 ```
 
@@ -169,15 +193,15 @@ Pour affecter un « contexte de données » à un élément, ajoutez un attrib
 ```json
 {
     "type": "Container",
-    "$data": "{mySubObject}",
+    "$data": "${mySubObject}",
     "items": [
         {
             "type": "TextBlock",
-            "text": "This TextBlock is now scoped directly to 'mySubObject': {mySubObjectProperty}"
+            "text": "This TextBlock is now scoped directly to 'mySubObject': ${mySubObjectProperty}"
         },
         {
             "type": "TextBlock",
-            "text": "To break-out and access the root data, use: {$root}"
+            "text": "To break-out and access the root data, use: ${$root}"
         }
     ]
 }
@@ -185,11 +209,9 @@ Pour affecter un « contexte de données » à un élément, ajoutez un attrib
 
 ## <a name="repeating-items-in-an-array"></a>Répétition d’éléments dans un tableau
 
-Cette partie relève un peu de la « magie noire ». Vos commentaires sont les bienvenus.
-
 * Si la propriété `$data` d’un élément de carte adaptative est liée à un **tableau**, **cet élément est répété pour chaque élément du tableau**. 
-* Toute expression de liaison (`{myProperty}`) utilisée dans les valeurs de propriété a pour étendue l’**élément individuel** dans le tableau.
-* En cas de liaison à un tableau de chaînes, utilisez `{$data}` pour accéder à l’élément de chaîne individuel. Par exemple : `"text": "{$data}"`
+* Toute expression de liaison (`${myProperty}`) utilisée dans les valeurs de propriété a pour étendue l’**élément individuel** dans le tableau.
+* En cas de liaison à un tableau de chaînes, utilisez `${$data}` pour accéder à l’élément de chaîne individuel. Par exemple : `"text": "${$data}"`
 
 Par exemple, le `TextBlock` ci-dessous est répété 3 fois car `$data` est un tableau. Notez que la propriété `text` est liée à la propriété `name` d’un objet individuel dans le tableau. 
 
@@ -204,7 +226,7 @@ Par exemple, le `TextBlock` ci-dessous est répété 3 fois car `$data` est un 
                 { "name": "David" }, 
                 { "name": "Thomas" }
             ],
-            "text": "{name}"
+            "text": "${name}"
         }
     ]
 }
@@ -232,29 +254,15 @@ Par exemple, le `TextBlock` ci-dessous est répété 3 fois car `$data` est un 
 }
 ```
 
-## <a name="functions"></a>Fonctions
+## <a name="built-in-functions"></a>Fonctions intégrées
 
-Aucun langage de création de modèles ne serait complet sans des fonctions d’assistance. Nous allons proposer un ensemble standard de fonctions qui marcheront sur chaque SDK. 
+Aucun langage de création de modèles ne serait complet sans une suite de fonctions d’assistance. La création de modèles de cartes adaptatives s’appuie sur le [langage AEL](https://aka.ms/adaptive-expressions), qui est un standard ouvert permettant de déclarer des expressions pouvant être évaluées sur un grand nombre de plateformes différentes. Comme il s’agit d’un vrai sur-ensemble de « Logic Apps », vous pouvez utiliser une syntaxe similaire à celle de Power Automate, etc.
 
-La syntaxe présentée ici étant toujours en suspens, revenez plus tard. Voici toutefois une ébauche de ce que nous avons l’intention de faire :
+**Il ne s’agit là que d’un petit échantillon des fonctions intégrées.**
 
-### <a name="string-functions"></a>Fonctions de chaîne
+Consultez la liste complète des [fonctions prédéfinies du langage AEL](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-concept-adaptive-expressions?view=azure-bot-service-4.0).
 
-* substr
-* indexOf *(ne fonctionne pas encore)*
-* toUpper *(ne fonctionne pas encore)*
-* toLower *(ne fonctionne pas encore)*
-
-### <a name="number-functions"></a>Fonctions numériques
-
-* Mise en forme (devise, décimale, etc.) *(ne fonctionne pas encore)*
-
-### <a name="date-functions"></a>Fonctions de date
-
-* Analyse des formats de chaîne de date connus *(ne fonctionne pas encore)*
-* Mise en forme des représentations de date/heure connues *(ne fonctionne pas encore)*
-
-### <a name="conditional-functions"></a>Fonctions conditionnelles
+### <a name="conditional-evaluation"></a>Évaluation conditionnelle
 
 * if(*expression*, *valeur_true*, *valeur_false*)
 
@@ -263,17 +271,17 @@ La syntaxe présentée ici étant toujours en suspens, revenez plus tard. Voici 
 ```json
 {
     "type": "TextBlock",
-    "color": "{if(priceChange >= 0, 'good', 'attention')}"
+    "color": "${if(priceChange >= 0, 'good', 'attention')}"
 }
 ```
 
-### <a name="data-manipulation"></a>Manipulation de données
+### <a name="parsing-json"></a>Analyse du JSON
 
-* JSON.parse : capacité à analyser une chaîne JSON 
+* JSON (*jsonString*) - Analyser une chaîne JSON
 
-**Exemple `JSON.parse`**
+**Exemple `json`**
 
-Il s’agit d’une réponse Azure DevOps où la propriété `message` est une chaîne sérialisée au format JSON. Pour pouvoir accéder aux valeurs de la chaîne, nous devons utiliser la fonction `JSON.parse` dans notre modèle.
+Il s’agit d’une réponse Azure DevOps où la propriété `message` est une chaîne sérialisée au format JSON. Pour pouvoir accéder aux valeurs de la chaîne, nous devons utiliser la fonction `json` dans notre modèle.
 
 **Données** 
 
@@ -293,7 +301,7 @@ Il s’agit d’une réponse Azure DevOps où la propriété `message` est une c
 ```json
 {
     "type": "TextBlock",
-    "text": "{JSON.parse(message).releaseName}"
+    "text": "${json(message).releaseName}"
 }
 ```
 
@@ -308,9 +316,9 @@ Il s’agit d’une réponse Azure DevOps où la propriété `message` est une c
 
 ### <a name="custom-functions"></a>Fonctions personnalisées
 
-Nous voulons nous assurer que les hôtes peuvent ajouter des fonctions personnalisées, ce qui signifie qu’il nous faut une stratégie de secours fiable pour gérer les fonctions non prises en charge. Ceci est encore à l’étude.
+Les fonctions personnalisées sont prises en charge via les API des [SDK de création de modèles](sdk.md). 
 
-## <a name="conditional-layout"></a>Disposition conditionnelle
+## <a name="conditional-layout-with-when"></a>Disposition conditionnelle avec `$when`
 
 Pour supprimer un élément entier si une condition est remplie, utilisez la propriété `$when`. Si `$when` prend la valeur `false`, l’utilisateur ne voit pas l’élément.
 
@@ -323,13 +331,13 @@ Pour supprimer un élément entier si une condition est remplie, utilisez la pro
     "body": [
         {
             "type": "TextBlock",
-            "$when": "{price > 30}",
+            "$when": "${price > 30}",
             "text": "This thing is pricy!",
             "color": "attention",
         },
          {
             "type": "TextBlock",
-            "$when": "{price <= 30}",
+            "$when": "${price <= 30}",
             "text": "Dang, this thing is cheap!",
             "color": "good"
         }
@@ -340,7 +348,6 @@ Pour supprimer un élément entier si une condition est remplie, utilisez la pro
 ### <a name="composing-templates"></a>Composition de modèles
 
 À l’heure actuelle, il n’est pas possible de composer ensemble les « parties » d’un modèle. Toutefois, nous explorons différentes pistes et espérons vous en dire plus très bientôt. Vos idées sont les bienvenues !
-
 
 ## <a name="examples"></a>Exemples
 

@@ -2,14 +2,14 @@
 title: Kits SDK de création de modèles
 author: matthidinger
 ms.author: mahiding
-ms.date: 08/01/2019
+ms.date: 05/15/2020
 ms.topic: article
-ms.openlocfilehash: 3a9bfcd1bf8f87959a747997e04f5c5ad2a79980
-ms.sourcegitcommit: e6418d692296e06be7412c95c689843f9db5240d
+ms.openlocfilehash: dc20c22995bb0a259bc801a6ffcd674967bbe78f
+ms.sourcegitcommit: c921a7bb15a95c0ceb803ad375501ee3b8bef028
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "72163619"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83631352"
 ---
 # <a name="adaptive-card-templating-sdks"></a>Kits SDK de création de modèles de cartes adaptatives
 
@@ -19,15 +19,24 @@ Les kits SDK de création de modèles de cartes adaptatives facilitent le rempli
 
 > [!IMPORTANT] 
 > 
-> Ces fonctionnalités sont **en préversion et sujettes à modification**. Vos commentaires sont non seulement bienvenus, mais essentiels pour garantir que nous fournissions les fonctionnalités dont **vous** avez besoin.
-> 
-> Seul le SDK JavaScript est disponible durant la préversion initiale, mais un SDK .NET devrait bientôt sortir.
+> **Changements cassants** dans la version **RC (Release Candidate) de mai 2020**
+>
+> Nous avons travaillé dur à la publication des modèles et nous sommes dans la dernière ligne droite ! Nous avons dû apporter des modifications mineures avant de finaliser la version.
+
+## <a name="breaking-changes-as-of-may-2020"></a>Changements cassants de mai 2020
+
+1. La syntaxe de liaison a changé et passe de `{...}` à `${...}`. 
+    * Par exemple : `"text": "Hello {name}"` devient `"text": "Hello ${name}"`
+2. L’API JavaScript ne contient plus d’objet `EvaluationContext`. Passez simplement vos données à la fonction `expand`. Consultez la [page du SDK](sdk.md) pour obtenir les détails complets.
+3. L’API .NET a été reconçue pour correspondre davantage à l’API JavaScript. Vous trouverez des informations détaillées ci-dessous.
 
 ## <a name="javascript"></a>JavaScript
 
 La bibliothèque [adaptivecards-Templating](https://www.npmjs.com/package/adaptivecards-templating) est disponible sur npm et par le biais de CDN. Suivez le lien du package pour obtenir une documentation complète.
 
 ### <a name="npm"></a>npm
+
+[![Installation npm](https://img.shields.io/npm/v/adaptivecards-templating.svg)](https://www.npmjs.com/package/adaptivecards-templating)
 
 ```console
 npm install adaptivecards-templating
@@ -38,6 +47,7 @@ npm install adaptivecards-templating
 ```html
 <script src="https://unpkg.com/adaptivecards-templating/dist/adaptivecards-templating.min.js"></script>
 ``` 
+
 
 ### <a name="usage"></a>Utilisation
 
@@ -56,7 +66,7 @@ var templatePayload = {
     "body": [
         {
             "type": "TextBlock",
-            "text": "Hello {name}!"
+            "text": "Hello ${name}!"
         }
     ]
 };
@@ -64,60 +74,127 @@ var templatePayload = {
 // Create a Template instamce from the template payload
 var template = new ACData.Template(templatePayload);
  
-// Create a data binding context, and set its $root property to the
-// data object to bind the template to
-var context = new ACData.EvaluationContext();
-context.$root = {
-    "name": "Mickey Mouse"
-};
+// Expand the template with your `$root` data object.
+// This binds it to the data and produces the final Adaptive Card payload
+var cardPayload = template.expand({
+   $root: {
+      name: "Matt Hidinger"
+   }
+});
  
-// "Expand" the template - this generates the final Adaptive Card,
-// ready to render
-var card = template.expand(context);
- 
-// Render the card
+// OPTIONAL: Render the card (required the adaptivecards library loaded)
 var adaptiveCard = new AdaptiveCards.AdaptiveCard();
-adaptiveCard.parse(card);
+adaptiveCard.parse(cardPayload);
  
 var htmlElement = adaptiveCard.render();
 ```
 
 ## <a name="net"></a>.NET 
 
+> [!IMPORTANT] 
+> 
+> La version Release Candidate de .NET sera disponible vers le 23 mai. Recherchez la version `1.0.0-RC1`.
+>
+
+[![Installation NuGet](https://img.shields.io/nuget/vpre/AdaptiveCards.Templating.svg)](https://www.nuget.org/packages/AdaptiveCards.Templating)
+
 ```console
-dotnet add package AdaptiveCards.Templating --version 0.1.0-alpha1
+dotnet add package AdaptiveCards.Templating
 ```
 
-> [!NOTE]
->
-> Envisagez de remplacer la version ci-dessus par la dernière version publiée.
-
-Importer la bibliothèque 
+### <a name="usage"></a>Utilisation
 
 ```cs
-using AdaptiveCards.Templating
+// Import the library 
+using AdaptiveCards.Templating;
 ```
-
-Utilisez le moteur de création de modèles en passant votre modèle et vos données au format JSON.
 
 ```cs
 var templateJson = @"
 {
     ""type"": ""AdaptiveCard"",
-    ""version"": ""1.0"",
+    ""version"": ""1.2"",
     ""body"": [
         {
             ""type"": ""TextBlock"",
-            ""text"": ""Hello {name}""
+            ""text"": ""Hello ${name}!""
         }
     ]
 }";
 
-var dataJson = @"
+// Create a Template instance from the template payload
+AdaptiveCardTemplate template = new AdaptiveCardTemplate(templateJson);
+
+// You can use any serializable object as your data
+var myData = new
 {
-    ""name"": ""Mickey Mouse""
+    Name = "Matt Hidinger"
+};
+
+// "Expand" the template - this generates the final Adaptive Card payload
+string cardJson = template.Expand(myData);
+```
+
+### <a name="custom-functions"></a>Fonctions personnalisées
+
+Les fonctions personnalisées peuvent être ajoutées à la bibliothèque d’expressions adaptatives, en plus des fonctions prédéfinies.
+
+Dans l’exemple ci-dessous, la fonction personnalisée stringFormat est ajoutée, et elle est utilisée pour la mise en forme d’une chaîne.
+```cs
+string jsonTemplate = @"{
+    ""type"": ""AdaptiveCard"",
+    ""version"": ""1.0"",
+    ""body"": [{
+        ""type"": ""TextBlock"",
+        ""text"": ""${stringFormat(strings.myName, person.firstName, person.lastName)}""
+    }]
 }";
 
-var transformer = new AdaptiveTransformer();
-var cardJson = transformer.Transform(templateJson, dataJson);
+string jsonData = @"{
+    ""strings"": {
+        ""myName"": ""My name is {0} {1}""
+    },
+    ""person"": {
+        ""firstName"": ""Andrew"",
+        ""lastName"": ""Leader""
+    }
+}";
+
+AdaptiveCardTemplate template = new AdaptiveCardTemplate(jsonTemplate);
+
+var context = new EvaluationContext
+{
+    Root = jsonData
+};
+
+// a custom function is added
+AdaptiveExpressions.Expression.Functions.Add("stringFormat", (args) =>
+{
+    string formattedString = "";
+
+    // argument is packed in sequential order as defined in the template
+    // For example, suppose we have "${stringFormat(strings.myName, person.firstName, person.lastName)}"
+    // args will have following entries
+    // args[0]: strings.myName
+    // args[1]: person.firstName
+    // args[2]: strings.lastName
+    if (args[0] != null && args[1] != null && args[2] != null) 
+    {
+        string formatString = args[0];
+        string[] stringArguments = {args[1], args[2] };
+        formattedString = string.Format(formatString, stringArguments);
+    }
+    return formattedString;
+});
+
+string cardJson = template.Expand(context);
 ```
+
+## <a name="troubleshooting"></a>Résolution des problèmes
+Q. Pourquoi une exception AdaptiveTemplateException est-elle levée lorsque j’appelle ```expand()``` ?   
+A. Si votre message d’erreur ressemble à « \<offending item> at line, \<line number> is **malformed for $data : pair** » (<élément problématique> à la ligne <numéro de ligne> est incorrect pour $data : pair).   
+Vérifiez que la valeur fournie pour « $data » correspond à du code JSON valide, tel qu’un nombre, une valeur booléenne, un objet ou un tableau, que la syntaxe est correcte pour le langage AEL, et que l’entrée existe dans le contexte de données au numéro de ligne indiqué. Notez que ${LineItem} et « 8 » peuvent changer.
+
+Q. Pourquoi une exception ArgumentNullException est-elle levée lorsque j’appelle ```expand()``` ?   
+A. Si votre message d’erreur ressemble à « **Check if parent data context is set, or please enter a non-null value for** \<offending item> at line, \<line number> » (Vérifiez si le contexte de données parent est défini ou entrez une valeur non nulle pour <élément problématique> à la ligne <numéro de ligne>).   
+Celui-ci indique qu’il n’existe aucun contexte de données pour la liaison de données demandée. Vérifiez que le contexte de données racine est défini, le cas échéant, et vérifiez qu’un contexte de données est disponible pour la liaison actuelle, comme indiqué par le numéro de ligne.
