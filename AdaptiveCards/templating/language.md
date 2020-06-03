@@ -4,12 +4,12 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 05/18/2020
 ms.topic: article
-ms.openlocfilehash: 1b5a7df25eedb96ec6edfe02912d328ab59d2801
-ms.sourcegitcommit: c921a7bb15a95c0ceb803ad375501ee3b8bef028
+ms.openlocfilehash: 98ab88d541916198b9a027a54fb70ee4502e63f7
+ms.sourcegitcommit: eb71aebe40a592649461e468a87993a10cbe6187
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83631343"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84318189"
 ---
 # <a name="adaptive-cards-template-language"></a>Langage de modèle de cartes adaptatives
 
@@ -260,7 +260,7 @@ Aucun langage de création de modèles ne serait complet sans une suite de fonct
 
 **Il ne s’agit là que d’un petit échantillon des fonctions intégrées.**
 
-Consultez la liste complète des [fonctions prédéfinies du langage AEL](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-concept-adaptive-expressions?view=azure-bot-service-4.0).
+Consultez la liste complète des [fonctions prédéfinies du langage AEL](https://docs.microsoft.com/azure/bot-service/bot-builder-concept-adaptive-expressions?view=azure-bot-service-4.0).
 
 ### <a name="conditional-evaluation"></a>Évaluation conditionnelle
 
