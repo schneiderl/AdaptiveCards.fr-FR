@@ -4,12 +4,12 @@ author: paulcam206
 ms.author: paulcam
 ms.date: 09/18/2018
 ms.topic: reference
-ms.openlocfilehash: 848ce3dd2ccca1f975dfd330c1c88292c753641d
-ms.sourcegitcommit: e6418d692296e06be7412c95c689843f9db5240d
+ms.openlocfilehash: d7fda209e6c470659d2fb2b66ac982e9c7183367
+ms.sourcegitcommit: eb71aebe40a592649461e468a87993a10cbe6187
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "77454922"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84318199"
 ---
 # <a name="what-is-hostconfig"></a>Qu’est-ce que HostConfig ?
 `HostConfig` est un **objet de configuration partagé multiplateforme** qui spécifie comment un renderer de carte adaptative génère l’interface utilisateur.
@@ -35,7 +35,7 @@ Pour voir un aperçu de son contenu, consultez un exemple de fichier [HostConfig
    * [`SpacingsConfig`](#schema-spacingsconfig) : contrôle la disposition des éléments
    * [`TextBlockConfig`](#schema-textblockconfig) : paramètres contrôlant l’affichage du texte
 
-# <a name="card-configuration"></a>Configuration de carte
+## <a name="card-configuration"></a>Configuration de carte
 
 <a name="schema-adaptivecardconfig"></a>
 ## <a name="adaptivecardconfig"></a>AdaptiveCardConfig
