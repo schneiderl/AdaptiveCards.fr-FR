@@ -4,12 +4,12 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 05/15/2020
 ms.topic: article
-ms.openlocfilehash: dc20c22995bb0a259bc801a6ffcd674967bbe78f
-ms.sourcegitcommit: c921a7bb15a95c0ceb803ad375501ee3b8bef028
+ms.openlocfilehash: d04b38d6b2a389ca31b690d3298f64b3fced7c9a
+ms.sourcegitcommit: eb71aebe40a592649461e468a87993a10cbe6187
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83631352"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84318179"
 ---
 # <a name="adaptive-card-templating-sdks"></a>Kits SDK de création de modèles de cartes adaptatives
 
@@ -71,7 +71,7 @@ var templatePayload = {
     ]
 };
  
-// Create a Template instamce from the template payload
+// Create a Template instance from the template payload
 var template = new ACData.Template(templatePayload);
  
 // Expand the template with your `$root` data object.
@@ -82,11 +82,10 @@ var cardPayload = template.expand({
    }
 });
  
-// OPTIONAL: Render the card (required the adaptivecards library loaded)
+// OPTIONAL: Render the card (requires that the adaptivecards library be loaded)
 var adaptiveCard = new AdaptiveCards.AdaptiveCard();
 adaptiveCard.parse(cardPayload);
- 
-var htmlElement = adaptiveCard.render();
+document.getElementById('exampleDiv').appendChild(adaptiveCard.render());
 ```
 
 ## <a name="net"></a>.NET 
@@ -192,9 +191,9 @@ string cardJson = template.Expand(context);
 
 ## <a name="troubleshooting"></a>Résolution des problèmes
 Q. Pourquoi une exception AdaptiveTemplateException est-elle levée lorsque j’appelle ```expand()``` ?   
-A. Si votre message d’erreur ressemble à « \<offending item> at line, \<line number> is **malformed for $data : pair** » (<élément problématique> à la ligne <numéro de ligne> est incorrect pour $data : pair).   
+A. Si votre message d’erreur ressemble à « '\<offending item>' à la ligne '\<line number>' est **mal formé pour '$data : ' pair** ».   
 Vérifiez que la valeur fournie pour « $data » correspond à du code JSON valide, tel qu’un nombre, une valeur booléenne, un objet ou un tableau, que la syntaxe est correcte pour le langage AEL, et que l’entrée existe dans le contexte de données au numéro de ligne indiqué. Notez que ${LineItem} et « 8 » peuvent changer.
 
 Q. Pourquoi une exception ArgumentNullException est-elle levée lorsque j’appelle ```expand()``` ?   
-A. Si votre message d’erreur ressemble à « **Check if parent data context is set, or please enter a non-null value for** \<offending item> at line, \<line number> » (Vérifiez si le contexte de données parent est défini ou entrez une valeur non nulle pour <élément problématique> à la ligne <numéro de ligne>).   
+A. Si votre message d’erreur ressemble à « **Vérifiez si le contexte de données parent est défini ou entrez une valeur non nulle pour** '\<offending item>' à la ligne '\<line number>' ».   
 Celui-ci indique qu’il n’existe aucun contexte de données pour la liaison de données demandée. Vérifiez que le contexte de données racine est défini, le cas échéant, et vérifiez qu’un contexte de données est disponible pour la liaison actuelle, comme indiqué par le numéro de ligne.
