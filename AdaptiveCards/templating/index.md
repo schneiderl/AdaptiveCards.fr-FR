@@ -4,12 +4,12 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 05/18/2020
 ms.topic: article
-ms.openlocfilehash: db1f44c4465db88d375dec728bcb32d5933ef702
-ms.sourcegitcommit: c921a7bb15a95c0ceb803ad375501ee3b8bef028
+ms.openlocfilehash: 41eb972603b1688a1f1857cec83208b9b55b02c3
+ms.sourcegitcommit: fec0fd2c23293127e8e8f7ca7821c04d46987f37
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83631371"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86417619"
 ---
 # <a name="adaptive-cards-templating"></a>Création de modèles de cartes adaptatives
 
@@ -187,7 +187,7 @@ Les kits de développement logiciel (SDK) de création de modèles permettent de
 >
 > À ce jour, les kits SDK de création de modèles sont disponibles pour .NET et NodeJS. Nous publierons au fur et à mesure les kits SDK pour toutes les autres plateformes de cartes adaptatives comme iOS, Android, UWP, etc.
 
-Plateforme | Package | Installer | Documentation
+Plate-forme | Package | Installer | Documentation
 --- | --- | --- | ---
 JavaScript | [![Installation npm](https://img.shields.io/npm/v/adaptivecards-templating.svg)](https://www.npmjs.com/package/adaptivecards-templating) | `npm install adaptivecards-templating` | [Documentation](https://www.npmjs.com/package/adaptivecards-templating)
 .NET | [![Installation NuGet](https://img.shields.io/nuget/vpre/AdaptiveCards.Templating.svg)](https://www.nuget.org/packages/AdaptiveCards.Templating) | `dotnet add package AdaptiveCards.Templating` | [Documentation](https://docs.microsoft.com/adaptive-cards/templating/sdk#net)
@@ -198,14 +198,27 @@ Le code JavaScript ci-dessous montre le modèle général qui sera utilisé pour
 
 ```js
 var template = new ACData.Template({ 
-    // EmployeeCardTemplate goes here
+    // Card Template JSON
 });
 
 var card = template.expand({
     $root: {
-        // Your data goes here
+        // Data Fields
     }
 });
+
+// Now you have an AdaptiveCard ready to render!
+```
+
+### <a name="c-example"></a>Exemple C#
+
+Le code C# ci-dessous montre le modèle général qui sera utilisé pour renseigner un modèle de données.
+
+```csharp
+var template = new AdaptiveCards.Templating.AdaptiveCardTemplate(cardJson);
+   
+var card = template.Expand(new {Key="Value"});
+
 // Now you have an AdaptiveCard ready to render!
 ```
 
