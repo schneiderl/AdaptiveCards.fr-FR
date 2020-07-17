@@ -4,12 +4,12 @@ author: almedina-ms
 ms.author: almedina
 ms.date: 09/27/2017
 ms.topic: article
-ms.openlocfilehash: d0c6b56e0497b78aa149f73dc1d32537689c0386
-ms.sourcegitcommit: 9a9973129c36a41f5e4af30d95ffc146820ad173
+ms.openlocfilehash: 8d5dd9bbf17800c55aae1d416b7e6d80ac697b25
+ms.sourcegitcommit: fec0fd2c23293127e8e8f7ca7821c04d46987f37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76145479"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86417612"
 ---
 # <a name="native-styling---android"></a>Style natif – Android
 
@@ -35,3 +35,11 @@ Des entrées de texte avec une action incorporée permettent d’appliquer un st
 
 > [!IMPORTANT]
 > Tous les noms d’éléments doivent être conservés comme indiqué ici, car le convertisseur recherche ces noms précis.
+
+## <a name="actionshowcard"></a>Action.ShowCard
+
+Vous pouvez appliquer un style à action. ShowCard en ajoutant des styles à votre thème dans styles.xml.
+
+```styles.xml
+ <item name="adaptiveShowCardAction">@style/adaptiveShowCardAction</item>
+```

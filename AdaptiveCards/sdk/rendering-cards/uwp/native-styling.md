@@ -4,12 +4,12 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 08/15/2018
 ms.topic: article
-ms.openlocfilehash: 565c61535adc5b316cb8b1f3ad77e511012e7612
-ms.sourcegitcommit: 1e18c5dc0cf85d26f66335e312348bbfb903d95a
+ms.openlocfilehash: da3c7616ce4fe307eda3073f7037842e3e3df81b
+ms.sourcegitcommit: fec0fd2c23293127e8e8f7ca7821c04d46987f37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77454042"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86417518"
 ---
 # <a name="native-styling---uwp"></a>Style natif-UWP
 
@@ -19,30 +19,30 @@ UWP facilite cette tâche en vous permettant de transmettre un ResourceDictionar
 
 | Élément | Noms de style |
 |---|---|
-| AdaptiveCard | Adaptive.Card| 
+| AdaptiveCard | Carte adaptative.| 
 | Action.OpenUrl  | Adaptative. action. OpenUrl  |
-| Action.ShowCard | Adaptive.Action.ShowCard |
+| Action.ShowCard | Adaptive. action. ShowCard |
 | Action.Submit  | Adaptative. action. Submit  |
-| Column | Adaptative. Column, adaptative. action. TAP |
-| ColumnSet | Adaptive.ColumnSet, Adaptive.VerticalSeparator |
-| Conteneur | Adaptive.Container|
-| Input.ChoiceSet | Adaptive.Input.ChoiceSet,  Adaptive.Input.ChoiceSet.ComboBox, Adaptive.Input.ChoiceSet.CheckBox,  Adaptive.Input.ChoiceSet.Radio,  Adaptive.Input.ChoiceSet.ComboBoxItem |
-| Entrée. date | Adaptive.Input.Text.Date
+| Colonne | Adaptative. Column, adaptative. action. TAP |
+| ColumnSet | Adaptive. ColumnSet, adaptatif. VerticalSeparator |
+| Conteneur | Adaptative. Container|
+| Entrée. ChoiceSet | Adaptative. Input. ChoiceSet, adaptative. Input. ChoiceSet. ComboBox, adaptative. Input. ChoiceSet. CheckBox, adaptative. Input. ChoiceSet. radio, adaptative. Input. ChoiceSet. ComboBoxItem |
+| Entrée. date | Adaptative. Input. Text. date
 | Entrée. nombre | Adaptative. Input. Text. Number |
 | Input. Text | Adaptative. Input. Text |
 | Input. Time | Adaptative. Input. Text. Time |
-| Input.Toggle| Adaptive.Input.Toggle|
+| Entrée. Toggle| Adaptative. Input. Toggle|
 | Image  | Adaptive. image |
-| ImageSet  | Adaptive.ImageSet |
-| FactSet | Adaptive.FactSet, Adaptive.Fact.Title, Adaptive.Fact.Value |
+| ImageSet  | Adaptive. ImageSet |
+| FactSet | Adaptive. FactSet, adaptative. fact. title, adaptatif. fact. Value |
 | TextBlock  | Adaptive. TextBlock |
 
-Cet exemple de dictionnaire de ressources XAML définit l’arrière-plan de tous les TextBlocks sur Aqua. Vous souhaiterez probablement une plus grande avancée que cette 😁
+Cet exemple de dictionnaire de ressources XAML définit l’arrière-plan de tous les TextBlocks sur Aqua. Vous souhaiterez probablement une plus grande avancée que celle-ci😁
 
 ```xml
 <ResourceDictionary
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    xmlns="https://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="https://schemas.microsoft.com/winfx/2006/xaml">
     <Style x:Key="Adaptive.TextBlock" TargetType="TextBlock">
         <Setter Property="Background" Value="Aqua"></Setter>
     </Style>
