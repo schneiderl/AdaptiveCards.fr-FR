@@ -4,12 +4,12 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 05/30/2018
 ms.topic: article
-ms.openlocfilehash: 1c3ad2a4588244a8bd30011a4b6e25e37062624a
-ms.sourcegitcommit: e6418d692296e06be7412c95c689843f9db5240d
+ms.openlocfilehash: e460bf50cdb4f0c1af54f5c7ad6c1d02db9af746
+ms.sourcegitcommit: fec0fd2c23293127e8e8f7ca7821c04d46987f37
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "76145379"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86417494"
 ---
 # <a name="adaptive-cards-for-bot-developers"></a>Cartes adaptatives pour développeurs de bots
 
@@ -107,7 +107,7 @@ Vous pouvez :
 * Ajouter différents types d'`Actions`
 * Recueillir des `Input` auprès de vos utilisateurs
 * Faire en sorte qu'une carte affiche une autre carte : `show another card`
-* [Accédez à l'Explorateur de schémas complet](http://adaptivecards.io/explorer/) ! 
+* [Accédez à l'Explorateur de schémas complet](https://adaptivecards.io/explorer/) ! 
 
 ## <a name="platform-sdks"></a>Kits de développement logiciels (SDK) pour plateformes
 
@@ -128,7 +128,7 @@ Bot Framework vous permet de publier votre bot sur différents canaux. Nous util
 
 Ce didacticiel ne fait qu'effleurer le sujet. Nous vous invitons donc à utiliser les liens ci-dessous pour en savoir plus sur l'amélioration de votre bot à l'aide de cartes adaptatives.
 
-* [Parcourir des exemples de cartes](http://adaptivecards.io/samples/) pour trouver l'inspiration
-* Utiliser l'[Explorateur de schémas](http://adaptivecards.io/explorer) pour en savoir plus sur les éléments disponibles
-* Générer une carte à l'aide du [Visualiseur interactif](http://adaptivecards.io/visualizer/index.html?hostApp=Skype)
-* [Nous contacter](http://adaptivecards.io/connect) pour nous faire part de vos commentaires
+* [Parcourir des exemples de cartes](https://adaptivecards.io/samples/) pour trouver l'inspiration
+* Utiliser l'[Explorateur de schémas](https://adaptivecards.io/explorer) pour en savoir plus sur les éléments disponibles
+* Générer une carte à l'aide du [Visualiseur interactif](https://adaptivecards.io/visualizer/index.html?hostApp=Skype)
+* [Nous contacter](https://adaptivecards.io/connect) pour nous faire part de vos commentaires

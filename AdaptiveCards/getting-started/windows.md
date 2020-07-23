@@ -4,12 +4,12 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 06/26/2017
 ms.topic: article
-ms.openlocfilehash: f6ae9b99decf8176af68334a681eb9e370f04484
-ms.sourcegitcommit: c921a7bb15a95c0ceb803ad375501ee3b8bef028
+ms.openlocfilehash: 8a73bcaf52e838453c6484ecd210d8ad7a577113
+ms.sourcegitcommit: fec0fd2c23293127e8e8f7ca7821c04d46987f37
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83631327"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86417555"
 ---
 # <a name="adaptive-cards-for-windows-developers"></a>Cartes adaptatives pour développeurs Windows
 
@@ -52,7 +52,7 @@ Nous n'avons rien à présenter pour le moment, mais nous préparons l'intégrat
 
 Ce didacticiel ne fait qu'effleurer le sujet. N'hésitez donc pas à revenir très bientôt et à utiliser les liens ci-dessous pour en savoir plus sur les cartes adaptatives.
 
-* [Parcourir des exemples de cartes](http://adaptivecards.io/samples/) pour trouver l'inspiration
-* Utiliser l'[Explorateur de schémas](http://adaptivecards.io/explorer) pour en savoir plus sur les éléments disponibles
-* Générer une carte à l'aide du [Visualiseur interactif](http://adaptivecards.io/visualizer/index.html?hostApp=Skype)
-* [Nous contacter](http://adaptivecards.io/connect) pour nous faire part de vos commentaires
+* [Parcourir des exemples de cartes](https://adaptivecards.io/samples/) pour trouver l'inspiration
+* Utiliser l'[Explorateur de schémas](https://adaptivecards.io/explorer) pour en savoir plus sur les éléments disponibles
+* Générer une carte à l'aide du [Visualiseur interactif](https://adaptivecards.io/visualizer/index.html?hostApp=Skype)
+* [Nous contacter](https://adaptivecards.io/connect) pour nous faire part de vos commentaires

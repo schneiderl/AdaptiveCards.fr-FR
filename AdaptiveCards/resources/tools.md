@@ -4,12 +4,12 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 03/14/2019
 ms.topic: article
-ms.openlocfilehash: f0c5a61d3406e1defffefc575ee0a6ec78fba93d
-ms.sourcegitcommit: e6418d692296e06be7412c95c689843f9db5240d
+ms.openlocfilehash: f26550a73610073000166357df5b70c1bd8ccdc8
+ms.sourcegitcommit: fec0fd2c23293127e8e8f7ca7821c04d46987f37
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "77454832"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86417592"
 ---
 # <a name="tools-and-samples"></a>Outils et exemples
 
@@ -29,7 +29,7 @@ Pour bien démarrer, consultez le [package adaptivecards-designer](https://npmjs
 
 La validation de schéma est un excellent moyen de simplifier la création d’outils.
 
-Nous mettons à votre disposition un [fichier de schéma JSON](http://adaptivecards.io/schemas/1.2.0/adaptive-card.json) complet pour la modification et la validation des cartes adaptatives dans JSON. Notez que l’URL de schéma a une version spécifique. Les versions plus récentes des cartes adaptatives auront une URL correspondante.
+Nous mettons à votre disposition un [fichier de schéma JSON](https://adaptivecards.io/schemas/1.2.0/adaptive-card.json) complet pour la modification et la validation des cartes adaptatives dans JSON. Notez que l’URL de schéma a une version spécifique. Les versions plus récentes des cartes adaptatives auront une URL correspondante.
 
 Dans Visual Studio et Visual Studio Code, vous pouvez obtenir une fonctionnalité IntelliSense automatique en incluant une référence `$schema`.
 

@@ -4,12 +4,12 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 11/9/2017
 ms.topic: article
-ms.openlocfilehash: c9a0ad07ba5fefbcdc35239591c02fe0720b5b66
-ms.sourcegitcommit: e6418d692296e06be7412c95c689843f9db5240d
+ms.openlocfilehash: 9cc7344ac357dcb95c7e47e377dbb12fbcd66957
+ms.sourcegitcommit: fec0fd2c23293127e8e8f7ca7821c04d46987f37
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "77454842"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86417487"
 ---
 # <a name="getting-started"></a>Prise en main 
 
@@ -89,7 +89,7 @@ Les actions ajoutent des boutons à la carte. Ceux-ci permettent d'effectuer dif
 
 ## <a name="learn-more"></a>En savoir plus
 
-* [Parcourir des exemples de cartes](http://adaptivecards.io/samples/) pour trouver l'inspiration
-* Utiliser l'[Explorateur de schémas](http://adaptivecards.io/explorer) pour parcourir les éléments disponibles
-* Générer une carte à l'aide du [Visualiseur interactif](http://adaptivecards.io/visualizer/)
-* [Nous contacter](http://adaptivecards.io/connect) pour nous faire part de vos commentaires
+* [Parcourir des exemples de cartes](https://adaptivecards.io/samples/) pour trouver l'inspiration
+* Utiliser l'[Explorateur de schémas](https://adaptivecards.io/explorer) pour parcourir les éléments disponibles
+* Générer une carte à l'aide du [Visualiseur interactif](https://adaptivecards.io/visualizer/)
+* [Nous contacter](https://adaptivecards.io/connect) pour nous faire part de vos commentaires
