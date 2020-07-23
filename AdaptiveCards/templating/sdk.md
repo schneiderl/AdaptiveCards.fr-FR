@@ -4,12 +4,12 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 05/15/2020
 ms.topic: article
-ms.openlocfilehash: d04b38d6b2a389ca31b690d3298f64b3fced7c9a
-ms.sourcegitcommit: eb71aebe40a592649461e468a87993a10cbe6187
+ms.openlocfilehash: a8db2f5ef84203187ed1b9d0fc8dd3ce63ee3569
+ms.sourcegitcommit: fec0fd2c23293127e8e8f7ca7821c04d46987f37
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84318179"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86417576"
 ---
 # <a name="adaptive-card-templating-sdks"></a>Kits SDK de création de modèles de cartes adaptatives
 
@@ -192,8 +192,11 @@ string cardJson = template.Expand(context);
 ## <a name="troubleshooting"></a>Résolution des problèmes
 Q. Pourquoi une exception AdaptiveTemplateException est-elle levée lorsque j’appelle ```expand()``` ?   
 A. Si votre message d’erreur ressemble à « '\<offending item>' à la ligne '\<line number>' est **mal formé pour '$data : ' pair** ».   
-Vérifiez que la valeur fournie pour « $data » correspond à du code JSON valide, tel qu’un nombre, une valeur booléenne, un objet ou un tableau, que la syntaxe est correcte pour le langage AEL, et que l’entrée existe dans le contexte de données au numéro de ligne indiqué. Notez que ${LineItem} et « 8 » peuvent changer.
+Vérifiez que la valeur fournie pour « $data » correspond à du code JSON valide, tel qu’un nombre, une valeur booléenne, un objet ou un tableau, que la syntaxe est correcte pour le langage AEL, et que l’entrée existe dans le contexte de données au numéro de ligne indiqué.
 
 Q. Pourquoi une exception ArgumentNullException est-elle levée lorsque j’appelle ```expand()``` ?   
 A. Si votre message d’erreur ressemble à « **Vérifiez si le contexte de données parent est défini ou entrez une valeur non nulle pour** '\<offending item>' à la ligne '\<line number>' ».   
 Celui-ci indique qu’il n’existe aucun contexte de données pour la liaison de données demandée. Vérifiez que le contexte de données racine est défini, le cas échéant, et vérifiez qu’un contexte de données est disponible pour la liaison actuelle, comme indiqué par le numéro de ligne.
+
+Q. Pourquoi le format de date/heure dans la RFC 3389, par ex. « 2017-02-14T06:08:00Z », ne fonctionne pas avec les fonctions TIME/DATE quand il est utilisé avec le modèle ?   
+A. Le SDK .NET nuget version 1.0.0-rc.0 expose ce comportement. Ce comportement est corrigé dans les prochaines mises en production. Le comportement par défaut du désérialiseur json.Net change la chaîne au format date/heure et est désactivé dans les prochaines mises en production. Utilisez la fonction formatDateTime() pour mettre en forme la chaîne date/heure dans la RFC 3389, comme montré dans [cet exemple](https://github.com/microsoft/AdaptiveCards/blob/db99ee07dadf317fe45e114a508e3de6e4325d0f/samples/Templates/Elements/Template.Functions.DateFunctions.json#L28), ou vous pouvez contourner les fonctions TIME/DATE et utiliser juste formatDateTime(). Pour plus d’informations sur formatDateTime(), rendez-vous [ici](https://docs.microsoft.com/azure/bot-service/adaptive-expressions/adaptive-expressions-prebuilt-functions?view=azure-bot-service-4.0#date-and-time-functions).

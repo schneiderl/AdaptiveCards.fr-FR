@@ -4,12 +4,12 @@ author: dclaux
 ms.author: dclaux
 ms.date: 5/10/2018
 ms.topic: article
-ms.openlocfilehash: 3bf8f04307e0ad65cae609e56295269254ca1e06
-ms.sourcegitcommit: e6418d692296e06be7412c95c689843f9db5240d
+ms.openlocfilehash: 891b9ca4e1682d4249963f6ceb3da7dab026addc
+ms.sourcegitcommit: fec0fd2c23293127e8e8f7ca7821c04d46987f37
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "76145419"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86417565"
 ---
 # <a name="adaptive-cards-for-outlook-actionable-message-developers"></a>Cartes adaptatives pour développeurs de messages actionnables Outlook
 
@@ -28,4 +28,4 @@ Vous pouvez désormais utiliser des cartes adaptatives pour alimenter vos messag
 
 - Rendez-vous sur https://docs.microsoft.com/outlook/actionable-messages/ pour apprendre à créer votre premier scénario de message actionnable.
 - Utilisez l'outil Actionable Message Card Playground pour accéder à des exemples de cartes, créer vos propres cartes, les envoyer à votre compte Office 365 et les visualiser dans [Outlook pour le web](https://outlook.office.com).
-- Pas envie de rédiger le code JSON manuellement ? L'outil [Adaptive Card Designer (préversion)](https://acdesignerbeta.azurewebsites.net) vous permet de créer des cartes adaptatives sans rédiger la moindre ligne de code JSON !
+- Pas envie de rédiger le code JSON manuellement ? L'outil [Adaptive Card Designer](https://adaptivecards.io/designer/) vous permet de créer des cartes adaptatives sans rédiger la moindre ligne de code JSON !
