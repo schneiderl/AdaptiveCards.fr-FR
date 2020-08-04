@@ -1,4 +1,4 @@
-- name: Vue d’ensemble
+- name: Vue d'ensemble
   href: index.md
 - name: Prise en main
   items:
@@ -18,6 +18,8 @@
       href: authoring-cards/speech.md
     - name: Fonctionnalités de texte
       href: authoring-cards/text-features.md
+    - name: Validation d'entrée
+      href: authoring-cards/input-validation.md
 - name: Rendu des cartes
   items:
     - name: Prise en main
