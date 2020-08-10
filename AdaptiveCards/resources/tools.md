@@ -4,12 +4,12 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 03/14/2019
 ms.topic: article
-ms.openlocfilehash: f26550a73610073000166357df5b70c1bd8ccdc8
-ms.sourcegitcommit: fec0fd2c23293127e8e8f7ca7821c04d46987f37
+ms.openlocfilehash: 819788313d78b4057fb5d3dc4d5a9be658566642
+ms.sourcegitcommit: 996fc604e59f72ba1dd96c29f4b517862a5264e9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86417592"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87566023"
 ---
 # <a name="tools-and-samples"></a>Outils et exemples
 
@@ -48,7 +48,18 @@ Dans Visual Studio et Visual Studio Code, vous pouvez obtenir une fonctionnalit�
 }
 ```
 
-## <a name="visual-studio-code-extension"></a>Extension Visual Studio Code
+## <a name="visual-studio-code-extensions"></a>Extensions Visual Studio Code
+
+### <a name="adaptive-cards-studio"></a>**Adaptive Cards Studio**
+
+![place de marché](https://madewithcards.blob.core.windows.net/uploads/29bb3d02-2158-40b8-8420-4dd1f15da34c-acstudio.png)
+
+Grâce à Adaptive Cards Studio, vous pouvez créer des cartes directement dans Visual Studio Code. L’extension détecte automatiquement toutes les cartes adaptatives dans votre espace de travail et vous permet de modifier facilement le modèle de carte et les exemples de données.
+
+[En savoir plus et l’installer à partir du marketplace Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=madewithcardsio.adaptivecardsstudiobeta)
+
+
+### <a name="adaptive-card-viewer"></a>**Adaptive Card Viewer**
 
 Nous avons créé une extension Visual Studio Code qui vous permet de visualiser la carte que vous modifiez en temps réel dans l’éditeur lui-même. 
 
@@ -58,7 +69,7 @@ Pour l’installer, ouvrez la Place de marché des extensions et recherchez **Ad
 
 ![place de marché](media/tools/vscode-extension-marketplace.png)
 
-### <a name="usage"></a>Utilisation
+### <a name="usage"></a>Usage
 
 Quand vous modifiez un fichier .json avec une propriété `$schema` de carte adaptative, vous pouvez la voir à l’aide de `Ctrl+Shift+V A`.
 ```json
