@@ -4,12 +4,12 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 10/12/2018
 ms.topic: article
-ms.openlocfilehash: 63426b2250407cc40af8c46975c10f57d1028a40
-ms.sourcegitcommit: e6418d692296e06be7412c95c689843f9db5240d
+ms.openlocfilehash: 1042fd862990a79c77110ebdf5d804eadcc606ea
+ms.sourcegitcommit: 19c08b1370305fb2965de0140c5e632356e78513
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "77454902"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87879143"
 ---
 # <a name="renderer-status"></a>État du rendu
 Les tableaux ci-dessous indiquent l’état actuel de chaque renderer, en fonction de leurs versions publiées publiques.
@@ -30,7 +30,7 @@ Les tableaux ci-dessous indiquent l’état actuel de chaque renderer, en foncti
 |Afficher la barre d’actions | ✅ | ✅ | ✅ | ✅ | ✅ |
 |Ignorer les éléments inconnus | ✅ | ✅ | ✅ | ✅ | ✅ |
 |Prise en charge de la configuration de l’hôte | ✅ | ✅ | ✅ | ✅ | ✅ |
-|Style de plateforme native | ✅ | ✅ | ✅ | ✅ | ✅ |
+|Style de plateforme native | ✅ | ✅ | ✅ | ✅ | ❌ |
 
 ### <a name="element-rendering"></a>Rendu d’élément
 
@@ -38,8 +38,9 @@ Les tableaux ci-dessous indiquent l’état actuel de chaque renderer, en foncti
 |--- | --- | --- | --- | --- | --- | --- |
 |Espacement et séparateur | ✅ | ✅ | ✅ | ✅ | ✅ |
 |[Format de DATE/HEURE TextBlock](../authoring-cards/text-features.md#datetime-formatting-and-localization) | ✅ | ✅ | ✅ | ✅ | ✅ |
-|[Prise en charge du Markdown TextBlock](../authoring-cards/text-features.md#markdown) | ✅* | ✅ | ✅ | ✅ | ✅ |
-|Prise en charge complète des entrées | ✅ | ✅ | ✅ | ✅ | ✅ |
+|[Prise en charge du Markdown TextBlock](../authoring-cards/text-features.md#markdown-commonmark-subset) | ✅* | ✅ | ✅ | ✅ | ✅ |
+|Validation et étiquettes d’entrées | ❌ | ✅ | ✅ | ✅ | ✅ |
+
 
 \* Le renderer HTML n’inclut pas la prise en charge intégrée du Markdown, afin de réduire la taille de la bibliothèque et de permettre aux applications consommatrices d’utiliser leur processeur Markdown par défaut. En revanche, le renderer HTML utilise automatiquement Markdown-It s’il est chargé.
 

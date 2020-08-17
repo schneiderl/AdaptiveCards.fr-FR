@@ -1,15 +1,15 @@
 ---
 title: HostConfig pour cartes adaptatives
-author: paulcam206
-ms.author: paulcam
-ms.date: 09/18/2018
+author: almedina-ms
+ms.author: almedina
+ms.date: 08/05/2020
 ms.topic: reference
-ms.openlocfilehash: d7fda209e6c470659d2fb2b66ac982e9c7183367
-ms.sourcegitcommit: eb71aebe40a592649461e468a87993a10cbe6187
+ms.openlocfilehash: 6a7dd189a5fd39c76241544679011f22c53ccc66
+ms.sourcegitcommit: 19c08b1370305fb2965de0140c5e632356e78513
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84318199"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87879159"
 ---
 # <a name="what-is-hostconfig"></a>Qu’est-ce que HostConfig ?
 `HostConfig` est un **objet de configuration partagé multiplateforme** qui spécifie comment un renderer de carte adaptative génère l’interface utilisateur.
@@ -29,6 +29,10 @@ Pour voir un aperçu de son contenu, consultez un exemple de fichier [HostConfig
    * [`ForegroundColorsConfig`](#schema-foregroundcolorsconfig) : contrôle diverses couleurs de police
    * [`ImageSetConfig`](#schema-imagesetconfig) : contrôle le mode d’affichage des `ImageSet`s
    * [`ImageSizesConfig`](#schema-imagesizesconfig) : contrôle les tailles des objets `Image`
+   * [`InputsConfig`](#schema-inputsconfig) - Contrôle le mode d’affichage des étiquettes et des messages d’erreur 
+      * [`LabelConfig`](#schema-labelconfig) - Contrôle le mode d’affichage des étiquettes
+         * [`InputLabelConfig`](#schema-inputlabelconfig) -Contrôle le mode d’affichage des étiquettes obligatoires ou facultatives
+      * [`ErrorMessageConfig`](#schema-errormessageconfig) - Contrôle le mode d’affichage des messages d’erreur
    * [`MediaConfig`](#schema-mediaconfig) : contrôle l’affichage et le comportement des éléments `Media`
    * [`SeparatorConfig`](#schema-separatorconfig) : contrôle l’affichage des séparateurs
    * [`ShowCardConfig`](#schema-showcardconfig) : contrôle le comportement et le style de `Action.ShowCard`
@@ -165,6 +169,50 @@ Contrôle la tailles des objets `Image`
 |**medium**|`integer`| Non, valeur par défaut : `120`|Valeur de taille d’image moyenne|1.0
 |**large**|`integer`| Non, valeur par défaut : `180`|Valeur de taille de grande image|1.0
 
+<a name="schema-inputsconfig"></a>
+## <a name="inputsconfig"></a>InputsConfig
+
+Contrôle le mode d’affichage des étiquettes et des messages d’erreur 
+
+|Propriété|Type|Obligatoire|Description|Version|
+|--------|----|--------|-----------|-------|
+|**label**|`LabelConfig`| Non |Contrôle le mode d’affichage des étiquettes|1.3|
+|**errorMessage**|`ErrorMessageConfig`| Non|Contrôle le mode d’affichage des messages d’erreur |1.3|
+
+<a name="schema-labelconfig"></a>
+### <a name="labelconfig"></a>LabelConfig
+
+Contrôle le mode d’affichage des étiquettes
+
+|Propriété|Type|Obligatoire|Description|Version|
+|--------|----|--------|-----------|-------|
+|**requiredInputs**|`InputLabelConfig`| Non |Contrôle le mode d’affichage des étiquettes pour les entrées obligatoires|1.3|
+|**optionalInputs**|`InputLabelConfig`| Non|Contrôle le mode d’affichage des étiquettes pour les entrées facultatives |1.3|
+|**spacing**|`string`| Non, valeur par défaut : `"default"` |[Espacement](#schema-spacingsconfig) entre l’étiquette et l’entrée|1.3|
+
+<a name="schema-inputlabelconfig"></a>
+#### <a name="inputlabelconfig"></a>InputLabelConfig
+
+Contrôle le mode d’affichage des étiquettes obligatoires ou facultatives
+
+|Propriété|Type|Obligatoire|Description|Version|
+|--------|----|--------|-----------|-------|
+|**color**|`string`|Non, valeur par défaut : `"default"`| [Couleur](#schema-foregroundcolorsconfig) de police de l’étiquette (le suffixe est toujours rendu dans la couleur `attention`) |1.3|
+|**isSubtle**|`bool`| Non, valeur par défaut : `false`| Définit s’il faut utiliser la couleur de premier plan `subtle` |1.3|
+|**size**|`string`| Non, valeur par défaut : `"default"` | [Taille](#schema-fontsizesconfig) de police de l’étiquette à afficher |1.3|
+|**suffix**|`string`| Non, valeur par défaut : `"*"` | Suffixe à afficher à la fin de l’étiquette pour les entrées obligatoires. Si aucune valeur n’est définie, un astérisque `*` est ajouté à l’étiquette |1.3|
+|**weight**|`string`| Non, valeur par défaut : `"default"` | [Épaisseur](#schema-fontweightsconfig) de police de l’étiquette |1.3|
+
+<a name="schema-errormessageconfig"></a>
+### <a name="errormessageconfig"></a>ErrorMessageConfig
+
+Contrôle le mode d’affichage des messages d’erreur. Les messages d’erreur sont toujours affichés avec la couleur `attention`.
+
+|Propriété|Type|Obligatoire|Description|Version|
+|--------|----|--------|-----------|-------|
+|**spacing**|`string`| Non, valeur par défaut : `"default"` |[Espacement](#schema-spacingsconfig) entre l’entrée et le message d’erreur|1.3|
+|**size**|`string`| Non, valeur par défaut : `"default"` | [Taille](#schema-fontsizesconfig) de police du message d’erreur  |1.3|
+|**weight**|`string`| Non, valeur par défaut : `"default"` | [Épaisseur](#schema-fontweightsconfig) de police du message d’erreur |1.3|
 
 <a name="schema-mediaconfig"></a>
 ## <a name="mediaconfig"></a>MediaConfig
