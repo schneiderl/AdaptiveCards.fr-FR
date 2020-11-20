@@ -2,14 +2,14 @@
 title: Rendu d’une carte-SDK JavaScript
 author: matthidinger
 ms.author: mahiding
-ms.date: 11/28/2017
+ms.date: 08/30/2020
 ms.topic: article
-ms.openlocfilehash: 16e4b3e057137e361be52d654fa937c5dae5ff6f
-ms.sourcegitcommit: 1e18c5dc0cf85d26f66335e312348bbfb903d95a
+ms.openlocfilehash: 4e3bf8d1774933d0c163c34bbe0838fbc9bb842b
+ms.sourcegitcommit: 65b792d73c264c943036343e05b75f2b0488e6e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77454582"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "95001836"
 ---
 # <a name="render-a-card---javascript"></a>Rendre une carte-JavaScript
 
@@ -17,7 +17,7 @@ Voici comment afficher une carte à l’aide du kit de développement logiciel (
 
 ## <a name="usage"></a>Utilisation
 
-### <a name="import-the-module"></a>Importer le module
+### <a name="import-the-module"></a>Importation du module
 
 ```js
 // import the module
@@ -81,7 +81,10 @@ adaptiveCard.onExecuteAction = function(action) { alert("Ow!"); }
 // E.g., to use markdown-it, include in your HTML page:
 //     <script type="text/javascript" src="https://unpkg.com/markdown-it/dist/markdown-it.js"></script>
 // And add this code to replace the default markdown handler:
-//     AdaptiveCards.processMarkdown = function(text) { return markdownit().render(text); }
+//     AdaptiveCards.AdaptiveCard.onProcessMarkdown = function (text, result) {
+//         result.outputHtml = markdownit().render(text);
+//         result.didProcess = true;
+//     };
 
 // Parse the card payload
 adaptiveCard.parse(card);
