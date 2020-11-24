@@ -4,12 +4,12 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 06/26/2017
 ms.topic: article
-ms.openlocfilehash: 272a7dc7c31fc3da8e5b27ff7479b249c4ef4226
-ms.sourcegitcommit: c921a7bb15a95c0ceb803ad375501ee3b8bef028
+ms.openlocfilehash: e54582f74ea6d5d537bc5993a7494fea05102182
+ms.sourcegitcommit: 65b792d73c264c943036343e05b75f2b0488e6e9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83631297"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "95001826"
 ---
 # <a name="adaptive-cards-overview"></a>Vue d’ensemble du format Cartes adaptatives 
 
