@@ -4,12 +4,12 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 10/12/2018
 ms.topic: article
-ms.openlocfilehash: 1042fd862990a79c77110ebdf5d804eadcc606ea
-ms.sourcegitcommit: 19c08b1370305fb2965de0140c5e632356e78513
+ms.openlocfilehash: 2b4f9d9ab376839a309a312e9846c45b0fc6cdff
+ms.sourcegitcommit: 65b792d73c264c943036343e05b75f2b0488e6e9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87879143"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "95001796"
 ---
 # <a name="renderer-status"></a>État du rendu
 Les tableaux ci-dessous indiquent l’état actuel de chaque renderer, en fonction de leurs versions publiées publiques.
@@ -41,7 +41,6 @@ Les tableaux ci-dessous indiquent l’état actuel de chaque renderer, en foncti
 |[Prise en charge du Markdown TextBlock](../authoring-cards/text-features.md#markdown-commonmark-subset) | ✅* | ✅ | ✅ | ✅ | ✅ |
 |Validation et étiquettes d’entrées | ❌ | ✅ | ✅ | ✅ | ✅ |
 
-
 \* Le renderer HTML n’inclut pas la prise en charge intégrée du Markdown, afin de réduire la taille de la bibliothèque et de permettre aux applications consommatrices d’utiliser leur processeur Markdown par défaut. En revanche, le renderer HTML utilise automatiquement Markdown-It s’il est chargé.
 
 ### <a name="extensibility"></a>Extensibilité
@@ -51,7 +50,7 @@ Les tableaux ci-dessous indiquent l’état actuel de chaque renderer, en foncti
 |Remplacer le renderer d’élément | ✅ | ✅ | ✅ | ✅ | ✅ |
 |Ajouter un nouveau renderer d’élément | ✅ | ✅ | ✅ | ✅ | ✅ |
 |Supprimer le renderer d’élément | ✅ | ✅ | ✅ | ✅ | ✅ |
-|[Remplacer/ajouter/supprimer le renderer d’action](https://github.com/Microsoft/AdaptiveCards/issues/1671) | ✅ | ✅ | ❌ | ✅ | ✅ |
+|[Remplacer/ajouter/supprimer le renderer d’action](https://github.com/Microsoft/AdaptiveCards/issues/1671) | ✅ | ✅ | ✅ | ✅ | ✅ |
 
 ### <a name="actions"></a>Actions
 
