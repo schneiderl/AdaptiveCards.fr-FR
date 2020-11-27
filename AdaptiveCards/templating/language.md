@@ -4,12 +4,12 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 05/18/2020
 ms.topic: article
-ms.openlocfilehash: 98ab88d541916198b9a027a54fb70ee4502e63f7
-ms.sourcegitcommit: eb71aebe40a592649461e468a87993a10cbe6187
+ms.openlocfilehash: c03ed2c18039d199f37b9cbd52814f4561dad199
+ms.sourcegitcommit: 65b792d73c264c943036343e05b75f2b0488e6e9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84318189"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "95001856"
 ---
 # <a name="adaptive-cards-template-language"></a>Langage de modèle de cartes adaptatives
 

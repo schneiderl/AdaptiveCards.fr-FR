@@ -4,12 +4,12 @@ author: rebeccaanne
 ms.author: rebecch
 ms.date: 07/24/2020
 ms.topic: article
-ms.openlocfilehash: 08fb2cb5b2b6fa1f227ec5a530f8063dc26b40e3
-ms.sourcegitcommit: 19c08b1370305fb2965de0140c5e632356e78513
+ms.openlocfilehash: fe8602ecfb308afeb7a42b82c22b49c33911d20d
+ms.sourcegitcommit: 65b792d73c264c943036343e05b75f2b0488e6e9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87879130"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "95001766"
 ---
 # <a name="input-validation"></a>Validation d'entrée
 
@@ -37,6 +37,7 @@ Une propriété `errorMessage` est disponible sur tous les types d’entrée afi
 ## <a name="labels"></a>Étiquettes
 
 La propriété de chaîne `label` est une autre propriété ajoutée dans le schéma version 1.3 pour tous les éléments d’entrée. L’utilisation de la propriété `label` est la méthode recommandée pour étiqueter les entrées dans une carte adaptative, vis-à-vis de la propriété `placeholder` . Il s’agit d’un moyen simple et concis d’étiqueter les entrées pour les auteurs de cartes. Il présente les avantages suivants :
+
 * Indicateurs de validation : comme indiqué ci-dessus, les entrées peuvent maintenant être marquées comme obligatoires, les étiquettes pour les entrées obligatoires auront un indicateur visuel à côté. Cet indicateur visuel est défini dans `HostConfig` et est rendu par défaut sous la forme d’un astérisque `*`.
 * Accessibilité : avec une connexion entre les étiquettes et les entrées, les bibliothèques de renderers peuvent définir les propriétés nécessaires pour permettre aux utilisateurs qui se servent des technologies d’assistance (lecteurs d’écran) de pouvoir interagir correctement avec les entrées au sein des cartes adaptatives.
     * Étiquettes ou espaces réservés : comme Katie Sherwin l’explique dans l’article [Placeholders in form fields are harmful](https://www.nngroup.com/articles/form-design-placeholders/), l’utilisation d’espaces réservés a de nombreuses conséquences négatives, telles que la sollicitation de la mémoire à court terme des utilisateurs (ce qui leur rend la tâche plus difficile pour vérifier leurs entrées avant de les soumettre), des difficultés à les lire car, généralement, le texte des espaces réservés présente un contraste de couleurs très faible par rapport à son arrière-plan, l’impossibilité totale pour les lecteurs d’écran de lire le texte des espaces réservés, pour n’en citer que quelques-unes.
